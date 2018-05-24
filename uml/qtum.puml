@@ -1,0 +1,282 @@
+@startuml
+
+class CCryptoKeyStore {
+}
+class CValidationInterface {
+}
+
+class CBlockIndex{
+
+}
+class COutput{
+}
+class CReserveKey{
+}
+CReserveScript <|-- CReserveKey
+
+
+class CScript{
+
+}
+class CTxMemPool{
+
+}
+class CWalletTx{
+
+}
+class CTokenTx{
+
+}
+class CContractBookData{
+
+}
+
+class CKeyPool {
+}
+
+class CAddressBookData {
+}
+
+class CRecipient {
+}
+
+class CScript {
+}
+
+class CAmount {
+}
+
+class COutputEntry {
+}
+
+class CMerkleTx {
+}
+
+class CWalletTx {
+}
+CMerkleTx <|-- CWalletTx
+
+
+class COutput {
+}
+
+class CWalletKey {
+}
+class CAccountingEntry {
+}
+
+class CReserveScript {
+}
+class CAccount {
+}
+class CTokenInfo {
+}
+class CTokenTx {
+}
+class CContractBookData {
+}
+
+class CWallet {
+}
+CCryptoKeyStore <|-- CWallet
+CValidationInterface <|-- CWallet
+
+
+
+
+class CMasterKey {
+}
+class CCrypter {
+}
+class CBasicKeyStore {
+}
+class CCoinControl {
+}
+class CHDChain {
+}
+class CKeyMetadata {
+}
+class CWalletDB {
+}
+class CDB {
+}
+class CDBEnv {
+}
+
+
+
+
+
+
+
+
+class CBitcoinAddress {
+}
+class CBase58Data {
+}
+class CBitcoinSecret {
+}
+class CBitcoinExtKeyBase {
+}
+CBase58Data <|-- CBitcoinAddress
+CBase58Data <|-- CBitcoinSecret
+CBase58Data <|-- CBitcoinExtKeyBase
+
+class CWalletKey {
+}
+class CWalletKey {
+}
+class CWalletKey {
+}
+class CWalletKey {
+}
+class CWalletKey {
+}
+class CWalletKey {
+}
+
+@enduml
+
+
+interface Peer  {
+	GetPeerEndpoint() (*pb.PeerEndpoint, error)
+	NewOpenchainDiscoveryHello() (*pb.Message, error)
+}
+
+
+
+interface RemoteLedger  {
+	BlocksRetriever
+	StateRetriever
+}
+
+interface BlockChainAccessor  {
+	GetBlockByNumber(blockNumber uint64) (*pb.Block, error)
+	GetBlockchainSize() uint64
+	GetCurrentStateHash() (stateHash []byte, err error)
+}
+
+interface BlockChainModifier  {
+	ApplyStateDelta(id {}, delta *statemgmt.StateDelta) error
+	RollbackStateDelta(id {}) error
+	CommitStateDelta(id {}) error
+	EmptyState() error
+	PutBlock(blockNumber uint64, block *pb.Block) error
+}
+
+interface BlockChainUtil  {
+	HashBlock(block *pb.Block) ([]byte, error)
+	VerifyBlockchain(start, finish uint64) (uint64, error)
+}
+
+interface StateAccessor  {
+	GetStateSnapshot() (*state.StateSnapshot, error)
+	GetStateDelta(blockNumber uint64) (*statemgmt.StateDelta, error)
+}
+
+interface MessageHandler  {
+	RemoteLedger
+	HandleMessage(msg *pb.Message) error
+	SendMessage(msg *pb.Message) error
+	To() (pb.PeerEndpoint, error)
+	Stop() error
+}
+RemoteLedger <|-- MessageHandler
+
+interface MessageHandlerCoordinator  {
+	Peer
+	SecurityAccessor
+	BlockChainAccessor
+	BlockChainModifier
+	BlockChainUtil
+	StateAccessor
+	Discoverer
+
+	RegisterHandler(messageHandler MessageHandler) error
+	DeregisterHandler(messageHandler MessageHandler) error
+	Broadcast(*pb.Message, pb.PeerEndpoint_interface) []error
+	Unicast(*pb.Message, *pb.PeerID) error
+	GetPeers() (*pb.PeersMessage, error)
+	GetRemoteLedger(receiver *pb.PeerID) (RemoteLedger, error)
+	PeersDiscovered(*pb.PeersMessage) error
+	ExecuteTransaction(transaction *pb.Transaction) *pb.Response
+}
+
+Peer <|-- MessageHandlerCoordinator
+BlockChainAccessor <|-- MessageHandlerCoordinator
+BlockChainModifier <|-- MessageHandlerCoordinator
+
+MessageHandlerCoordinator --|> BlockChainUtil
+MessageHandlerCoordinator --|> Discoverer
+MessageHandlerCoordinator --|> StateAccessor
+MessageHandlerCoordinator --|> SecurityAccessor
+
+
+
+
+interface ChatStream  {
+	Send(*pb.Message) error
+	Recv() (*pb.Message, error)
+}
+
+interface SecurityAccessor  {
+	GetSecHelper() crypto.Peer
+}
+
+interface TransactionProccesor  {
+	ProcessTransactionMsg(*pb.Message, *pb.Transaction) *pb.Response
+}
+
+interface Engine  {
+	TransactionProccesor
+	HandlerFactory(MessageHandler) (LegacyMessageHandler, error)
+}
+TransactionProccesor <|-- Engine
+Engine <|-- help.EngineImpl
+
+class Impl {
+	handlerFactory HandlerFactory
+	handlerMap     *handlerMap
+	ledgerWrapper  *ledgerWrapper
+	secHelper      crypto.Peer
+	engine         Engine
+	reconnectOnce  sync.Once
+	discHelper     discovery.Discovery
+}
+MessageHandlerCoordinator <|-- Impl
+Impl o--> ledgerWrapper
+Impl o--> handlerMap
+Impl *--> Engine
+
+
+Handler *--> Impl
+Handler *--> ChatStream
+Handler --|> MessageHandler
+handlerMap *--> MessageHandler
+
+
+class help.EngineImpl {
+	consenter    consensus.Consenter
+	helper       *Helper
+	peerEndpoint *pb.PeerEndpoint
+	consensusFan *util.MessageFan
+}
+help.EngineImpl o--> consensus.Consenter
+
+consensus.Consenter <|-- noops.Noops
+consensus.Consenter <|-- pbft.obcBatch
+pbft.obcBatch <|-- pbft.pbftCore
+
+@enduml
+
+interface BlocksRetriever  {
+	RequestBlocks(*pb.SyncBlockRange) (<-chan *pb.SyncBlocks, error)
+}
+
+interface StateRetriever  {
+	RequestStateSnapshot() (<-chan *pb.SyncStateSnapshot, error)
+	RequestStateDeltas(syncBlockRange *pb.SyncBlockRange)
+}
+
+StateRetriever <|-- RemoteLedger
+BlocksRetriever <|-- RemoteLedger

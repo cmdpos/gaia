@@ -1,0 +1,254 @@
+@startuml
+
+peer.Impl_A -> peer.Impl_A: chatWithPeer
+peer.Impl_A -> peer.Impl_A: New Connection
+peer.Impl_A -> PeerClient: NewPeerClient
+PeerClient -> PeerClient: Chat
+stream_A -> stream_A
+MessageHandler_A -> MessageHandler_A
+_Peer_Chat_Handler_A -> _Peer_Chat_Handler_A
+
+PeerClient -> _Peer_Chat_Handler_B: rpc Chat
+_Peer_Chat_Handler_B -> stream_B:create Chat stream
+_Peer_Chat_Handler_B -> peer.Impl_B: Chat(stream pb.Peer_ChatServer)
+peer.Impl_B -> peer.Impl_B: handleChat
+peer.Impl_B -> MessageHandler_B: NewPeerHandler
+stream_B-> stream_B: Recv message
+MessageHandler_B -> MessageHandler_B: handler message
+
+PeerClient -> stream_A: create Chat stream
+
+peer.Impl_A -> peer.Impl_A: handleChat
+peer.Impl_A -> MessageHandler_A: NewPeerHandler
+MessageHandler_A -> MessageHandler_B: send helloMessage
+
+peer.Impl_B <- MessageHandler_B: RegisterHandler\nSyncIn stream\nGossipIn stream
+
+peer.Impl_B -> _Peer_Chat_Handler_A: rpc SyncIn
+_Peer_Chat_Handler_A -> stream_A: create SyncIn stream
+_Peer_Chat_Handler_A -> peer.Impl_A: SyncIn(stream pb.Peer_SyncInServer)
+
+
+peer.Impl_B -> _Peer_Chat_Handler_A: rpc GossipIn
+_Peer_Chat_Handler_A -> stream_A: create GossipIn stream
+_Peer_Chat_Handler_A -> peer.Impl_A: GossipIn(stream pb.Peer_GossipInServer)
+
+
+stream_A -> stream_A: Recv message
+MessageHandler_A -> MessageHandler_A: handler message
+
+
+
+@enduml
+GossipHandlerImpl
+interface grpc.Stream  {
+	Context() context.Context
+	SendMsg(m interface{}) error
+	RecvMsg(m interface{}) error
+}
+interface grpc.ClientStream  {
+	Header() (metadata.MD, error)
+	Trailer() metadata.MD
+	CloseSend() error
+	Stream
+}
+interface grpc.ServerStream  {
+	SetHeader(metadata.MD) error
+	SendHeader(metadata.MD) error
+	SetTrailer(metadata.MD)
+	Stream
+}
+grpc.Stream <|-- grpc.ClientStream
+grpc.Stream <|-- grpc.ServerStream
+
+
+interface PeerServer  {
+	Chat(Peer_ChatServer) error
+	GossipIn(Peer_GossipInServer) error
+	ProcessTransaction(context.Context, *Transaction) (*Response, error)
+}
+
+interface Peer_ChatServer  {
+	Send(*Message) error
+	Recv() (*Message, error)
+	grpc.ServerStream
+}
+
+class peerChatServer {
+	grpc.ServerStream
+}
+grpc.ServerStream <|-- Peer_ChatServer
+Peer_ChatServer <|-- peerChatServer
+
+
+
+interface Peer_GossipInServer  {
+	Send(*Gossip) error
+	Recv() (*Gossip, error)
+	grpc.ServerStream
+}
+class peerGossipInServer  {
+	grpc.ServerStream
+}
+grpc.ServerStream <|-- Peer_GossipInServer
+Peer_GossipInServer <|-- peerGossipInServer
+
+
+
+
+interface Peer_ChatClient  {
+	Send(*Message) error
+	Recv() (*Message, error)
+	grpc.ClientStream
+}
+
+class peerChatClient  {
+	grpc.ClientStream
+}
+
+
+interface RemoteLedger  {
+	BlocksRetriever
+	StateRetriever
+}
+
+interface BlockChainAccessor  {
+	GetBlockByNumber(blockNumber uint64) (*pb.Block, error)
+	GetBlockchainSize() uint64
+	GetCurrentStateHash() (stateHash []byte, err error)
+}
+
+interface BlockChainModifier  {
+	ApplyStateDelta(id {}, delta *statemgmt.StateDelta) error
+	RollbackStateDelta(id {}) error
+	CommitStateDelta(id {}) error
+	EmptyState() error
+	PutBlock(blockNumber uint64, block *pb.Block) error
+}
+
+interface BlockChainUtil  {
+	HashBlock(block *pb.Block) ([]byte, error)
+	VerifyBlockchain(start, finish uint64) (uint64, error)
+}
+
+interface StateAccessor  {
+	GetStateSnapshot() (*state.StateSnapshot, error)
+	GetStateDelta(blockNumber uint64) (*statemgmt.StateDelta, error)
+}
+
+interface MessageHandler  {
+	RemoteLedger
+	HandleMessage(msg *pb.Message) error
+	SendMessage(msg *pb.Message) error
+	To() (pb.PeerEndpoint, error)
+	Stop() error
+}
+RemoteLedger <|-- MessageHandler
+
+interface MessageHandlerCoordinator  {
+	Peer
+	SecurityAccessor
+	BlockChainAccessor
+	BlockChainModifier
+	BlockChainUtil
+	StateAccessor
+	Discoverer
+
+	RegisterHandler(messageHandler MessageHandler) error
+	DeregisterHandler(messageHandler MessageHandler) error
+	Broadcast(*pb.Message, pb.PeerEndpoint_interface) []error
+	Unicast(*pb.Message, *pb.PeerID) error
+	GetPeers() (*pb.PeersMessage, error)
+	GetRemoteLedger(receiver *pb.PeerID) (RemoteLedger, error)
+	PeersDiscovered(*pb.PeersMessage) error
+	ExecuteTransaction(transaction *pb.Transaction) *pb.Response
+}
+
+Peer <|-- MessageHandlerCoordinator
+BlockChainAccessor <|-- MessageHandlerCoordinator
+BlockChainModifier <|-- MessageHandlerCoordinator
+
+MessageHandlerCoordinator --|> BlockChainUtil
+MessageHandlerCoordinator --|> Discoverer
+MessageHandlerCoordinator --|> StateAccessor
+MessageHandlerCoordinator --|> SecurityAccessor
+
+
+
+
+interface ChatStream  {
+	Send(*pb.Message) error
+	Recv() (*pb.Message, error)
+}
+
+interface SecurityAccessor  {
+	GetSecHelper() crypto.Peer
+}
+
+interface TransactionProccesor  {
+	ProcessTransactionMsg(*pb.Message, *pb.Transaction) *pb.Response
+}
+
+interface Engine  {
+	TransactionProccesor
+	HandlerFactory(MessageHandler) (LegacyMessageHandler, error)
+}
+TransactionProccesor <|-- Engine
+Engine <|-- help.EngineImpl
+
+class Impl {
+	handlerFactory HandlerFactory
+	handlerMap     *handlerMap
+	ledgerWrapper  *ledgerWrapper
+	secHelper      crypto.Peer
+	engine         Engine
+	reconnectOnce  sync.Once
+	discHelper     discovery.Discovery
+}
+MessageHandlerCoordinator <|-- Impl
+Impl o--> ledgerWrapper
+Impl o--> handlerMap
+Impl *--> Engine
+
+
+class Handler  {
+	ToPeerEndpoint                *pb.PeerEndpoint
+	Coordinator                   MessageHandlerCoordinator
+	ChatStream                    ChatStream
+	doneChan                      chan struct{}
+	FSM                           *fsm.FSM
+	syncBlocks                    chan *pb.SyncBlocks
+	snapshotRequestHandler        *syncStateSnapshotRequestHandler
+	syncStateDeltasRequestHandler *syncStateDeltasHandler
+	syncBlocksRequestHandler      *syncBlocksRequestHandler
+}
+Handler *--> Impl
+Handler *--> ChatStream
+Handler --|> MessageHandler
+handlerMap *--> MessageHandler
+
+
+class help.EngineImpl {
+	consenter    consensus.Consenter
+	helper       *Helper
+	peerEndpoint *pb.PeerEndpoint
+	consensusFan *util.MessageFan
+}
+help.EngineImpl o--> consensus.Consenter
+
+consensus.Consenter <|-- noops.Noops
+consensus.Consenter <|-- pbft.obcBatch
+pbft.obcBatch <|-- pbft.pbftCore
+
+
+interface BlocksRetriever  {
+	RequestBlocks(*pb.SyncBlockRange) (<-chan *pb.SyncBlocks, error)
+}
+
+interface StateRetriever  {
+	RequestStateSnapshot() (<-chan *pb.SyncStateSnapshot, error)
+	RequestStateDeltas(syncBlockRange *pb.SyncBlockRange)
+}
+
+StateRetriever <|-- RemoteLedger
+BlocksRetriever <|-- RemoteLedger

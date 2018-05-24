@@ -1,0 +1,48 @@
+@startuml
+
+
+
+
+Impl o--> protos.StreamStub
+Impl o--> handlerMap
+Impl *--> Engine
+Peer <|-- Impl
+Neighbour <|-- Impl
+
+protos.StreamStub *--> protos.shandlerMap
+protos.shandlerMap *--> protos.StreamHandler
+protos.StreamHandlerImpl <|-- protos.StreamHandler
+
+protos.StreamHandlerFactory <|-- protos.GossipHandlerImpl
+protos.GossipHandlerImpl <|-- protos.StreamStub
+
+Handler *--> ChatStream
+Handler o--> Impl
+Handler --|> MessageHandler
+Handler o--> ledger.Ledger
+
+
+@enduml
+
+
+
+
+
+
+interface BlocksRetriever  {
+	RequestBlocks(*pb.SyncBlockRange) (<-chan *pb.SyncBlocks, error)
+}
+
+interface StateRetriever  {
+	RequestStateSnapshot() (<-chan *pb.SyncStateSnapshot, error)
+	RequestStateDeltas(syncBlockRange *pb.SyncBlockRange)
+}
+
+Handler o--> ledger.Ledger
+
+BlocksRetriever <|-- RemoteLedger
+StateRetriever <|-- RemoteLedger
+
+Handler o--> syncStateSnapshotRequestHandler
+Handler o--> syncStateDeltasHandler
+Handler o--> syncBlocksRequestHandler

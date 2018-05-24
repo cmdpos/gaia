@@ -1,0 +1,225 @@
+@startuml
+consensus.ExecutionConsumer <|-- consensus.Consenter
+consensus.Communicator <|-- consensus.NetworkStack
+consensus.Inquirer <|-- consensus.NetworkStack
+consensus.LegacyExecutor <|-- executor.PartialStack
+
+consensus.NetworkStack <|-- consensus.Stack
+consensus.SecurityUtils <|-- consensus.Stack
+consensus.Executor <|-- consensus.Stack
+consensus.LegacyExecutor <|-- consensus.Stack
+consensus.LedgerManager <|-- consensus.Stack
+consensus.ReadOnlyLedger <|-- consensus.Stack
+consensus.StatePersistor <|-- consensus.Stack
+
+executor.PartialStack <|-- executor.coordinatorImpl
+consensus.ExecutionConsumer <|-- executor.coordinatorImpl
+statetransfer.Coordinator <|-- executor.coordinatorImpl
+events.Manager <|-- executor.coordinatorImpl
+
+consensus.StatePersistor <|-- pbft.innerStack
+pbft.innerStack <|-- pbft.pbftCore
+
+consensus.Inquirer <|-- consensus.Communicator
+consensus.Communicator <|-- pbft.broadcaster
+
+
+interface consensus.Stack  {
+	consensus.NetworkStack
+	SecurityUtils
+	Executor
+	LegacyExecutor
+	LedgerManager
+	ReadOnlyLedger
+	StatePersistor
+}
+
+interface consensus.LegacyExecutor {
+	BeginTxBatch(id interface{}) error
+	ExecTxs(id interface{}, txs []*pb.Transaction)
+	CommitTxBatch(id interface{}, metadata []byte)
+	RollbackTxBatch(id interface{}) error
+	PreviewCommitTxBatch(id interface{}, metadata []byte)
+}
+
+interface consensus.Executor {
+	Start()
+	Halt()
+	Execute(tag interface{}, txs []*pb.Transaction)
+	Commit(tag interface{}, metadata []byte)
+	Rollback(tag interface{})
+	UpdateState()
+}
+
+interface consensus.LedgerManager {
+	InvalidateState()
+	ValidateState()
+}
+
+interface consensus.StatePersistor {
+	StoreState(key string, value []byte) error
+	ReadState(key string) ([]byte, error)
+	ReadStateSet(prefix string) (map[string][]byte, error)
+	DelState(key string)
+}
+
+interface consensus.ExecutionConsumer {
+	Executed(tag interface{})
+	Committed(tag interface{}, target *pb.BlockchainInfo)
+	RolledBack(tag interface{})
+	StateUpdated(tag interface{}, target *pb.BlockchainInfo)
+}
+
+interface consensus.Consenter  {
+	RecvMsg(msg *pb.Message, senderHandle *pb.PeerID)
+	consensus.ExecutionConsumer
+}
+
+interface consensus.Inquirer {
+	GetNetworkInfo() (self *pb.PeerEndpoint, network []*pb.PeerEndpoint, err error)
+	GetNetworkHandles() (self *pb.PeerID, network []*pb.PeerID, err error)
+}
+
+interface consensus.Communicator {
+	Broadcast(msg *pb.Message, peerType pb.PeerEndpoint_Type) error
+	Unicast(msg *pb.Message, receiverHandle *pb.PeerID) error
+}
+
+interface consensus.ReadOnlyLedger  {
+	GetBlock(id uint64) (block *pb.Block, err error)
+	GetBlockchainSize() uint64
+	GetBlockchainInfo() *pb.BlockchainInfo
+	GetBlockchainInfoBlob() []byte
+	GetBlockHeadMetadata() ([]byte, error)
+}
+interface consensus.NetworkStack {
+	consensus.Communicator
+	consensus.Inquirer
+}
+interface consensus.Communicator  {
+	consensus.Communicator
+	consensus.Inquirer
+}
+
+
+
+interface executor.PartialStack  {
+	consensus.consensus.LegacyExecutor
+	GetBlockchainInfo() *pb.BlockchainInfo
+}
+
+class executor.coordinatorImpl  {
+	manager         events.Manager
+	rawExecutor     executor.PartialStack
+	consumer        consensus.ExecutionConsumer
+	stc             statetransfer.Coordinator
+}
+
+interface events.Manager  {
+	Inject(Event)
+	Queue()
+	SetReceiver(Receiver)
+	Start()
+	Halt()
+}
+
+interface statetransfer.Coordinator  {
+	Start()
+	Stop()
+	SyncToTarget()
+}
+
+
+interface pbft.innerStack  {
+	broadcast(msgPayload []byte)
+	unicast(msgPayload []byte, receiverID uint64) (err error)
+	execute(seqNo uint64, reqBatch *RequestBatch)
+	getState() []byte
+	getLastSeqNo()
+	skipTo(seqNo uint64, snapshotID []byte, peers []uint64)
+	sign(msg []byte) ([]byte, error)
+	verify(senderID uint64, signature []byte, message []byte)
+	invalidateState()
+	validateState()
+	consensus.StatePersistor
+}
+
+
+class pbft.pbftCore  {
+	consumer innerStack
+}
+
+class pbft.obcBatch  {
+	obcGeneric
+	externalEventReceiver
+    persistForward
+
+	pbft        *pbftCore
+	broadcaster *broadcaster
+}
+pbft.obcGeneric <|-- pbft.obcBatch
+pbft.externalEventReceiver <|-- pbft.obcBatch
+pbft.persistForward <|-- pbft.obcBatch
+pbft.obcBatch o--> pbft.pbftCore
+pbft.obcBatch *--> pbft.broadcaster
+
+
+class pbft.obcGeneric  {
+	stack consensus.Stack
+	pbft  *pbftCore
+}
+pbft.obcGeneric *--> consensus.Stack
+pbft.obcGeneric o--> pbft.pbftCore
+
+class pbft.externalEventReceiver  {
+	manager events.Manager
+}
+
+pbft.externalEventReceiver *--> events.Manager
+
+
+class pbft.broadcaster  {
+	comm consensus.Communicator
+
+}
+
+class pbft.persistForward  {
+	persistor StatePersistor
+}
+
+pbft.persistForward *--> consensus.StatePersistor
+
+
+class helper.EngineImpl {
+	consenter    consensus.Consenter
+	helper       *Helper
+	peerEndpoint *pb.PeerEndpoint
+	consensusFan *util.MessageFan
+}
+
+helper.EngineImpl *--> consensus.Consenter
+helper.EngineImpl *--> helper.Helper
+
+class helper.Helper  {
+	consenter    consensus.Consenter
+	coordinator  peer.MessageHandlerCoordinator
+	curBatch     []*pb.Transaction
+	curBatchErrs []*pb.TransactionResult
+	persist.Helper
+	executor consensus.Executor
+}
+
+helper.Helper *--> consensus.Executor
+helper.Helper *--> consensus.Consenter
+helper.Helper *--> peer.MessageHandlerCoordinator
+
+
+class helper.ConsensusHandler  {
+	peer.MessageHandler
+	consenterChan chan *util.Message
+	coordinator   peer.MessageHandlerCoordinator
+}
+peer.MessageHandler <|-- helper.ConsensusHandler
+helper.ConsensusHandler *--> peer.MessageHandlerCoordinator
+
+@enduml

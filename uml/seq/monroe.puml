@@ -1,0 +1,30 @@
+@startuml
+
+JavaColdWallet -> JavaColdWallet: load monero-wallet-cli.so
+JavaFakeMoneorDaemon -> JavaColdWallet: 发起一个转账 tx
+
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: get_txpool_backlog
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: get_info
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: getblockheadersrange
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: get_output_distribution
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: get_outs.bin
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: get_output_histogram
+JavaColdWallet -> JavaFakeMoneorDaemon: invoke_http_json_rpc: ...
+
+
+
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: get_txpool_backlog
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: get_info
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: getblockheadersrange
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: get_output_distribution
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: get_outs.bin
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: get_output_histogram
+JavaFakeMoneorDaemon -> OfficalMoneorDaemon: invoke_http_json_rpc: ...
+OfficalMoneorDaemon -> JavaFakeMoneorDaemon: rpc responses
+JavaFakeMoneorDaemon -> JavaColdWallet: rpc responses
+
+
+JavaFakeMoneorDaemon <- JavaColdWallet: signed tx hex
+
+
+@enduml

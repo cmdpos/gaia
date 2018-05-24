@@ -1,0 +1,23 @@
+@startuml
+
+javaColdWallet -> javaColdWallet: 不连接互联网，\n用私钥创建钱包
+FileWall -> FileWall:
+java_and_viewonly.so -> java_and_viewonly.so: 用viewkey创建钱包\n连接互联网\n去主链获取数据
+java_and_viewonly.so -> java_and_viewonly.so: 发起转账\n因为是viewolny钱包\n只能生成unsigned_monero_tx文件\n不能对其签名
+
+
+java_and_viewonly.so -> monerod: 请求数据，获取当前余额
+java_and_viewonly.so -> monerod: 请求数据，json_rpc, get_output_histogram
+java_and_viewonly.so -> monerod: 请求数据，json_rpc, /getblocks.bin
+java_and_viewonly.so <- monerod: 返回数据
+
+java_and_viewonly.so -> java_and_viewonly.so: 生成 unsigned_monero_tx 数据
+java_and_viewonly.so -> javaColdWallet: 发送 unsigned_monero_tx 数据
+javaColdWallet -> javaColdWallet: 对unsigned_monero_tx签名\n生成signed_monero_tx
+javaColdWallet -> java_and_viewonly.so: 发送signed_monero_tx
+java_and_viewonly.so -> monerod: 发送signed_monero_tx到主链
+
+monerod -> Internet: 广播signed_monero_tx
+
+
+@enduml

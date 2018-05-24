@@ -1,0 +1,11 @@
+@startuml
+
+Alice -> Alice: to tell Bob <i am alice, \nand waiting for you in room716>
+Alice -> Alice: produce signature <vcxzfdsarewq>\n by sig(\nhash(<i am alice, and waiting for you in room716>), \npriKey\n)
+
+Alice -> Bob: send: \n[<i am alice, and waiting for you in room716>\n<vcxzfdsarewq>]
+
+Bob --> Bob: decode_sig(\nhash(<i am alice, and waiting for you in room716>, \npubKey)\n) == <vcxzfdsarewq>
+
+
+@enduml

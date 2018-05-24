@@ -1,0 +1,48 @@
+@startuml
+
+class helper.EngineImpl  {
+	consenter    consensus.Consenter
+	helper       *Helper
+	peerEndpoint *pb.PeerEndpoint
+	consensusFan *util.MessageFan
+}
+
+
+@enduml
+
+
+
+"bool tools::wallet2::invoke_http_json" +
+	"<" +
+	"cryptonote::COMMAND_RPC_SAVE_BC::request, " +
+	"cryptonote::COMMAND_RPC_SAVE_BC::response, " +
+	"epee::net_utils::http::http_simple_client_template<epee::net_utils::blocked_mode_client> " +
+	">" +
+
+	"(" +
+	"boost::basic_string_ref<char, std::__1::char_traits<char> >, " +
+	"cryptonote::COMMAND_RPC_SAVE_BC::request const&, " +
+	"cryptonote::COMMAND_RPC_SAVE_BC::response&, " +
+	"epee::net_utils::http::http_simple_client_template<epee::net_utils::blocked_mode_client>&, " +
+	"std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> >, " +
+	"boost::basic_string_ref<char, std::__1::char_traits<char> >" +
+	")", referenced from:
+
+
+	  "bool tools::wallet2::invoke_http_bin
+	  <
+	  cryptonote::COMMAND_RPC_GET_OUTPUTS_BIN::request,
+	  cryptonote::COMMAND_RPC_GET_OUTPUTS_BIN::response
+	  >
+
+	  (
+	  boost::basic_string_ref<char, std::__1::char_traits<char> >,
+	  cryptonote::COMMAND_RPC_GET_OUTPUTS_BIN::request const&,
+	  cryptonote::COMMAND_RPC_GET_OUTPUTS_BIN::response&,
+	  std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> >,
+	  boost::basic_string_ref<char, std::__1::char_traits<char> >
+	  )",
+
+	  referenced from:
+          cryptonote::simple_wallet::print_ring_members(std::__1::vector<tools::wallet2::pending_tx,
+          std::__1::allocator<tools::wallet2::pending_tx> > const&, std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in simplewallet.cpp.o

@@ -1,0 +1,106 @@
+@startuml
+ledger.Ledger *--> state.State
+ledger.Ledger *--> ledger.blockchain
+
+state.State *--> state.HashableState
+state.State *--> state.StateDelta
+
+state.HashableState <|-- row.StateImpl
+state.HashableState <|-- trie.StateTrie
+state.HashableState <|-- buckettree.StateImpl
+
+ledger.blockchain *--> ledger.lastProcessedBlock
+ledger.blockchain *--> ledger.blockchainIndexer
+
+ledger.blockchainIndexer <|-- ledger.blockchainIndexerAsync
+ledger.blockchainIndexer <|-- ledger.blockchainIndexerSync
+
+ledger.lastProcessedBlock *--> protos.Block
+protos.Block *--> protos.Transaction
+
+class ledger.Ledger {
+	blockchain *ledger.blockchain
+	state      *state.State
+	currentID  interface{}
+}
+
+interface ledger.blockchainIndexer {
+}
+
+interface state.HashableState {
+	Initialize()
+	Get()
+	PrepareWorkingSet()
+	ComputeCryptoHash()
+	AddChangesForPersistence()
+}
+
+class state.State {
+	stateDelta            state.StateDelta
+	currentTxStateDelta   state.StateDelta
+}
+
+class ledger.blockchain {
+	size               uint64
+	previousBlockHash  []byte
+	indexer            blockchainIndexer
+	lastProcessedBlock *lastProcessedBlock
+}
+
+class ledger.lastProcessedBlock {
+	block       *protos.Block
+	blockNumber uint64
+	blockHash   []byte
+}
+
+class protos.Block {
+	Version           uint32
+	Timestamp         *google_protobuf.Timestamp
+	Transactions      []*Transaction
+	StateHash         []byte
+	PreviousBlockHash []byte
+	ConsensusMetadata []byte
+	NonHashData       *NonHashData
+}
+
+class protos.Transaction  {
+	Type Transaction_Type
+	ChaincodeID                    []byte
+	Payload                        []byte
+	Metadata                       []byte
+	Txid                           string
+	Timestamp                      *google_protobuf.Timestamp
+	ConfidentialityLevel           ConfidentialityLevel
+	ConfidentialityProtocolVersion string
+	Nonce                          []byte
+	ToValidators                   []byte
+	Cert                           []byte
+	Signature                      []byte
+}
+
+
+interface ledger.BlockChainAccessor  {
+	GetBlockByNumber(blockNumber uint64) (*pb.Block, error)
+	GetBlockchainSize() uint64
+	GetCurrentStateHash() (stateHash []byte, err error)
+}
+
+interface ledger.BlockChainModifier  {
+	ApplyStateDelta(id {}, delta *statemgmt.StateDelta) error
+	RollbackStateDelta(id {}) error
+	CommitStateDelta(id {}) error
+	EmptyState() error
+	PutBlock(blockNumber uint64, block *pb.Block) error
+}
+
+interface ledger.BlockChainUtil  {
+	HashBlock(block *pb.Block) ([]byte, error)
+	VerifyBlockchain(start, finish uint64) (uint64, error)
+}
+
+interface ledger.StateAccessor  {
+	GetStateSnapshot() (*state.StateSnapshot, error)
+	GetStateDelta(blockNumber uint64) (*statemgmt.StateDelta, error)
+}
+
+@enduml

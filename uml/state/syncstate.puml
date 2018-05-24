@@ -1,0 +1,14 @@
+@startuml
+
+[*] --> synchandshake
+synchandshake --> synclocating
+synclocating --> syncdelta
+synclocating --> syncsnapshot
+synclocating --> syncblock
+
+
+syncdelta --> [*]
+syncsnapshot --> [*]
+syncblock --> [*]
+
+@enduml

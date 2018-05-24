@@ -1,0 +1,131 @@
+@startuml
+
+
+interface peer.Peer  {
+	GetPeerEndpoint() (*pb.PeerEndpoint, error)
+	ExecuteTransaction(transaction *pb.Transaction) *pb.Response
+	SecurityAccessor
+	GetNeighbour() (Neighbour, error)
+	GetStreamStub(string) *pb.StreamStub
+}
+peer.SecurityAccessor <|-- peer.Peer
+
+
+interface peer.Neighbour  {
+	Broadcast(*pb.Message, pb.PeerEndpoint_Type) []error
+	Unicast(*pb.Message, *pb.PeerID) error
+	GetPeers() (*pb.PeersMessage, error)
+	GetRemoteLedger(receiver *pb.PeerID) (RemoteLedger, error)
+	GetDiscoverer() (Discoverer, error)
+}
+
+interface peer.BlocksRetriever  {
+	RequestBlocks(*pb.SyncBlockRange) (<-chan *pb.SyncBlocks, error)
+}
+
+interface peer.StateRetriever  {
+	RequestStateSnapshot() (<-chan *pb.SyncStateSnapshot, error)
+	RequestStateDeltas(syncBlockRange *pb.SyncBlockRange)
+}
+
+interface peer.RemoteLedger  {
+	BlocksRetriever
+	StateRetriever
+}
+
+interface peer.ChatStream  {
+	Send(*pb.Message) error
+	Recv() (*pb.Message, error)
+	Context() context.Context
+}
+
+interface peer.SecurityAccessor  {
+	GetSecHelper() crypto.Peer
+}
+
+interface peer.LegacyMessageHandler  {
+	HandleMessage(msg *pb.Message) error
+}
+
+interface peer.MessageHandler  {
+	RemoteLedger
+	LegacyMessageHandler
+	SendMessage(msg *pb.Message) error
+	To() (pb.PeerEndpoint, error)
+	Stop() error
+}
+peer.RemoteLedger <|-- peer.MessageHandler
+peer.LegacyMessageHandler <|-- peer.MessageHandler
+peer.handlerMap *--> peer.MessageHandler
+
+
+interface peer.ChatStream  {
+	Send(*pb.Message) error
+	Recv() (*pb.Message, error)
+}
+
+interface peer.SecurityAccessor  {
+	GetSecHelper() crypto.Peer
+}
+
+interface peer.TransactionProccesor  {
+	ProcessTransactionMsg(*pb.Message, *pb.Transaction) *pb.Response
+}
+
+interface peer.Engine  {
+	TransactionProccesor
+	HandlerFactory(MessageHandler) (LegacyMessageHandler, error)
+}
+peer.TransactionProccesor <|-- peer.Engine
+peer.Engine <|-- peer.EngineImpl
+
+class peer.EngineImpl {
+	consenter    consensus.Consenter
+	helper       *Helper
+	peerEndpoint *pb.PeerEndpoint
+	consensusFan *util.MessageFan
+}
+
+
+class peer.Impl {
+	handlerMap    *handlerMap
+	gossipStub    *pb.StreamStub
+	random        *rand.Rand
+	secHelper     crypto.Peer
+	engine        Engine
+	reconnectOnce sync.Once
+	discHelper    discovery.Discovery
+}
+peer.Impl o--> peer.handlerMap
+peer.Impl *--> peer.Engine
+peer.Peer <|-- peer.Impl
+peer.Neighbour <|-- peer.Impl
+
+
+class peer.Handler  {
+	ToPeerEndpoint                *pb.PeerEndpoint
+	Coordinator                   *Impl
+	ChatStream                    ChatStream
+	doneChan                      chan struct{}
+	FSM                           *fsm.FSM
+	syncBlocks                    chan *pb.SyncBlocks
+	snapshotRequestHandler        *syncStateSnapshotRequestHandler
+	syncStateDeltasRequestHandler *syncStateDeltasHandler
+	syncBlocksRequestHandler      *syncBlocksRequestHandler
+	ledger                        *ledger.Ledger
+}
+peer.Handler *--> peer.ChatStream
+peer.Handler o--> peer.Impl
+peer.Handler --|> peer.MessageHandler
+peer.Handler o--> peer.Ledger
+
+@enduml
+
+peer.Handler o--> ledger.Ledger
+
+peer.BlocksRetriever <|-- peer.RemoteLedger
+peer.StateRetriever <|-- peer.RemoteLedger
+
+peer.Handler o--> peer.syncStateSnapshotRequestHandler
+peer.Handler o--> peer.syncStateDeltasHandler
+peer.Handler o--> peer.syncBlocksRequestHandler

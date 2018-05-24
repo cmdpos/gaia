@@ -1,0 +1,26 @@
+@startuml
+
+sendview钱包 -> sendview钱包: 不连接互联网\n但是需要连接monerod\n可部署在内网机器A
+viewonly钱包 -> viewonly钱包: 不连接互联网\n但是需要连接monerod\n可部署在内网机器A\n和sendview钱包在同一机器
+sendview钱包 -> monerod: 连接monerod同步账本获取余额
+viewonly钱包 -> monerod: 连接monerod同步账本获取余额
+
+monerod -> Internet: 连接互联网,从主网同步账本\n可部署在能访问外网的机器B
+
+sendview钱包 -> sendview钱包: 本地生成钱包address1和账户数据
+sendview钱包 -> sendview钱包: 账户数据包括:\npublic viewkey\nsecret viewkey\npublic spendkey\nsecret spendkey\nmnemonic seed
+sendview钱包 -> sendview钱包: 钱包address1和public viewkey是完全公开
+
+
+viewonly钱包 -> viewonly钱包: 使用sendview钱包生成的钱包address1和public viewkey\n在本地创建viewonly钱包
+viewonly钱包 -> viewonly钱包: 使用transfer命令给address2转账，\n会在本地生成unsigned_monero_tx文件
+viewonly钱包 -> viewonly钱包: 因为是viewonly钱包转账不会发生，\n只会在本地生成unsigned_monero_tx文件
+viewonly钱包 -> viewonly钱包: viewonly钱包也不能给\nunsigned_monero_tx签名使其生效
+
+viewonly钱包 -> sendview钱包: copy unsigned_monero_tx 文件 to\n sendview钱包
+sendview钱包 -> sendview钱包: 用sign_transfer命令签名 unsigned_monero_tx\n生成signed_monero_tx文件
+sendview钱包 -> monerod: 使用submit_transfer命令将signed_monero_tx文件发送给monerod, 其再广播该tx到主网
+
+monerod -> Internet: 广播signed_monero_tx
+
+@enduml
