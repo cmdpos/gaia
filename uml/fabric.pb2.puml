@@ -1,95 +1,5 @@
 @startuml
 
-interface grpc.Stream  {
-	Context() context.Context
-	SendMsg(m interface{}) error
-	RecvMsg(m interface{}) error
-}
-interface grpc.ClientStream  {
-	Header() (metadata.MD, error)
-	Trailer() metadata.MD
-	CloseSend() error
-	Stream
-}
-interface grpc.ServerStream  {
-	SetHeader(metadata.MD) error
-	SendHeader(metadata.MD) error
-	SetTrailer(metadata.MD)
-	Stream
-}
-grpc.Stream <|-- grpc.ClientStream
-grpc.Stream <|-- grpc.ServerStream
-
-
-interface PeerServer  {
-	Chat(Peer_ChatServer) error
-	GossipIn(Peer_GossipInServer) error
-	ProcessTransaction(context.Context, *Transaction) (*Response, error)
-}
-PeerServer <|-- peer.Impl
-
-
-interface Peer_ChatServer  {
-	Send(*Message) error
-	Recv() (*Message, error)
-	grpc.ServerStream
-}
-
-class peerChatServer {
-	grpc.ServerStream
-}
-grpc.ServerStream <|-- Peer_ChatServer
-Peer_ChatServer <|-- peerChatServer
-
-
-
-interface Peer_GossipInServer  {
-	Send(*Gossip) error
-	Recv() (*Gossip, error)
-	grpc.ServerStream
-}
-class peerGossipInServer  {
-	grpc.ServerStream
-}
-grpc.ServerStream <|-- Peer_GossipInServer
-Peer_GossipInServer <|-- peerGossipInServer
-
-
-
-interface PeerClient  {
-	Chat(ctx context.Context) (Peer_ChatClient)
-	GossipIn(ctx context.Context) (Peer_GossipInClient)
-	ProcessTransaction(ctx context.Context, in *Transaction) (*Response)
-}
-class peerClient  {
-	cc *grpc.ClientConn
-}
-PeerClient <|-- peerClient
-
-
-
-interface Peer_ChatClient  {
-	Send(*Message) error
-	Recv() (*Message, error)
-	grpc.ClientStream
-}
-class peerChatClient  {
-	grpc.ClientStream
-}
-Peer_ChatClient <|-- peerChatClient
-grpc.ClientStream <|-- Peer_ChatClient
-
-
-interface Peer_GossipInClient  {
-	Send(*Gossip) error
-	Recv() (*Gossip, error)
-	grpc.ClientStream
-}
-class peerGossipInClient  {
-	grpc.ClientStream
-}
-Peer_GossipInClient <|-- peerGossipInClient
-grpc.ClientStream <|-- Peer_GossipInClient
 
 
 class StreamStub {
@@ -101,9 +11,25 @@ class StreamStub {
 class StreamHandler {
 }
 
-StreamStub *-> StreamHandler_1
-StreamStub *-> StreamHandler_2
-StreamStub *-> StreamHandler_N
+StreamStub *-> StreamHandler
+StreamStub *-> StreamHandler
+StreamStub *-> StreamHandler
+
+
+class stateSyncHandler  {
+	peerId  *pb.PeerID
+	handler *fsm.FSM
+	server  *stateServer
+	client  *syncer
+	stream  *pb.StreamHandler
+	sync.Once
+}
+
+stateSyncHandler o-> stateServer
+stateSyncHandler o-> syncer
+
+syncer o-> StreamHandler
+stateServer o-> StreamHandler
 
 @enduml
 
