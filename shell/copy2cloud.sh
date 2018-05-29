@@ -1,0 +1,1 @@
+/Users/zhongqiu/code/cdc/sbin/copy2cloud.sh
