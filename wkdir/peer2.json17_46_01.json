@@ -1,0 +1,57 @@
+17:46:01.139 [nodeCmd] StartNode -> INFO [61881] Security enabled status: false
+17:46:01.139 [nodeCmd] StartNode -> INFO [61881] Privacy enabled status: false
+17:46:01.139 [eventhub_producer] start -> INFO [61881] event processor started
+17:46:01.139 [db] DefaultOption -> INFO [61881] Create new default option
+17:46:01.139 [db] DefaultOption -> INFO [61881] Setting rocksdb maxLogFileSize to 10485760
+17:46:01.139 [db] DefaultOption -> INFO [61881] Setting rocksdb keepLogFileNum to 10
+17:46:01.140 [db] getDBPath -> INFO [61881] dbpath /var/hyperledger/production2/ not exist, we have created it
+17:46:01.140 [db] DefaultOption -> INFO [61881] Create new default option
+17:46:01.140 [db] DefaultOption -> INFO [61881] Setting rocksdb maxLogFileSize to 10485760
+17:46:01.140 [db] DefaultOption -> INFO [61881] Setting rocksdb keepLogFileNum to 10
+17:46:01.140 [db] opendb -> INFO [61881] Try opendb on </var/hyperledger/production2/txdb> with 4 cfs
+17:46:01.171 [db] opendb -> INFO [61881] gorocksdb.OpenDbColumnFamilies </var/hyperledger/production2/txdb>, len cfHandlers<5>
+17:46:01.174 [db] Start -> INFO [61881] New DB is open
+17:46:01.174 [db] opendb -> INFO [61881] Try opendb on </var/hyperledger/production2/db> with 5 cfs
+17:46:01.226 [db] opendb -> INFO [61881] gorocksdb.OpenDbColumnFamilies </var/hyperledger/production2/db>, len cfHandlers<6>
+17:46:01.226 [ledger] UpgradeLedger -> INFO [61881] Current DB Version is 1
+17:46:01.226 [state] loadConfig -> INFO [61881] Loading configurations...
+17:46:01.227 [state] loadConfig -> INFO [61881] Configurations loaded. stateImplName=[buckettree], stateImplConfigs=map[numBuckets:1000003 maxGroupingAtEachLevel:5 bucketCacheSize:100], deltaHistorySize=[500]
+17:46:01.227 [state] NewState -> INFO [61881] Initializing state implementation [buckettree]
+17:46:01.227 [buckettree] initConfig -> INFO [61881] configs passed during initialization = map[string]interface {}{"numBuckets":1000003, "maxGroupingAtEachLevel":5, "bucketCacheSize":100}
+17:46:01.227 [buckettree] initConfig -> INFO [61881] Initializing bucket tree state implemetation with configurations &{maxGroupingAtEachLevel:5 lowestLevel:9 levelToNumBucketsMap:map[3:65 0:1 6:8001 2:13 8:200001 7:40001 9:1000003 5:1601 4:321 1:3] hashFunc:0x451ff00}
+17:46:01.227 [buckettree] newBucketCache -> INFO [61881] Constructing bucket-cache with max bucket cache size = [100] MBs
+17:46:01.227 [buckettree] loadAllBucketNodesFromDB -> INFO [61881] Loaded buckets data in cache. Total buckets in DB = [0]. Total cache size:=0
+17:46:01.227 [genesis] func1 -> INFO [61881] Creating genesis block.
+17:46:01.228 [ledger] AddGlobalState -> WARN [61881] Try to add existed globalstate: 
+17:46:01.228 [ledger] AddGlobalState -> INFO [61881] Add globalstate [%x] on parent [%x] [] []
+17:46:01.229 [consensus/controller] NewConsenter -> INFO [61881] Creating consensus plugin pbft
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT type = *pbft.obcBatch
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT Max number of validating peers (N) = 4
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT Max number of failing peers (f) = 1
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT byzantine flag = false
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT request timeout = 2s
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT view change timeout = 2s
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT Checkpoint period (K) = 10
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT broadcast timeout = 1s
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT Log multiplier = 4
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT log size (L) = 40
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT null requests disabled
+17:46:01.230 [consensus/pbft] newPbftCore -> INFO [61881] PBFT automatic view change disabled
+17:46:01.230 [consensus/pbft] restoreLastSeqNo -> INFO [61881] Replica 2 restored lastExec: 0
+17:46:01.230 [consensus/pbft] restoreState -> INFO [61881] Replica 2 restored state: view: 0, seqNo: 0, pset: 0, qset: 0, reqBatches: 0, chkpts: 1 h: 0
+17:46:01.231 [consensus/pbft] newObcBatch -> INFO [61881] PBFT Batch size = 500
+17:46:01.231 [consensus/pbft] newObcBatch -> INFO [61881] PBFT Batch timeout = 1s
+17:46:01.231 [consensus/statetransfer] blockThread -> INFO [61881] Validated blockchain to the genesis block
+17:46:01.232 [nodeCmd] StartNode -> INFO [61881] Discovery hidden mode: false
+17:46:01.232 [consensus/statetransfer] SyncToTarget -> INFO [61881] Syncing to target 7250d6eb424a2ae67b384738f4c918ac6bacb340e0ab775c1076ebbefb8eeccc for block number 0 with peers []
+17:46:01.232 [consensus/statetransfer] blockThread -> INFO [61881] Validated blockchain to the genesis block
+17:46:01.232 [consensus/pbft] ProcessEvent -> INFO [61881] Replica 2 application caught up via state transfer, lastExec now 0
+17:46:01.232 [nodeCmd] StartNode -> INFO [61881] Starting peer with ID=name:"vp2" , network ID=dev, address=127.0.0.1:2255, rootnodes=127.0.0.1:2055, validator=true
+17:46:01.233 [chaincode] NewChaincodeSupport -> INFO [61881] Chaincode support using peerAddress: 127.0.0.1:2255
+17:46:01.233 [nodeCmd] StartNode -> INFO [61881] Starting local service
+17:46:01.233 [service] StartService -> INFO [61881] Starting service with address=127.0.0.1:2256
+17:46:01.233 [service] StartService -> INFO [61881] Starting service with address=127.0.0.1:2255
+17:46:01.233 [nodeCmd] StartNode -> INFO [61881] Starting devops service
+17:46:01.234 [service] StartService -> INFO [61881] Starting service with address=127.0.0.1:2251
+17:46:04.232 [peer] chatWithPeer -> ERRO [61881] Error creating connection to peer address 127.0.0.1:2055: context deadline exceeded
+ting connection to peer address 127.0.0.1:2055: context deadline exceeded
