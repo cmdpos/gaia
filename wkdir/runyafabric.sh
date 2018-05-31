@@ -70,6 +70,10 @@ function clearLog {
     echo 'a' > peer3.json
 }
 
+function clearBin {
+    rm -rf $FABRIC_TOP/build/bin/*
+}
+
 function runpeers {
     NUM_VP=$1
     NUM_LVP=$2
@@ -86,15 +90,18 @@ function runpeers {
 
     if [ "$ACTION_CLEAR" = "clearall" ];then
         clearLog
+        clearBin
         rm -rf /var/hyperledger/production*
     fi
 
 
     if [ "$ACTION_CLEAR" = "clearlog" ];then
+        clearBin
         clearLog
     fi
 
     if [ "$ACTION_CLEAR" = "cleardb" ];then
+        clearBin
         rm -rf /var/hyperledger/production*
     fi
 
@@ -140,6 +147,8 @@ function build_embedded {
 
 
 function build_peer_process {
+
+    clearBin
 
     if [ ! -d ${BUILD_BIN} ]; then
         mkdir -p ${BUILD_BIN}
@@ -222,7 +231,7 @@ function startpeer {
     export CORE_PEER_VALIDATOR_CONSENSUS_PLUGIN=$CONSENSUS
 
     export CORE_LOGGING_OUTPUT_FILE=peer${PEER_ID}.json
-    export CORE_LOGGING_OUTPUTFILE=peer${PEER_ID}.json
+    #export CORE_LOGGING_OUTPUTFILE=peer${PEER_ID}.json
     #export CORE_LOGGING_OUTPUT_DIRECTORY=${GOPATH}/src/$FABRIC_PATH/wkdir
     export CORE_PEER_LOGPATH=${GOPATH}/src/$FABRIC_PATH/wkdir
 
@@ -249,6 +258,9 @@ function startpeer {
 
     export CORE_PEER_FILESYSTEMPATH=/var/hyperledger/production${PEER_ID}
 
+    export LOG_STDOUT_FILE=$CORE_PEER_LOGPATH/_stdout_$CORE_LOGGING_OUTPUT_FILE
+
+
     if [ ! -f ${BUILD_BIN}/peer_fabric_${PEER_ID} ]; then
         cd ${BUILD_BIN}
         ln -s peerex peer_fabric_${PEER_ID}
@@ -259,10 +271,23 @@ function startpeer {
         mkdir ${FABRIC_TOP}/stderrdir
     fi
 
+    if [ "$ACTION_CLEAR" = "clearall" ];then
+        echo '' > ${LOG_STDOUT_FILE}
+    fi
+
+
+    if [ "$ACTION_CLEAR" = "clearlog" ];then
+        echo '' > ${LOG_STDOUT_FILE}
+    fi
+
+    if [ "$ACTION_CLEAR" = "cleardb" ];then
+        echo '' > ${LOG_STDOUT_FILE}
+    fi
+
     #nohup ${BUILD_BIN}/peer_fabric_${PEER_ID} node start > /dev/null 2>${FABRIC_TOP}/stderrdir/err_nohup_peer${PEER_ID}.json &
     #nohup ${BUILD_BIN}/peer_fabric_${PEER_ID} node start > ${FABRIC_TOP}/nohup_peer${PEER_ID}.log 2>&1 &
 
-    nohup ${BUILD_BIN}/peer_fabric_${PEER_ID} node start > /dev/null 2>err_nohup_peer${PEER_ID}.json &
+    nohup ${BUILD_BIN}/peer_fabric_${PEER_ID} node start >> ${LOG_STDOUT_FILE} 2>>${LOG_STDOUT_FILE} &
 #    ${BUILD_BIN}/peer_fabric_${PEER_ID} node start
 }
 
