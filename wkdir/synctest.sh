@@ -1,52 +1,11 @@
 #!/bin/bash
 
-function invoke {
-    sleep 2
-    let limit=$1
-    let index=0
-    while [  $index -lt $limit ]; do
-        ./invoke.sh i
-        let index=index+1
-    done
-}
+rm -rf /var/hyperledger/production*
+
+cp -rf ~/__var_hy2/production* /var/hyperledger/
 
 
-./runyafabric.sh -f 1 -c p -r clearall
+./runyafabric.sh -f 1 -c p -r clearlog
 sleep 3
 
-./invoke.sh di
-invoke 1
-invoke 1
-invoke 1
-invoke 1
-invoke 1
-
-sleep 6
-./runyafabric.sh -k 3
-
-invoke 5
-invoke 5
-invoke 5
-invoke 5
-invoke 5
-
-invoke 5
-invoke 5
-invoke 5
-
-
-exit
-sleep 5
-./runyafabric.sh -f 1 -c p -i 3
-invoke 1
-
-
-
-exit
-
-invoke 5
-invoke 5
-invoke 5
-invoke 5
-invoke 5
-invoke 5
+./invoke.sh d

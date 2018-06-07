@@ -1,20 +1,11 @@
 #!/bin/bash
 
-EXECUTION=wkdir
 
-BUILD_BIN=${FABRIC_TOP}/build/bin
+export FABRIC_PATH=github.com/abchain/fabric
+export FABRIC_TOP=${GOPATH}/src/${FABRIC_PATH}
 
-#EXECUTION=${BUILD_BIN}/dbupgrade
-
-./killbyname.sh peer_fabric
-
-
-rm ./${EXECUTION}
-
-go build
-
-#GOBIN=${GOPATH}/src/github.com/abchain/fabric/build/bin go install github.com/abchain/fabric/tools/dbupgrade
-
-./${EXECUTION} -dbpath /var/hyperledger/production$1
-
-#ls -l /var/hyperledger/production$1/checkpoint/db
+cd $FABRIC_TOP/tools/dbutility/dbscan
+./scandb.sh 0 > $FABRIC_TOP/wkdir/dbvp0.json
+./scandb.sh 1 > $FABRIC_TOP/wkdir/dbvp1.json
+./scandb.sh 2 > $FABRIC_TOP/wkdir/dbvp2.json
+./scandb.sh 3 > $FABRIC_TOP/wkdir/dbvp3.json

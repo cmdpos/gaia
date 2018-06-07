@@ -275,7 +275,6 @@ function startpeer {
         echo '' > ${LOG_STDOUT_FILE}
     fi
 
-
     if [ "$ACTION_CLEAR" = "clearlog" ];then
         echo '' > ${LOG_STDOUT_FILE}
     fi
