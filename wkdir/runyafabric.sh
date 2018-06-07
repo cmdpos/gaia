@@ -260,6 +260,10 @@ function startpeer {
 
     export LOG_STDOUT_FILE=$CORE_PEER_LOGPATH/_stdout_$CORE_LOGGING_OUTPUT_FILE
 
+    export CORE_PEER_FILESYSTEMPATH=/var/hyperledger/production${PEER_ID}
+
+    export CORE_LOGGING_NODE=warning:statesync=debug:ledger=debug:statetransfer=debug:consensus/executor=debug
+
 
     if [ ! -f ${BUILD_BIN}/peer_fabric_${PEER_ID} ]; then
         cd ${BUILD_BIN}
