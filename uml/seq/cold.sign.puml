@@ -1,0 +1,22 @@
+@startuml
+
+ColdWallet -> ColdWallet: 不连接互联网\n本地存储私钥\n使用私钥创建地址和公钥
+
+FireWall -> FireWall: 仅开放有限的端口\n让Hotwallet访问ColdWallet
+HotWallet -> ColdWallet: 获取公钥和地址
+ColdWallet -> HotWallet: 返回公钥和地址
+
+HotWallet -> MainChain: 请求区块数据，获取该地址的UTXO
+HotWallet <- MainChain: 返回区块数据
+
+HotWallet -> HotWallet: 计算余额，创建unsigned transaction hex
+HotWallet -> ColdWallet: 发送unsigned transaction hex
+ColdWallet -> ColdWallet: 用私钥对unsigned transaction hex签名
+HotWallet <- ColdWallet: 返回signed transaction hex
+
+
+HotWallet -> MainChain: 广播signed transaction hex
+
+
+
+@enduml

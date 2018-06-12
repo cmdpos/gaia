@@ -1,0 +1,32 @@
+{
+	  "cdc_top": "/home/cdc",
+	  "cdc_top2": "/Users/zhongqiu/code/cdc",
+	
+	  "workdir": "crawler/cdcspider/cdcspider",
+	  "tasks": [
+	      {
+	        "enable": "True",
+	        "brokers":["cdc3:8090", "cdc4:8090", "cdc5:8090", "cdc6:8090"],
+	        "mode": "spider",
+	        "topic":"cdc_spider_task_topic",
+	        "group_id": "cdc_spider_task_group",
+	        "concurrent_task": 30,
+	        "child_task_commands": [
+	          {"task_type": "spider",   "child_cmd": "crawler/cdcspider/cdcspider/run.py"},
+	          {"task_type": "ana",   "child_cmd": "ana/cdcspider/cdcspider/run.py"}
+	        ]
+	      },
+	      {
+	        "enable": "True",
+	        "brokers":["cdc3:8090", "cdc4:8090", "cdc5:8090", "cdc6:8090"],
+	        "concurrent_task": 20,
+	        "mode": "spider",
+	        "topic":"cdc_spider_urgent_task_topic",
+	        "group_id": "cdc_spider_urgent_task_group",
+	        "child_task_commands": [
+	          {"task_type": "spider",   "child_cmd": "crawler/cdcspider/cdcspider/run.py"},
+	          {"task_type": "ana",   "child_cmd": "ana/cdcspider/cdcspider/run.py"}
+	        ]
+	      }
+	    ]
+}
