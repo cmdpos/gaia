@@ -1,5 +1,5 @@
 # 曲六方案
-[https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg)
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg)
 
 ## 玄关
 1. 瓷砖地面
