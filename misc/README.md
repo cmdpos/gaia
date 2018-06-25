@@ -65,3 +65,7 @@
 1. 瓷砖墙面
 1. PVC吊顶
 
+
+## 原户型图
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg)
+
