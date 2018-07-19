@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/misc/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="108">
+                <caret line="6" selection-start-line="6" selection-end-line="6" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -28,8 +29,8 @@
         <entry file="file://$PROJECT_DIR$/misc/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="403">
-                <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <first_editor relative-caret-position="576">
+                <caret line="32" selection-start-line="32" selection-end-line="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ci.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ci.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ci.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="90">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -86,17 +87,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fabric.profile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wkdir/fabric.profile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="44" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="176.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/misc/176.jpeg">
+      <file leaf-file-name="176.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/176.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -117,6 +109,7 @@
         <option value="$PROJECT_DIR$/uml/pos.miner.puml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/misc/README.md" />
+        <option value="$PROJECT_DIR$/misc/memo/README.md" />
       </list>
     </option>
   </component>
@@ -130,7 +123,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1875" />
+    <option name="x" value="-1876" />
     <option name="y" value="23" />
     <option name="width" value="1876" />
     <option name="height" value="1057" />
@@ -140,8 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,6 +150,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,15 +165,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/misc" />
-      <recent name="$PROJECT_DIR$/shell" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/misc/memo" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/misc" />
       <recent name="$PROJECT_DIR$/uml/shell" />
       <recent name="$PROJECT_DIR$/uml" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/misc" />
+      <recent name="$PROJECT_DIR$/shell" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -259,7 +253,8 @@
       <workItem from="1530526636222" duration="512000" />
       <workItem from="1531563930174" duration="706000" />
       <workItem from="1531576138424" duration="3000" />
-      <workItem from="1531703983964" duration="2883000" />
+      <workItem from="1531703983964" duration="3378000" />
+      <workItem from="1531982182989" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1527471294672</created>
@@ -279,11 +274,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5382000" />
+    <option name="totallyTimeSpent" value="6965000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1875" y="23" width="1876" height="1057" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1876" y="23" width="1876" height="1057" extended-state="1" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.50373137" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -326,9 +320,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/misc/176.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wkdir/buildpeer.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -584,9 +575,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/misc/README2.md" />
-    <entry file="file://$PROJECT_DIR$/misc/176.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/misc/176.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -618,26 +606,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shell/connNoneEstablished.sh">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/misc/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="403">
-            <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,8 +618,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ci.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="576">
+            <caret line="32" selection-start-line="32" selection-end-line="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/176.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/memo/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="792">
+            <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
