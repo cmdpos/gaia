@@ -135,4 +135,6 @@
 
 ## 原户型图
 ![https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg)
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpeg)
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpeg)
 
