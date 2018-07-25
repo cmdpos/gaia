@@ -2,7 +2,7 @@
 ## 大众瓷砖
 |  施工区域 |  墙面   | 地面  |备注                 |         
 | ----     | ----   |---    |------             |
-| 厨房      | 30*60  |60*60  | 地面以及橱柜后面直接用60*60整砖  |     
+| 厨房      | 30*60  |60*60  | 地面以及橱柜后面都用60*60整砖  |     
 | 次卫生间   | 30*60  |30*60  |                   |      
 ![https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg)
 
