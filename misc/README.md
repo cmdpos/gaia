@@ -1,3 +1,22 @@
+
+## 大众瓷砖
+|  施工区域 |  墙面   | 地面  |备注                 |         
+| ----     | ----   |---    |------             |
+| 厨房      | 30*60  |60*60  | 地面以及橱柜后面直接用60*60整砖  |     
+| 次卫生间   | 30*60  |30*60  |                   |      
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg)
+
+## 三德瓷砖
+|  施工区域 |  墙面   | 地面  |备注    |         
+| ----     | ----   |---    |------ |
+| 主卫生间   | 30*60  |30*60  |      | 
+| 北阳台    | 30*60   |30*60  |      |     
+| 南阳台    | 30*60   |60*60  | 地面用60*60整砖    |   
+![https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpg)
+
+
+
+
 # 曲六方案
 ![https://github.com/zhongqiuwood/cloud/blob/master/misc/176.png](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.png)
 
@@ -135,10 +154,3 @@
 
 ## 原户型图
 ![https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg](https://github.com/zhongqiuwood/cloud/blob/master/misc/176.jpeg)
-
-## 大众瓷砖
-![https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/dazhong.jpg)
-
-## 三德瓷砖
-![https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpg](https://github.com/zhongqiuwood/cloud/blob/master/misc/sande.jpg)
-
