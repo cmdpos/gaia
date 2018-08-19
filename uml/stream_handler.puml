@@ -13,13 +13,30 @@ protos.StreamStub *--> protos.shandlerMap
 protos.shandlerMap *--> protos.StreamHandler
 protos.StreamHandlerImpl <|-- protos.StreamHandler
 
-protos.StreamHandlerFactory <|-- protos.GossipHandlerImpl
-protos.GossipHandlerImpl <|-- protos.StreamStub
-
 Handler *--> ChatStream
 Handler o--> Impl
 Handler --|> MessageHandler
 Handler o--> ledger.Ledger
+
+
+protos.StreamHandlerImpl <|.. statesync.stateSyncHandler
+statesync.stateSyncHandler *--> statesync.syncer
+statesync.stateSyncHandler *--> statesync.stateServer
+protos.StreamHandler *--> statesync.stateSyncHandler:contains
+
+interface protos.StreamHandlerImpl  {
+	Tag() string
+	EnableLoss() bool
+	NewMessage() proto.Message
+	HandleMessage(proto.Message) error
+	BeforeSendMessage(proto.Message) error
+	OnWriteError(error)
+	Stop()
+}
+
+
+protos.StreamHandlerImpl <|.. gossip.stub.GossipHandlerImpl
+protos.StreamHandler *--> gossip.stub.GossipHandlerImpl
 
 
 @enduml
