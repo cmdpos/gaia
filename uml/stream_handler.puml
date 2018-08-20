@@ -22,7 +22,7 @@ Handler o--> ledger.Ledger
 protos.StreamHandlerImpl <|.. statesync.stateSyncHandler
 statesync.stateSyncHandler *--> statesync.syncer
 statesync.stateSyncHandler *--> statesync.stateServer
-protos.StreamHandler *--> statesync.stateSyncHandler:contains
+protos.StreamHandler <--* statesync.stateSyncHandler:contains
 
 interface protos.StreamHandlerImpl  {
 	Tag() string
@@ -36,7 +36,7 @@ interface protos.StreamHandlerImpl  {
 
 
 protos.StreamHandlerImpl <|.. gossip.stub.GossipHandlerImpl
-protos.StreamHandler *--> gossip.stub.GossipHandlerImpl
+protos.StreamHandler <--* gossip.stub.GossipHandlerImpl:?
 
 
 @enduml
