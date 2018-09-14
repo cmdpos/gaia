@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/misc/memo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/misc/memo/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,8 +80,8 @@
         <entry file="file://$PROJECT_DIR$/misc/memo/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="36">
-                <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <first_editor relative-caret-position="108">
+                <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -135,7 +134,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-1874" />
+    <option name="x" value="-1879" />
     <option name="y" value="23" />
     <option name="width" value="1874" />
     <option name="height" value="1057" />
@@ -282,7 +281,7 @@
       <workItem from="1535623298859" duration="350000" />
       <workItem from="1535770234447" duration="3849000" />
       <workItem from="1535895419308" duration="552000" />
-      <workItem from="1536716408838" duration="6940000" />
+      <workItem from="1536716408838" duration="8492000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1527471294672</created>
@@ -302,10 +301,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27086000" />
+    <option name="totallyTimeSpent" value="28638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1874" y="23" width="1874" height="1057" extended-state="0" />
+    <frame x="-1874" y="23" width="1874" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.48612595" />
@@ -322,7 +321,7 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21363173" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13180363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13180363" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -635,9 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/06statesync.puml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/uml/08peer.nopackage.puml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -651,11 +647,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/uml/06statesync.puml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/misc/memo/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <first_editor relative-caret-position="108">
+            <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
