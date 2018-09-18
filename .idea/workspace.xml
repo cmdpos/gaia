@@ -81,8 +81,8 @@
         <entry file="file://$PROJECT_DIR$/misc/memo/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="326">
-                <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+              <first_editor relative-caret-position="180">
+                <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -134,7 +134,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="12" />
     <option name="y" value="23" />
     <option name="width" value="1874" />
@@ -186,6 +186,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -288,7 +289,7 @@
       <workItem from="1535770234447" duration="3849000" />
       <workItem from="1535895419308" duration="552000" />
       <workItem from="1536716408838" duration="8492000" />
-      <workItem from="1536897813161" duration="3010000" />
+      <workItem from="1536897813161" duration="4685000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1527471294672</created>
@@ -308,7 +309,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31648000" />
+    <option name="totallyTimeSpent" value="33323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="23" width="1874" height="1057" extended-state="0" />
@@ -660,8 +661,8 @@
     <entry file="file://$PROJECT_DIR$/misc/memo/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="326">
-            <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <first_editor relative-caret-position="180">
+            <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
