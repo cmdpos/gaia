@@ -1,6 +1,37 @@
 # 曲六方案
 
 
+personal.unlockAccount(eth.accounts[0])
+
+personal.unlockAccount("0x00046a514e13b0c398f0fa4e98b5936c058c33bb", "1")
+eth.sendTransaction({from:"0x00046a514e13b0c398f0fa4e98b5936c058c33bb", to: "0xd4764a0d9edca1b79bd2010260450b40fcd56933", gas:31000, "value": "0.1"})
+
+eth.sendTransaction({from:"0x00046a514e13b0c398f0fa4e98b5936c058c33bb", to: "0xd4764a0d9edca1b79bd2010260450b40fcd56933", gas:31000, "value": "0.1"})
+
+
+eth.sendTransaction({from: "0x00046a514e13b0c398f0fa4e98b5936c058c33bb",to: "0xd4764a0d9edca1b79bd2010260450b40fcd56933", gas:31000, value: web3.toWei(3,"ether")})
+
+["", ""]
+
+--------------------- 
+作者：不折腾就闹心 
+来源：CSDN 
+原文：https://blog.csdn.net/ddffr/article/details/74327876?utm_source=copy 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+## 老房子
+|  区域     |       | 
+| ---------| ----- |
+| 铰链      | 16个  |    
+| 灯       | 7个（客厅130）  |    
+| 把手      | 11  |    
+| 挂杆      | 宜家毛巾架，铝浴巾架  |    
+| 开关插座   |    |    
+|           |    |    
+
+
+
 ## todo
 1. 卫生间浴柜
 1. 镜前灯
