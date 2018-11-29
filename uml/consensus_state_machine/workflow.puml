@@ -1,0 +1,27 @@
+@startuml
+
+Node1 -> Node1: ProcessStartPoW
+Node2 -> Node2: ProcessStartPoW
+Node3 -> Node3: ProcessStartPoW
+Node4 -> Node4: ProcessStartPoW
+
+DS -> DS: setPrimary, wait4pow
+DSBackup -> DSBackup: setPrimary, wait4pow
+
+
+Node1 -> DS: PoWResult, \nWAITING_DSBLOCK
+Node2 -> DS: PoWResult, \nWAITING_DSBLOCK
+Node3 -> DS: PoWResult, \nWAITING_DSBLOCK
+Node4 -> DS: PoWResult, \nWAITING_DSBLOCK
+
+DS -> DS: RunConsensusOnDSBlockAsPrimary
+DS -> DS: SetState(DSBLOCK_CONSENSUS_PREP);
+
+DSBackup -> DSBackup: RunConsensusOnDSBlockAsBackup
+DSBackup -> DSBackup: SetState(DSBLOCK_CONSENSUS_PREP);
+
+DS -> ConsensusLeader: StartConsensus
+ConsensusLeader -> DSBackup: ANNOUNCE
+
+
+@enduml

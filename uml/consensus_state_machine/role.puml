@@ -1,0 +1,20 @@
+@startuml
+
+interface irole
+
+irole <|-- rolebase
+rolebase <|-- role_ds_base
+rolebase <|-- role_sharding_base
+rolebase <|-- role_idle
+rolebase <|-- role_lookup
+
+role_ds_base <|-- role_ds_lead
+role_ds_base <|-- role_ds_backup
+
+role_sharding_base <|-- role_sharding_lead
+role_sharding_base <|-- role_sharding_backup
+
+
+
+
+@enduml

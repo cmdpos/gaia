@@ -1,0 +1,16 @@
+@startuml
+
+Lead -> Backup: 1. Announce
+Backup -> Lead: 2. Commit
+Lead -> Backup: 3. Challenge
+Backup -> Lead: 4. Response
+Lead -> Backup: 5. CollectiveSig
+Backup -> Lead: 6. FinalCommit
+Lead -> Backup: 7. FinalChallenge
+Backup -> Lead: 8. FinalResponse
+Lead -> Backup: 9. FinalCollectiveSig
+
+
+
+
+@enduml

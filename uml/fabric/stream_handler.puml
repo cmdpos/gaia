@@ -11,7 +11,6 @@ Neighbour <|-- Impl
 
 protos.StreamStub *--> protos.shandlerMap
 protos.shandlerMap *--> protos.StreamHandler
-protos.StreamHandlerImpl <|-- protos.StreamHandler
 
 Handler *--> ChatStream
 Handler o--> Impl
@@ -22,7 +21,7 @@ Handler o--> ledger.Ledger
 protos.StreamHandlerImpl <|.. statesync.stateSyncHandler
 statesync.stateSyncHandler *--> statesync.syncer
 statesync.stateSyncHandler *--> statesync.stateServer
-protos.StreamHandler <--* statesync.stateSyncHandler:contains
+protos.StreamHandler o--> protos.StreamHandlerImpl
 
 interface protos.StreamHandlerImpl  {
 	Tag() string
@@ -34,9 +33,21 @@ interface protos.StreamHandlerImpl  {
 	Stop()
 }
 
+class protos.StreamHandler  {
+	SendMessage(m proto.Message) error
+	GetName() string
+}
 
-protos.StreamHandlerImpl <|.. gossip.stub.GossipHandlerImpl
-protos.StreamHandler <--* gossip.stub.GossipHandlerImpl:?
+class statesync.stateSyncHandler  {
+	Tag() string
+	EnableLoss() bool
+	NewMessage() proto.Message
+	HandleMessage(proto.Message) error
+	BeforeSendMessage(proto.Message) error
+	OnWriteError(error)
+	Stop()
+}
+
 
 
 @enduml

@@ -1,0 +1,52 @@
+@startuml
+
+
+participant cli
+
+participant 钱包
+participant 分片
+participant DS
+
+
+分片 ---> 分片:   A: 启动，生成创世块
+DS ---> DS:     B: 启动，生成创世块，设置DS lead
+分片 ---> DS:    C: 握手，获取DS lead
+
+
+cli ---> DS:     D-0: 通知set primary
+DS ---> DS:      D-1: wait for pow result
+============DS wait for pow result==
+
+cli ---> 分片:    D-2: 通知start pow
+分片 ---> 分片:   D: POW选举
+分片 ---> DS:    E: 发送POW选举结果
+============Sharding blocked waiting for DS blocks==
+
+DS ---> DS:     F-1: 片内共识: 根据POW选举结果选new lead,\n生成dsblock
+DS ---> DS:     F-2: 持久化DS 块
+DS ---> DS:     F-3: DS lead 成为 backup
+DS ---> DS:     F-4: 某个DS backup 成为 shard lead or backup
+DS ---> 分片:8:  G: 仅lead生产DS块，并广播
+
+DS ---> DS:     G-1: wait for n micro blocks\nn是分片个数
+============DS blocked waiting for n micro blocks==
+
+分片 ---> 分片:9: H-1: pow winner 成为 ds lead
+分片 ---> 分片:9: H-2: DS 块 持久化
+
+
+钱包 ---> 分片: 1: 发送交易
+分片 ---> 分片: 2: 分片内广播交易
+分片 ---> 分片: 3: 片内共识: 生成微块
+分片 ---> DS:  4: 发送微块
+
+
+DS ---> DS:   5: merge微块，生成final块
+DS ---> DS:   6: 片内共识: 生成final块
+DS ---> DS:   7: final块 持久化
+DS ---> 分片:  8: 广播final块
+分片 ---> 分片: 9: final块 持久化
+钱包 ---> 分片:10: 查询余额
+钱包 ---> DS: 11: 查询余额
+
+@enduml

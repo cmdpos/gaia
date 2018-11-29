@@ -1,0 +1,43 @@
+@startuml
+
+participant consensusLead
+participant consensusBackup1
+participant consensusBackup2
+participant consensusBackup3
+
+consensusLead --> consensusBackup3: Announce
+consensusLead --> consensusLead: goto Announce_done state
+consensusBackup1 -> consensusLead: Commit
+consensusBackup2 -> consensusLead: Commit
+consensusBackup3 -> consensusLead: Commit
+consensusBackup3 -> consensusBackup3: goto Commit done state
+
+consensusLead --> consensusBackup3: Challenge
+consensusLead --> consensusLead: goto Challenge_done state
+consensusBackup1 -> consensusLead: Response
+consensusBackup2 -> consensusLead: Response
+consensusBackup3 -> consensusLead: Response
+consensusBackup3 -> consensusBackup3: goto Response done state
+
+
+consensusLead --> consensusBackup3: CollectiveSig
+consensusLead --> consensusLead: goto CollectiveSig_done state
+consensusBackup1 -> consensusLead: FinalCommit
+consensusBackup2 -> consensusLead: FinalCommit
+consensusBackup3 -> consensusLead: FinalCommit
+consensusBackup3 -> consensusBackup3: goto FinalCommit done state
+
+consensusLead --> consensusBackup3: FinalChallenge
+consensusLead --> consensusLead: goto FinalChallenge_done state
+consensusBackup1 -> consensusLead: FinalResponse
+consensusBackup2 -> consensusLead: FinalResponse
+consensusBackup3 -> consensusLead: FinalResponse
+consensusBackup3 -> consensusBackup3: goto FinalResponse done state
+
+consensusLead --> consensusBackup3: FinalCollectiveSig
+consensusLead --> consensusLead: goto FinalCollectiveSig_done state
+
+
+
+
+@enduml

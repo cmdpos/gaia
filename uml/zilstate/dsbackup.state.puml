@@ -1,0 +1,27 @@
+@startuml
+[*] --> set_primary
+
+set_primary->pow_submission
+
+ds_consensus_done-->mircoblock_submission
+finalblock_consensus_done-->mircoblock_submission
+
+
+ds_consensus_prepare-->announce_done
+finalblock_consensus_prepare-->announce_done
+viewchange_consensus_prepare-->announce_done
+
+
+announce_done-->commit_send
+commit_send->challenge_done
+challenge_done->response_send
+response_send->collectivesig_done
+collectivesig_done->finalcommit_send
+finalcommit_send->finalchallenge_done
+finalchallenge_done->finalresponse_send
+finalresponse_send->ds_consensus_done
+finalresponse_send->finalblock_consensus_done
+finalresponse_send->viewchange_consensus_done
+
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+[*] --> lead_start_pow
+
+lead_start_pow->process_dsblock
+
+
+microblock_submission->process_finalblock
+
+   mircoblock_consensus_start->announce_done
+   viewchange_consensus_start->announce_done
+
+   announce_done             ->commit_collection
+   mircoblock_consensus_start->commit_collection
+
+
+
+commit_collection_done->challenge_done
+
+challenge_done->response_collection
+
+
+
+response_collection_done->collectivesig_done
+
+
+
+collectivesig_done->finalcommit_collection
+
+
+
+finalcommit_collection_done->finalchallenge_done
+
+finalchallenge_done->finalresponse_collection
+finalresponse_collection_done->mircoblock_consensus_done
+finalresponse_collection_done->viewchange_consensus_done
+
+@enduml
