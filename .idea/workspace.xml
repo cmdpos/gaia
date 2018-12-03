@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/dsbackup.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/dslead.internal.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/dslead.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/overview.workflow.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/role.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/sharding_backup.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/sharding_lead.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/tmp.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/workflow.consensus.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/consensus_state_machine/workflow.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/zilstate/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/zilstate/dsbackup.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/zilstate/dslead.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/zilstate/sharding_backup.state.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/zilstate/sharding_lead.state.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/QQ20180910-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/misc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/zxiu.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/misc/zxiu.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/~$zxiu.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/06peer.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/06peer.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/06statesync.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/06statesync.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/08peer.nopackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/08peer.nopackage.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/08peer.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/08peer.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/consensus.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/consensus.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/crypt.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/crypt.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/engine.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/engine.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/fabric.pb.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/fabric.pb.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/fabric.pb2.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/fabric.pb2.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/ledger.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/ledger.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/peer.chat.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/peer.chat.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/qtum.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/qtum.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/stream_handler.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabri/stream_handler.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-okchain" beforeDir="false" afterPath="$PROJECT_DIR$/go-okchain" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/uml/fabric/stream_handler.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabric/stream_handler.puml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +33,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="okchain_node_ds_2.log" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="523">
-              <caret line="256" selection-start-line="256" selection-end-line="256" />
+      <file leaf-file-name="stream_handler.puml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consensus.puml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runokchain.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wkdir/wkdir/runokchain.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3546">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
             </state>
           </provider>
         </entry>
@@ -79,51 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consensus.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/consensus.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42120">
-              <caret line="2363" column="34" selection-start-line="2363" selection-start-column="34" selection-end-line="2363" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fsm_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sharding_node.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3312">
-              <caret line="198" column="1" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="okchain_node_miner_8.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="1890">
-              <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="peer.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1998">
-              <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -174,7 +124,6 @@
         <option value="$PROJECT_DIR$/uml/shell/setgituser.sh" />
         <option value="$PROJECT_DIR$/wkdir/buildpeer.sh" />
         <option value="$PROJECT_DIR$/uml/pos.miner.puml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/uml/zilliqa/zilliqa.testnet.puml" />
         <option value="$PROJECT_DIR$/ci.sh" />
         <option value="$PROJECT_DIR$/misc/memo/README.md" />
@@ -202,6 +151,10 @@
         <option value="$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go" />
         <option value="$PROJECT_DIR$/go-okchain/peer/server2/peer.go" />
         <option value="$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go" />
+        <option value="$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log" />
+        <option value="$PROJECT_DIR$/wkdir/wkdir/runokchain.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/uml/fabric/stream_handler.puml" />
       </list>
     </option>
   </component>
@@ -212,12 +165,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/go-okchain/vendor/github.com/marten-seemann/quic-conn/package.json" />
-    </packageJsonPaths>
+    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="40" />
+    <option name="x" value="-1880" />
     <option name="y" value="23" />
     <option name="width" value="1879" />
     <option name="height" value="1057" />
@@ -237,36 +188,13 @@
             <path>
               <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
+              <item name="uml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="okchain_node_ds_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="wkdir" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="okchain_node_ds_2" type="462c0819:PsiDirectoryNode" />
+              <item name="uml" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,19 +218,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/uml/consensus_state_machine" />
-      <recent name="$PROJECT_DIR$/uml" />
-      <recent name="$PROJECT_DIR$/uml/zilstate" />
-      <recent name="$PROJECT_DIR$/dapp" />
-      <recent name="$PROJECT_DIR$/uml/zilliqa" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uml/fabri" />
       <recent name="$PROJECT_DIR$/uml/zilstate" />
       <recent name="$PROJECT_DIR$/uml/consensus" />
       <recent name="$PROJECT_DIR$/misc" />
       <recent name="$PROJECT_DIR$/shell" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uml" />
+      <recent name="$PROJECT_DIR$/uml/consensus_state_machine" />
+      <recent name="$PROJECT_DIR$/uml/zilstate" />
+      <recent name="$PROJECT_DIR$/dapp" />
+      <recent name="$PROJECT_DIR$/uml/zilliqa" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -439,20 +367,19 @@
     <option name="totallyTimeSpent" value="127614000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="23" width="1879" height="1057" extended-state="1" />
-    <editor active="true" />
+    <frame x="-1880" y="23" width="1879" height="1057" extended-state="1" />
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" weight="0.44202504" />
+      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.44148067" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30208334" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5910448" visible="true" weight="0.20087099" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.119791664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.584375" visible="true" weight="0.16712031" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.40895522" side_tool="true" visible="true" weight="0.20087099" />
+      <window_info id="Structure" order="1" sideWeight="0.415625" side_tool="true" visible="true" weight="0.16712031" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -484,6 +411,28 @@
     <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/workflow.consensus.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go" />
+    <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/overview.workflow.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -505,55 +454,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/consensus.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42120">
-          <caret line="2363" column="34" selection-start-line="2363" selection-start-column="34" selection-end-line="2363" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3312">
-          <caret line="198" column="1" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="1890">
-          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="4608">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/runokchain.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/consensus.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log" />
     <entry file="file://$PROJECT_DIR$/wkdir/runyafabric.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
@@ -565,11 +471,7 @@
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_4/stdout.log" />
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_5/stdout.log" />
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_lookup_3/okchain_node_lookup_3.log" />
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_6/stdout.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_6/stdout.log" />
     <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/dslead.state.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -626,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/workflow.consensus.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -640,53 +535,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/consensus.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42120">
-          <caret line="2363" column="34" selection-start-line="2363" selection-start-column="34" selection-end-line="2363" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="211" column="68" lean-forward="true" selection-start-line="211" selection-start-column="68" selection-end-line="211" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3312">
-          <caret line="198" column="1" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="1890">
-          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/consensus.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/peer.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go" />
+    <entry file="file://$PROJECT_DIR$/go-okchain/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log" />
     <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/overview.workflow.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -694,119 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_4/stdout.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_lookup_5/okchain_node_lookup_5.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-12" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_3/stdout.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_3/okchain_node_ds_3.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="231" column="68" selection-start-line="231" selection-start-column="68" selection-end-line="231" selection-end-column="68" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="249" selection-start-line="249" selection-end-line="249" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_1/okchain_node_ds_1.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="341" column="47" selection-start-line="341" selection-start-column="47" selection-end-line="341" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="375" lean-forward="true" selection-start-line="375" selection-end-line="375" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_4/okchain_node_ds_4.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="164" column="91" selection-start-line="164" selection-start-column="91" selection-end-line="164" selection-end-column="91" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="497">
-          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_6/okchain_node_miner_6.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_7/okchain_node_miner_7.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_9/okchain_node_miner_9.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="118" column="57" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="91">
-          <caret line="135" column="133" lean-forward="true" selection-start-line="135" selection-start-column="133" selection-end-line="135" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_4/stdout.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_lookup_5/okchain_node_lookup_5.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_4/okchain_node_ds_4.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_6/okchain_node_miner_6.log" />
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/gencode.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -814,15 +559,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="147" column="84" lean-forward="true" selection-start-line="147" selection-start-column="84" selection-end-line="147" selection-end-column="84" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_2/okchain_node_ds_2.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_9/okchain_node_miner_9.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_3/okchain_node_ds_3.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_3/stdout.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/runokchain.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3546">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="523">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_1/okchain_node_ds_1.log" />
+    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_1/stdout.log" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>

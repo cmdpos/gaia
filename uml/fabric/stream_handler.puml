@@ -10,6 +10,7 @@ Peer <|-- Impl
 Neighbour <|-- Impl
 
 protos.StreamStub *--> protos.shandlerMap
+protos.StreamStub *--> protos.StreamHandlerFactory
 protos.shandlerMap *--> protos.StreamHandler
 
 Handler *--> ChatStream
@@ -18,10 +19,16 @@ Handler --|> MessageHandler
 Handler o--> ledger.Ledger
 
 
+
 protos.StreamHandlerImpl <|.. statesync.stateSyncHandler
 statesync.stateSyncHandler *--> statesync.syncer
+statesync.stateSyncHandler ..> protos.StreamStub
 statesync.stateSyncHandler *--> statesync.stateServer
-protos.StreamHandler o--> protos.StreamHandlerImpl
+protos.StreamHandler *--> protos.StreamHandlerImpl
+
+
+stub.SyncFactory ..|> protos.StreamHandlerFactory
+
 
 interface protos.StreamHandlerImpl  {
 	Tag() string
@@ -53,7 +60,7 @@ class statesync.stateSyncHandler  {
 @enduml
 
 
-
+、
 
 
 
