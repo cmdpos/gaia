@@ -31,3 +31,5 @@
 *.lo
 *.la
 go-okchain
+
+*okchain*

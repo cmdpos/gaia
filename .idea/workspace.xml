@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-okchain" beforeDir="false" afterPath="$PROJECT_DIR$/go-okchain" afterDir="true" />
-      <change beforePath="$PROJECT_DIR$/uml/fabric/stream_handler.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/fabric/stream_handler.puml" afterDir="false" />
-    </list>
+    <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stream_handler.puml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stream_handler.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="268">
+              <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -51,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
@@ -167,7 +163,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1880" />
     <option name="y" value="23" />
     <option name="width" value="1879" />
@@ -184,17 +180,6 @@
             <path>
               <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="uml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="uml" type="462c0819:PsiDirectoryNode" />
-              <item name="fabric" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,19 +352,19 @@
     <option name="totallyTimeSpent" value="127614000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1880" y="23" width="1879" height="1057" extended-state="1" />
+    <frame x="-1880" y="23" width="1879" height="1057" extended-state="0" />
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.44148067" />
+      <window_info anchor="right" id="PlantUML" order="3" weight="0.44148067" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.119791664" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.584375" visible="true" weight="0.16712031" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27291667" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.58309454" visible="true" weight="0.16712031" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.415625" side_tool="true" visible="true" weight="0.16712031" />
+      <window_info id="Structure" order="1" sideWeight="0.41690543" side_tool="true" visible="true" weight="0.16712031" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -573,13 +558,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_1/okchain_node_ds_1.log" />
     <entry file="file://$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_ds_1/stdout.log" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -589,8 +567,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="268">
+          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
         </state>
       </provider>
     </entry>
