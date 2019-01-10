@@ -20,13 +20,22 @@ DS ---> DS:      D-1: wait for pow result
 cli ---> 分片:    D-2: 通知start pow
 分片 ---> 分片:   D: POW选举
 分片 ---> DS:    E: 发送POW选举结果
-============Sharding blocked waiting for DS blocks==
+
+============DS wait for pow result end==
+
+分片 <--- DS:     N-0: 通知所有分片进入等待 DS block 状态
+分片 <--- DS:     N-0: 通知所有分片进入等待 DS block 状态
+分片 <--- DS:     N-0: 通知所有分片进入等待 DS block 状态
+
+
+============Sharding waiting for DS blocks==
 
 DS ---> DS:     F-1: 片内共识: 根据POW选举结果选new lead,\n生成dsblock
 DS ---> DS:     F-2: 持久化DS 块
 DS ---> DS:     F-3: DS lead 成为 backup
 DS ---> DS:     F-4: 某个DS backup 成为 shard lead or backup
 DS ---> 分片:8:  G: 仅lead生产DS块，并广播
+============Sharding waiting for DS blocks end==
 
 DS ---> DS:     G-1: wait for n micro blocks\nn是分片个数
 ============DS blocked waiting for n micro blocks==
