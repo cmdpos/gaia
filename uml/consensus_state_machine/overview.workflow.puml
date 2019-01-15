@@ -1,6 +1,5 @@
 @startuml
 
-
 participant cli
 
 participant 钱包
