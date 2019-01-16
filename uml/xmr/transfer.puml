@@ -21,7 +21,9 @@ hot_out_wallet -> hot_out_wallet: 区块H+10之前, <txIndex_(last+1)>不能被�
 
 blockchian_network -> blockchian_network: 在区块H+10, <txIndex_n>被确认.\n<txIndex_(last+1)>, amount为unlocked
 
-hot_out_wallet -> hot_out_wallet: 还需要通过cold wallet导入<txIndex_(last+1)>的keyimage:\n1. 显示的调用export/import
+hot_out_wallet -> hot_out_wallet: 还需要通过cold wallet导入<txIndex_(last+1)>的keyimage,才可以花费:
+
+hot_out_wallet -> hot_out_wallet: 1. 显示的调用export/import
 hot_out_wallet -> hot_out_wallet: 2. 选择一个keyImageKnown=1的其他tx做一次转账，\n在cold wallet签名的时候会对\n<txIndex_(last+1)>做隐式的export/import
 
 
