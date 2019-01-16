@@ -67,11 +67,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pos.miner.puml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uml/consensus/pos.miner.puml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="transfer.puml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/uml/xmr/transfer.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="433">
+              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -180,8 +185,8 @@
       <file leaf-file-name="consensus.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="18">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -374,6 +379,18 @@
               <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
               <item name="uml" type="462c0819:PsiDirectoryNode" />
+              <item name="consensus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="uml" type="462c0819:PsiDirectoryNode" />
+              <item name="consensus_state_machine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="uml" type="462c0819:PsiDirectoryNode" />
               <item name="xmr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -555,18 +572,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1881" y="23" width="1881" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.70146817" />
+      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.53616095" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31666666" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6554878" visible="true" weight="0.08102229" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31770834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6549618" visible="true" weight="0.059815116" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.3445122" side_tool="true" visible="true" weight="0.08102229" />
+      <window_info id="Structure" order="1" sideWeight="0.34503818" side_tool="true" visible="true" weight="0.059815116" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -603,20 +621,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wkdir/wkdir/runokchain.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="225" selection-start-line="225" selection-end-line="225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/workflow.consensus.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setfabric.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -781,10 +785,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/uml/consensus/pos.miner.puml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/consensus_state_machine/consensus.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uml/xmr/transfer.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="433">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
         </state>
       </provider>
     </entry>
