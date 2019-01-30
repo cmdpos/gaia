@@ -2,5 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/__ada/cardano-cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/__ada/cardano-cli/cardano-deps" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/__ada/cargo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/__ada/jni-rs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/dev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/fabric_sync" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/go-okchain" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/wood_fabric" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/yafabric" vcs="Git" />
   </component>
 </project>

@@ -1,6 +1,8 @@
 @startuml
 
-sendview钱包 -> sendview钱包: 不连接互联网\n但是需要连接monerod\n可部署在内网机器A
+lead -> backup: 不连接互联网\n但是需要连接monerod\n可部署在内网机器A
+
+
 viewonly钱包 -> viewonly钱包: 不连接互联网\n但是需要连接monerod\n可部署在内网机器A\n和sendview钱包在同一机器
 sendview钱包 -> monerod: 连接monerod同步账本获取余额
 viewonly钱包 -> monerod: 连接monerod同步账本获取余额

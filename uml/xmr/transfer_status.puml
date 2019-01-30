@@ -1,0 +1,52 @@
+@startuml
+
+participant cold_out_wallet
+participant hot_out_wallet
+participant in_wallet
+participant blockchian_network
+
+
+hot_out_wallet -> in_wallet: t0: issue a transfer, input tx index[1000]
+
+
+blockchian_network -> hot_out_wallet: t1: return the change tx index[1001], \n in block[H]
+
+
+
+hnote over hot_out_wallet : <txIndex_n> info:\n spent[0->1]\nspentHeight[0->0]
+
+
+
+blockchian_network -> blockchian_network: 在区块H, 对txIndex_n打包, 并生成\n<txIndex_(last+1)>, 其amount为locked
+
+hot_out_wallet -> blockchian_network: sync block
+hot_out_wallet <-- blockchian_network:
+
+hot_out_wallet -> hot_out_wallet: 收到区块H，\n<txIndex_n>的spentHeight[0->H],
+
+
+hnote over hot_out_wallet: 找零<txIndex_(last+1)>也在区块H里, 其amount为locked
+
+hnote over hot_out_wallet: <txIndex_(last+1)> info:\nblockHeight=H \nspent=0 \nkeyImageKnown=0
+
+hnote over hot_out_wallet: 区块H+10之前, <txIndex_(last+1)>不能被花费,
+
+blockchian_network -> blockchian_network: 在区块H+10, <txIndex_n>被确认.\n<txIndex_(last+1)>, amount为unlocked
+
+hot_out_wallet -> hot_out_wallet: 收到区块H+10
+
+
+hnote over hot_out_wallet: 还需要通过cold wallet导入\n<txIndex_(last+1)>的keyimage,才可以花费:
+
+hnote over hot_out_wallet: 两种方式导入keyimage:\n1. 显示的调用export/import
+hnote over hot_out_wallet: 2. 选择一个keyImageKnown=1的其他tx做一次转账，\n在cold wallet签名的时候会对\n<txIndex_(last+1)>做隐式的export/import
+
+
+hot_out_wallet -> cold_out_wallet: 导出<txIndex_(last+1)>output
+
+cold_out_wallet -> hot_out_wallet: 导入<txIndex_(last+1)>keyimage\n <txIndex_(last+1)> info:\nkeyImageKnown=1
+
+hot_out_wallet -> hot_out_wallet: <txIndex_(last+1)>\n的keyImageKnown=1 可以被花费
+
+
+@enduml
