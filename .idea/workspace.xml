@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
-      <change afterPath="$PROJECT_DIR$/life/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/life/README.rent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/xmr/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/xmr/transfer_status.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/life/tax2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/life/tax2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/seq/monroe2.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/issue/monroe2.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/wkdir" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/fabric_sync/wkdir/dbscan/bucket_tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/fabric_sync/wkdir/dbscan/bucket_tree.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/go-okchain/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" afterDir="false" />
@@ -103,13 +94,9 @@
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/chaincode/shim/java/javabuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/chaincode/shim/java/javabuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/invoke.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/invoke.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/runyafabric.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/runyafabric.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,111 +104,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer2.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uncmt/yafabric/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="36">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uml/fabric/06peer.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uml/fabric/06statesync.puml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uml/fabric/consensus.puml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="36">
-                <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/life/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor />
-              <second_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/life/README.rent.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="54">
-                <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+                <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               </first_editor>
-              <second_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/life/商业安全研发部_钟秋_B140384.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uml/fabric/engine.puml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="stream_handler.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/fabric/stream_handler.puml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="828">
@@ -230,27 +139,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="qtum.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/fabric/qtum.puml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="peer.chat.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/fabric/peer.chat.puml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="syncstate.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/state/syncstate.puml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="syncstate.server.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/state/syncstate.server.puml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="cold.sign.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/seq/cold.sign.puml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -259,7 +168,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="monroe.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/seq/monroe.puml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -268,7 +177,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="monroe2.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uml/issue/monroe2.puml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -375,14 +284,27 @@
         <option value="$PROJECT_DIR$/uml/xmr/transfer.puml" />
         <option value="$PROJECT_DIR$/uml/xmr/transfer_status.puml" />
         <option value="$PROJECT_DIR$/uml/xmr/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/uncmt/yafabric/scripts/docker/pbft/4-peers.yml" />
         <option value="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh" />
         <option value="$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" />
         <option value="$PROJECT_DIR$/uml/issue/monroe2.puml" />
         <option value="$PROJECT_DIR$/life/README.rent.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/uncmt/dev/vendor/github.com/marten-seemann/quic-conn/package.json" />
+      <path value="$PROJECT_DIR$/uncmt/go-okchain/vendor/github.com/marten-seemann/quic-conn/package.json" />
+      <path value="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="39" />
@@ -398,7 +320,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -420,8 +344,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,6 +487,7 @@
       <workItem from="1542592777970" duration="14874000" />
       <workItem from="1542698119182" duration="30966000" />
       <workItem from="1543193486221" duration="16597000" />
+      <workItem from="1548846699917" duration="1166000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1527471294672</created>
@@ -584,44 +507,49 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127614000" />
+    <option name="totallyTimeSpent" value="128780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="23" width="1881" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64339906" visible="true" weight="0.16911365" />
-      <window_info id="Structure" order="1" sideWeight="0.3566009" side_tool="true" visible="true" weight="0.16911365" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31709844" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="PlantUML" order="8" weight="0.40468583" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31637844" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64136904" visible="true" weight="0.16905901" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info id="Structure" order="1" sideWeight="0.35863096" side_tool="true" visible="true" weight="0.16905901" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upd" />
@@ -637,14 +565,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/misc/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/README.md" />
     <entry file="file://$PROJECT_DIR$/uncmt/wood_fabric/images/base/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -652,14 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uncmt/wood_fabric/images/base/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uncmt/wood_fabric/images/base/README.md" />
     <entry file="file://$PROJECT_DIR$/uncmt/wood_fabric/images/base/release">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -674,16 +588,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/xmr/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/xmr/README.md" />
     <entry file="file://$PROJECT_DIR$/wkdir/runyafabric.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -826,24 +731,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/README.md" />
+    <entry file="file://$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" />
     <entry file="file://$PROJECT_DIR$/uml/fabric/06peer.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -856,24 +745,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uml/fabric/consensus.puml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/life/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/life/商业安全研发部_钟秋_B140384.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -921,13 +792,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/life/README.rent.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+    <entry file="file://$PROJECT_DIR$/life/README.rent.md" />
+    <entry file="file://$PROJECT_DIR$/life/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="54">
-            <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           </first_editor>
-          <second_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
