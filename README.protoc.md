@@ -48,6 +48,7 @@ source ~/.bash_profile
 若要生成的pb文件不带XXX字段，可回退protoc-gen-go版本到7b8002
 
 cd $GOPATH/src/github.com/golang/protobuf/
-
+git checkout 7b8002
 make
+make install
 
