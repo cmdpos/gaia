@@ -9,6 +9,8 @@
     <mapping directory="$PROJECT_DIR$/uncmt/dev" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/uncmt/fabric_sync" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/uncmt/go-okchain" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/syncorg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/uncmt/temp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/uncmt/wood_fabric" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/uncmt/yafabric" vcs="Git" />
   </component>
