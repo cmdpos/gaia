@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.protoc.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.protoc.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/life/tax2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/life/tax2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/tax/2019.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/tax/2019tax.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/dev/p2p/nat/nat_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/dev/p2p/nat/nat_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/go-okchain/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" afterDir="false" />
@@ -99,7 +95,7 @@
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_partial_iterator.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_partial_iterator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/yafabric/tools/dbutility/dbscan/dbscan.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/tools/dbutility/dbscan/dbscan.go" afterDir="false" />
     </list>
@@ -177,13 +173,18 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="295" selection-start-line="295" selection-end-line="295" />
+            <state relative-caret-position="62">
+              <caret line="270" selection-start-line="270" selection-end-line="270" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/xmr/api.workflow.puml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -304,7 +305,7 @@
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7182">
-              <caret line="401" selection-start-line="401" selection-end-line="401" />
+              <caret line="402" selection-start-line="402" selection-end-line="402" />
             </state>
           </provider>
         </entry>
@@ -422,7 +423,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/uncmt/yafabric" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -481,10 +482,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="34" />
-    <option name="y" value="203" />
-    <option name="width" value="1406" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="38" />
+    <option name="y" value="173" />
+    <option name="width" value="1402" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -508,6 +509,11 @@
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="life" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -530,19 +536,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/xmr" />
+      <recent name="$PROJECT_DIR$/uml/issue" />
+      <recent name="$PROJECT_DIR$/uncmt/go-okchain/wiki" />
+      <recent name="$PROJECT_DIR$/misc" />
+      <recent name="$PROJECT_DIR$/uml/fabri" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/life" />
       <recent name="$PROJECT_DIR$/uml/xmr" />
       <recent name="$PROJECT_DIR$/misc/fabric/wkdir/dbscan" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/uml/issue" />
-      <recent name="$PROJECT_DIR$/uncmt/go-okchain/wiki" />
-      <recent name="$PROJECT_DIR$/misc" />
-      <recent name="$PROJECT_DIR$/uml/fabri" />
-      <recent name="$PROJECT_DIR$/uml/zilstate" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -680,10 +686,10 @@
     <option name="totallyTimeSpent" value="128780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="23" width="1406" height="877" extended-state="0" />
+    <frame x="38" y="173" width="1402" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.627451" visible="true" weight="0.24340177" />
-      <window_info id="Structure" order="1" sideWeight="0.37254903" side_tool="true" visible="true" weight="0.24340177" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62781954" visible="true" weight="0.24411765" />
+      <window_info id="Structure" order="1" sideWeight="0.37218046" side_tool="true" visible="true" weight="0.24411765" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -698,7 +704,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22038217" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32229298" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -709,7 +715,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="PlantUML" order="8" weight="0.40468583" />
+      <window_info anchor="right" id="PlantUML" order="8" visible="true" weight="0.40514705" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="right" id="SciView" order="10" />
     </layout>
@@ -722,7 +728,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core.yaml" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/docker/pbft/4-peers.yml" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/docker/pbft/peer.yml" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer2.json" />
@@ -908,7 +913,7 @@
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7182">
-          <caret line="401" selection-start-line="401" selection-end-line="401" />
+          <caret line="402" selection-start-line="402" selection-end-line="402" />
         </state>
       </provider>
     </entry>
@@ -961,10 +966,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        <state relative-caret-position="62">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/xmr/api.workflow.puml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
