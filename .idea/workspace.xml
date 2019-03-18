@@ -95,9 +95,6 @@
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/tools/dbutility/dbscan/dbscan.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/tools/dbutility/dbscan/dbscan.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +173,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
+            <state relative-caret-position="4860">
               <caret line="270" selection-start-line="270" selection-end-line="270" />
             </state>
           </provider>
@@ -295,8 +292,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/hashable_state.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="1818">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -304,7 +301,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7182">
+            <state relative-caret-position="7056">
               <caret line="402" selection-start-line="402" selection-end-line="402" />
             </state>
           </provider>
@@ -313,8 +310,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="774">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -482,11 +479,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="38" />
-    <option name="y" value="173" />
-    <option name="width" value="1402" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="39" />
+    <option name="y" value="23" />
+    <option name="width" value="1641" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -688,8 +685,8 @@
   <component name="ToolWindowManager">
     <frame x="38" y="173" width="1402" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62781954" visible="true" weight="0.24411765" />
-      <window_info id="Structure" order="1" sideWeight="0.37218046" side_tool="true" visible="true" weight="0.24411765" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62664163" visible="true" weight="0.24779412" />
+      <window_info id="Structure" order="1" sideWeight="0.37335834" side_tool="true" visible="true" weight="0.24779412" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -704,7 +701,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32229298" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3210191" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -765,13 +762,7 @@
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/partial_sync.go" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync.go" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync_test.go" />
-    <entry file="file://$GOPATH$/abchain/fabric/core/ledger/statemgmt/buckettree/state_sync.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$GOPATH$/abchain/fabric/core/ledger/statemgmt/buckettree/state_sync.go" />
     <entry file="file://$PROJECT_DIR$/life/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -823,6 +814,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/sync_hide_offset_impl/scripts/dev/_stdout_peer1.json">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4860">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer0.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -905,22 +903,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/hashable_state.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1926">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="1818">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7182">
+        <state relative-caret-position="7056">
           <caret line="402" selection-start-line="402" selection-end-line="402" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="774">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
@@ -961,13 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
         </state>
       </provider>
     </entry>
