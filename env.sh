@@ -22,7 +22,8 @@ export PYTHONIOENCODING=UTF-8
 export GRAPHVIZ_DOT=/usr/local/bin/dot
 export OPENSSL_ROOT_DIR=/usr/local/opt/openssl
 export OPENSSL_CRYPTO_LIBRARY=/usr/local/opt/openssl/lib
-
+export GOPATH=/Users/oak/go
+export GOBIN=$GOPATH/bin
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH=/Users/$LOGNAME/lib/nwjs-v0.14.7-osx-x64/nwjs.app/Contents/MacOS:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
