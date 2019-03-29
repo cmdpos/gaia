@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 alias rzy='rz -y -e -b'
 alias dum='du -ms'
