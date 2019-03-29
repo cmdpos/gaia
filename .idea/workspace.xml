@@ -2,99 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e8d438-9143-47d4-aad3-3f7d332ab91c" name="Default" comment="upd">
+      <change afterPath="$PROJECT_DIR$/uml/dex/okdex.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/life/tax2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/life/tax2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/find.sh" beforeDir="false" afterPath="$PROJECT_DIR$/shell/find.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/dev/p2p/discover/database.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/dev/p2p/nat/nat_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/dev/p2p/nat/nat_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uncmt/go-okchain/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/TravisCI_Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/TravisCI_Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/bdd-docker/compose-defaults.yml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/bdd-docker/compose-defaults.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/bdd-docker/docker-compose-1-devmode.yml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/bdd-docker/docker-compose-1-devmode.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/chaincode_rbac.feature" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/chaincode_rbac.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/consensus.feature" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/consensus.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/peer_basic.feature" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/peer_basic.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/steps/coverage.py" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/steps/coverage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/steps/peer_basic_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/bddtests/steps/peer_basic_impl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/consensus/controller/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/consensus/controller/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/chaincode/chaincodetest.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/chaincode/chaincodetest.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/buckettree/buckettree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/buckettree/buckettree.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/db.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/db.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/randomTransactions.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/randomTransactions.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/singleKeyTransaction.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/ledger/singleKeyTransaction.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/statemgmt/cryptoHash.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/benchmark_scripts/statemgmt/cryptoHash.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/genesis/genesis_test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/core/ledger/genesis/genesis_test.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setupRHELonZ.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setupRHELonZ.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setupUbuntuOnPPC64le.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/devenv/setupUbuntuOnPPC64le.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/AttributesUsage.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/AttributesUsage.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/ChaincodeAPI.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/ChaincodeAPI.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/CoreAPI.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/API/CoreAPI.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/CONTRIBUTING.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/CONTRIBUTING.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/Chaincode-setup.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/Chaincode-setup.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/JAVAChaincode.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/JAVAChaincode.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/Network-setup.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/Network-setup.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/ca-setup.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/ca-setup.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/logging-control.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Setup/logging-control.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Style-guides/go-style.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/Style-guides/go-style.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/abstract_v1.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/abstract_v1.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/dev-setup/build.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/dev-setup/build.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/dev-setup/devenv.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/dev-setup/devenv.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/home.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/home.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/app-developer-env-setup.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/app-developer-env-setup.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/node-sdk-indepth.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/node-sdk-indepth.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/sample-standalone-app.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/nodeSDK/sample-standalone-app.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/protocol-spec.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/protocol-spec.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/releases.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/releases.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/starter/fabric-starter-kit.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/starter/fabric-starter-kit.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/v0.6_migration.rst" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/docs/source/v0.6_migration.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management/app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management/app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management02/asset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management02/asset.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management_with_roles/asset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/asset_management_with_roles/asset.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/utxo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/go/utxo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/java/SimpleSample/src/main/java/example/SimpleSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/chaincode/java/SimpleSample/src/main/java/example/SimpleSample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/events/block-listener/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/events/block-listener/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/examples/sdk/node/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/gotools/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/gotools/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/images/app/Dockerfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/images/app/Dockerfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/images/base/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/images/base/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/images/javaenv/Dockerfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/images/javaenv/Dockerfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/images/src/Dockerfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/images/src/Dockerfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/membersrvc/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/membersrvc/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/membersrvc/ca/ca_test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/membersrvc/ca/ca_test.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/Next-Consensus-Architecture-Proposal.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/Next-Consensus-Architecture-Proposal.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/Next-Ledger-Architecture-Proposal.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/Next-Ledger-Architecture-Proposal.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/System-Chaincode-Specification.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/proposals/r1/System-Chaincode-Specification.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/pub/fabric-baseimage.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/pub/fabric-baseimage.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/pub/fabric-peer.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/pub/fabric-peer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/containerlogs.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/containerlogs.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/foldercopy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/foldercopy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/goUnitTests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/goUnitTests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/goimports.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/goimports.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/provision/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/scripts/provision/common.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/bin/run-unit-tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/bin/run-unit-tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/src/hfc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/sdk/node/src/hfc.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/busyTest" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/bin/busyTest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/counters/countersTest" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/counters/countersTest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/counters/driver" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/counters/driver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/tcl/busywork.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/busywork/tcl/busywork.tcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/tools/dbutility/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/tools/dbutility/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/buildpeerex.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/buildpeerex.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/querya.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/wood_fabric/wkdir/scandb.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/testutil/test_util.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/core/ledger/testutil/test_util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/flogging/logging.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/break_point_sync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/break_point_sync.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,14 +92,63 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4860">
-              <caret line="270" selection-start-line="270" selection-end-line="270" />
+            <state relative-caret-position="4878">
+              <caret line="271" selection-start-line="271" selection-end-line="271" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/xmr/api.workflow.puml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uml/consensus/pos.miner.puml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uml/dex/okdex.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/lns.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/querytcpbyport.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/rollbackgit.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/rmdockercontainer.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/set2609611.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shell/setzhongwiuwood">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -278,8 +246,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/protos/sync.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2790">
-              <caret line="155" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="2862">
+              <caret line="159" selection-start-line="159" selection-end-line="159" />
             </state>
           </provider>
         </entry>
@@ -301,8 +269,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7056">
-              <caret line="402" selection-start-line="402" selection-end-line="402" />
+            <state relative-caret-position="7488">
+              <caret line="425" selection-start-line="425" selection-end-line="425" />
             </state>
           </provider>
         </entry>
@@ -425,12 +393,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_6/okchain_node_miner_6.log" />
-        <option value="$PROJECT_DIR$/uml/consensus_state_machine/workflow.consensus.puml" />
-        <option value="$PROJECT_DIR$/go-okchain/peer/server2/consensus.go" />
-        <option value="$PROJECT_DIR$/go-okchain/peer/server2/sharding_node.go" />
-        <option value="$PROJECT_DIR$/go-okchain/peer/server2/peer.go" />
-        <option value="$PROJECT_DIR$/go-okchain/peer/server2/fsm_test.go" />
         <option value="$PROJECT_DIR$/wkdir/wkdir/data/okchain_node_miner_8/okchain_node_miner_8.log" />
         <option value="$PROJECT_DIR$/wkdir/wkdir/runokchain.sh" />
         <option value="$PROJECT_DIR$/uml/fabric/stream_handler.puml" />
@@ -476,14 +438,20 @@
         <option value="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync_test.go" />
         <option value="$GOPATH$/abchain/fabric/core/ledger/statemgmt/buckettree/state_sync.go" />
         <option value="$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json" />
+        <option value="$PROJECT_DIR$/uml/dex/okdex.puml" />
+        <option value="$PROJECT_DIR$/shell/lns.sh" />
+        <option value="$PROJECT_DIR$/shell/querytcpbyport.sh" />
+        <option value="$PROJECT_DIR$/shell/rollbackgit.sh" />
+        <option value="$PROJECT_DIR$/shell/rmdockercontainer.sh" />
+        <option value="$PROJECT_DIR$/shell/set2609611.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="39" />
+    <option name="x" value="38" />
     <option name="y" value="23" />
-    <option name="width" value="1641" />
-    <option name="height" value="1027" />
+    <option name="width" value="1642" />
+    <option name="height" value="508" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -493,7 +461,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -504,17 +471,13 @@
             <path>
               <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="life" type="462c0819:PsiDirectoryNode" />
+              <item name="shell" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -533,19 +496,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uml/dex" />
+      <recent name="$PROJECT_DIR$/uml" />
+      <recent name="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/life" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/code/xmr" />
       <recent name="$PROJECT_DIR$/uml/issue" />
       <recent name="$PROJECT_DIR$/uncmt/go-okchain/wiki" />
       <recent name="$PROJECT_DIR$/misc" />
       <recent name="$PROJECT_DIR$/uml/fabri" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/life" />
-      <recent name="$PROJECT_DIR$/uml/xmr" />
-      <recent name="$PROJECT_DIR$/misc/fabric/wkdir/dbscan" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -683,10 +646,10 @@
     <option name="totallyTimeSpent" value="128780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="173" width="1402" height="877" extended-state="0" />
+    <frame x="38" y="23" width="1642" height="1027" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62664163" visible="true" weight="0.24779412" />
-      <window_info id="Structure" order="1" sideWeight="0.37335834" side_tool="true" visible="true" weight="0.24779412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6197183" visible="true" weight="0.22375" />
+      <window_info id="Structure" order="1" sideWeight="0.3802817" side_tool="true" visible="true" weight="0.22375" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -701,7 +664,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3210191" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31657755" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -712,7 +675,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="PlantUML" order="8" visible="true" weight="0.40514705" />
+      <window_info anchor="right" id="PlantUML" order="8" weight="0.34375" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="right" id="SciView" order="10" />
     </layout>
@@ -725,37 +688,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/docker/pbft/4-peers.yml" />
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/docker/pbft/peer.yml" />
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer2.json" />
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/systest.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uncmt/yafabric/README.md" />
-    <entry file="file://$PROJECT_DIR$/uncmt/go-okchain/wiki/README.md" />
-    <entry file="file://$PROJECT_DIR$/uml/fabric/06peer.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/fabric/06statesync.puml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/fabric/consensus.puml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/life/商业安全研发部_钟秋_B140384.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/fabric/engine.puml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/life/README.rent.md" />
     <entry file="file://$PROJECT_DIR$/uncmt/sync_hide_offset_impl/core/ledger.me/statemgmt/buckettree/db_helper.go" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/partial_iterator.go" />
@@ -763,6 +695,7 @@
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync.go" />
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_sync_test.go" />
     <entry file="file://$GOPATH$/abchain/fabric/core/ledger/statemgmt/buckettree/state_sync.go" />
+    <entry file="file://$PROJECT_DIR$/uml/dex/pos.miner.puml" />
     <entry file="file://$PROJECT_DIR$/life/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -817,12 +750,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
+        <state relative-caret-position="4878">
+          <caret line="271" selection-start-line="271" selection-end-line="271" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/xmr/api.workflow.puml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/consensus/pos.miner.puml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/scripts/dev/_stdout_peer0.json">
+      <provider editor-type-id="LargeFileEditor" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/sync_hide_offset_impl/scripts/dev/_stdout_peer0.json">
@@ -893,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/protos/sync.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="2862">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
     </entry>
@@ -910,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uncmt/yafabric/core/ledger/statemgmt/buckettree/state_impl.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7056">
-          <caret line="402" selection-start-line="402" selection-end-line="402" />
+        <state relative-caret-position="7488">
+          <caret line="425" selection-start-line="425" selection-end-line="425" />
         </state>
       </provider>
     </entry>
@@ -962,7 +905,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/xmr/api.workflow.puml">
+    <entry file="file://$PROJECT_DIR$/uml/dex/okdex.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/lns.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/querytcpbyport.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/rollbackgit.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/rmdockercontainer.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/set2609611.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/setoakplatform">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/setzhongwiuwood">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>

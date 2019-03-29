@@ -1,0 +1,20 @@
+@startuml
+
+
+
+TendermintCore -> DexApp: 该矿工当前币龄 = coinDays
+ner -> Miner: 当前本地账本块高度 = h
+Miner -> Miner: 当前本地txpool有：txid1,txid2...txidn
+Miner -> Miner: 目标hash值 = targetHash
+Miner -> Miner: 广播自己挖到 block[h],如果满足条件：\nhash(block[h-1], stateHashDelta(txid1,txid2...txidn)) / coinDays < targetHash
+
+
+Miner -> Verifier: 要求验证block[h]
+Verifier -> Verifier: 确定Miner的币龄是 coinDays
+Verifier -> Verifier: 将本地账本同步到 h 高
+Verifier -> Verifier: 将本地txpool同步到有：txid1,txid2...txidn
+Verifier -> Verifier: 目标hash值 = targetHash
+Verifier -> Verifier: 更新账本写入 block[h],如果满足条件：\nhash(block[h-1], stateHashDelta(txid1,txid2...txidn)) / coinDays < targetHash
+Verifier -> Verifier: 更新Miner的地址的余额（增加其挖矿的奖励和该块交易的手续费）
+
+@enduml
