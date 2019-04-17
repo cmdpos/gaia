@@ -1,0 +1,52 @@
+@startuml
+
+peer1 -> peer1: RunPeer
+peer1 -> peer1: chatWithSomePeers
+peer1 -> peer1: chatWithPeer
+
+peer1 -> peer2: connect to
+peer2 -> peer1: accepted
+
+peer2 -> peer2: handleChat active=false
+peer2 -> peer2: NewPeerHandler
+
+
+peer1 -> peer1: handleChat active=true
+peer1 -> peer1: NewPeerHandler
+peer1 -> peer2: DISC_HELLO
+peer2 -> peer2: 1. handler DISC_HELLO: beforeHello
+
+peer2 -> peer1: DISC_HELLO
+peer1 -> peer1: 1. handler DISC_HELLO: beforeHello
+peer1 -> peer1: RegisterHandler
+peer1 -> peer2: DISC_GET_PEERS
+peer1 -> peer1: 1. handler DISC_HELLO: beforeHello done
+
+peer2 -> peer2: RegisterHandler
+peer2 -> peer1: DISC_GET_PEERS
+peer2 -> peer2: 1. handler DISC_HELLO: beforeHello done
+
+
+peer1 -> peer1: 2. handle DISC_GET_PEERS: beforeGetPeers
+peer1 -> peer2: DISC_PEERS
+peer1 -> peer1: 2. handle DISC_GET_PEERS: beforeGetPeers done
+
+peer2 -> peer2: 2. handle DISC_GET_PEERS: beforeGetPeers
+peer2 -> peer1: DISC_PEERS
+peer2 -> peer2: 2. handle DISC_GET_PEERS: beforeGetPeers done
+
+
+peer1 -> peer1: 3. handle DISC_PEERS: beforePeers
+peer1 -> peer1: 3. handle DISC_PEERS: beforePeers done
+
+
+
+peer2 -> peer2: 2. handle DISC_PEERS: beforePeers
+peer2 -> peer2: 2. handle DISC_PEERS: beforePeers done
+
+
+
+
+
+
+@enduml
