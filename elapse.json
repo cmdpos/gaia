@@ -1,0 +1,51 @@
+2019-04-18 08:41:44.078	    7fb8503ed700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 16s elapsed
+2019-04-18 08:41:44.630	    7fb8503ed700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 16s elapsed
+2019-04-18 08:57:58.051	    7fb86126c700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 3s elapsed
+2019-04-18 08:57:58.614	    7fb86126c700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 3s elapsed
+2019-04-18 09:37:37.496	    7efe1e7a8700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 4s elapsed
+2019-04-18 09:37:37.979	    7efe1e7a8700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 4s elapsed
+2019-04-18 09:43:50.241	    7efe2dd6d700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 29s elapsed
+2019-04-18 09:43:50.704	    7efe2dd6d700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 29s elapsed
+2019-04-18 10:15:10.308	    7efe1bee2700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 4s elapsed
+2019-04-18 10:44:52.443	    7fb393e64700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 78s elapsed
+2019-04-18 10:46:41.678	    7fb39164f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 59s elapsed
+2019-04-18 10:48:09.887	    7fb39164f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::get_outs> ends, 86s elapsed
+2019-04-18 10:48:10.264	    7fb39164f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct: selected_transfer_idx[1062]> ends, 87s elapsed
+2019-04-18 10:48:10.264	    7fb39164f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct 1> ends, 87s elapsed
+2019-04-18 10:48:21.995	    7fb39164f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 159s elapsed
+2019-04-18 10:48:49.594	    7fb381d2a700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 25s elapsed
+2019-04-18 10:48:49.994	    7fb381d2a700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 25s elapsed
+2019-04-18 10:49:33.986	    7fb3839e0700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 14s elapsed
+2019-04-18 10:51:48.178	    7fb393562700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 104s elapsed
+2019-04-18 10:51:48.802	    7fb393562700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 105s elapsed
+2019-04-18 10:55:30.058	    7fb3839e0700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 3s elapsed
+2019-04-18 10:59:11.026	    7fb393562700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 3s elapsed
+2019-04-18 11:42:53.749	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <invoke_http_bin /get_outs.bin> ends, 8s elapsed
+2019-04-18 11:42:53.750	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::get_outs> ends, 108s elapsed
+2019-04-18 11:42:54.109	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct: selected_transfer_idx[1062]> ends, 109s elapsed
+2019-04-18 11:42:54.110	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct 1> ends, 109s elapsed
+2019-04-18 11:44:38.081	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <invoke_http_bin /get_outs.bin> ends, 9s elapsed
+2019-04-18 11:44:38.083	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::get_outs> ends, 104s elapsed
+2019-04-18 11:44:38.293	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct: selected_transfer_idx[1062 382]> ends, 104s elapsed
+2019-04-18 11:44:38.293	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct 1> ends, 104s elapsed
+2019-04-18 11:44:38.576	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::transfer_main> ends, 213s elapsed
+2019-04-18 11:44:38.577	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <transfer preferred_txid=dac6d66742447aeb95724ef7b63417562c3f9533d7dc803dc16a90beed11cd80,d0e0f05102c54cce6c22bf5b509ce2026a74a5a38eb45854046b448020700d13,73113b29ba9f8d375f60981d486b8cb171ec03d5b8213b34b8d64b1d9d4783da unimportant 47kzJ8qJ5zoVmsnYsY33wxjap5NBoX5D16UALY2SYt1NcvNwVNZp8vdZjjZWTKMCQR8aY7LrsoG7kcfuDScPY8e31ZHuYz6 0.017 11c2b12a28fbbf985ef0100310166181c0ce354215a664431234567890abedc0 > ends, 213s elapsed
+2019-04-18 11:44:38.717	    7f72eed17700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 214s elapsed
+2019-04-18 11:47:48.262	    7f72fc11f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 4s elapsed
+2019-04-18 12:10:27.523	    7f72fe03c700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 3s elapsed
+2019-04-18 12:10:28.020	    7f72fe03c700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 4s elapsed
+2019-04-18 12:18:57.559	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <invoke_http_bin /get_outs.bin> ends, 4s elapsed
+2019-04-18 12:18:57.560	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::get_outs> ends, 127s elapsed
+2019-04-18 12:18:57.756	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct: selected_transfer_idx[1062]> ends, 127s elapsed
+2019-04-18 12:18:57.756	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct 1> ends, 127s elapsed
+2019-04-18 12:19:04.276	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <invoke_http_bin /get_outs.bin> ends, 6s elapsed
+2019-04-18 12:19:04.278	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::get_outs> ends, 7s elapsed
+2019-04-18 12:19:04.474	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct: selected_transfer_idx[1062 382]> ends, 7s elapsed
+2019-04-18 12:19:04.474	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <wallet2::transfer_selected_rct 1> ends, 7s elapsed
+2019-04-18 12:19:04.801	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::transfer_main> ends, 134s elapsed
+2019-04-18 12:19:04.801	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <transfer preferred_txid=dac6d66742447aeb95724ef7b63417562c3f9533d7dc803dc16a90beed11cd80,d0e0f05102c54cce6c22bf5b509ce2026a74a5a38eb45854046b448020700d13,73113b29ba9f8d375f60981d486b8cb171ec03d5b8213b34b8d64b1d9d4783da unimportant 47kzJ8qJ5zoVmsnYsY33wxjap5NBoX5D16UALY2SYt1NcvNwVNZp8vdZjjZWTKMCQR8aY7LrsoG7kcfuDScPY8e31ZHuYz6 0.017 > ends, 134s elapsed
+2019-04-18 12:19:04.959	    7f730261f700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 135s elapsed
+2019-04-18 12:28:36.588	    7f72fb111700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 4s elapsed
+2019-04-18 12:28:37.212	    7f72fb111700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 5s elapsed
+2019-04-18 12:29:10.884	    7f7308466700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <simple_wallet::sync> ends, 3s elapsed
+2019-04-18 12:29:11.327	    7f7308466700	WARN 	wallet.wallet2	src/wallet/wallet2.cpp:146	// <monero_entry> ends, 4s elapsed
