@@ -7,7 +7,7 @@ alias ldd='otool -L'
 alias lla='ls -la'
 alias llrt='ls -ltr'
 
-
+export ETCDCTL_API=3
 #export CC1="--node c21:26657"
 #export CC2="--node c22:26657"
 #export CC3="--node c23:26657"
