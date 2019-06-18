@@ -1,0 +1,26 @@
+@startuml
+
+main -> go_coreImpl.MainRoutine:
+go_coreImpl.MainRoutine -> go_coreImpl.MainRoutine:select{\ncase mining := <-cb.purpose\n}
+
+
+
+
+someone -> systemCoreUtil: SetMiner
+
+someone -> systemCoreUtil: StartMining
+
+systemCoreUtil -> coreImpl: DoMining
+
+coreImpl -> coreImpl: BuildBasePurposerRoutine
+coreImpl -> go_coreImpl.MainRoutine: cb.purpose <- coreTask
+
+
+someone -> monologueCC: Query
+monologueCC -> monologueCC: candidateNotify
+
+monologueCC -> Cooperator: VoteBlock
+
+Cooperator -> go_coreImpl.MainRoutine: cb.purpose <- confirm. \nBuildConfirm
+
+@enduml
