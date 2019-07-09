@@ -1,0 +1,2 @@
+ssh -i ~/.ssh/okchain-dex-test.pem ubuntu@c$1
+

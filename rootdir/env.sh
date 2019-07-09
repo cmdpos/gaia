@@ -6,16 +6,10 @@ alias ll='ls -l'
 alias ldd='otool -L'
 alias lla='ls -la'
 alias llrt='ls -ltr'
-export GO111MODULE=off
-export ETCDCTL_API=3
-#export CC1="--node c21:26657"
-#export CC2="--node c22:26657"
-#export CC3="--node c23:26657"
-#export CC4="--node c24:26657"
-#export CC5="--node c25:26657"
-#export CCC="--node c16:26657"
-#export CC13="--node c13:26657"
 
+
+export ENV_LOCAL_HOST_IP=192.168.168.86
+export ZILLIQA_BUILD_TOP=/Users/oak/go/src/github.com/zhongqiuwood/Zilliqa/build
 export KAFKA_HOME=/usr/local/kafka
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 
