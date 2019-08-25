@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  vp0:
+    image: qzhong917/etcdcluster:latest
+    volumes: # docker.sock is mapped as the default CORE_VM_ENDPOINT
+      - /var/run/docker.sock:/var/run/docker.sock
+    hostname: vp0
+    environment:
+      - CORE_PEER_ID=vp0
+    command: vp0 vp0=http://172.17.219.229:12380,vp1=http://172.17.219.229:22380,vp2=http://172.17.234.133:12380 172.17.219.229:12380
+    ports:
+      - "12379:2379"
+      - "12380:2380"
+
+  vp1:
+    image: qzhong917/etcdcluster:latest
+    volumes: # docker.sock is mapped as the default CORE_VM_ENDPOINT
+      - /var/run/docker.sock:/var/run/docker.sock
+    hostname: vp1
+    environment:
+      - CORE_PEER_ID=vp1
+    command: vp1 vp0=http://172.17.219.229:12380,vp1=http://172.17.219.229:22380,vp2=http://172.17.234.133:12380 172.17.219.229:22380
+    ports:
+      - "22379:2379"
+      - "22380:2380"
