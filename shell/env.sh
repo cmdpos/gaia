@@ -17,7 +17,7 @@ export ETCDCTL_API=3
 #export CC13="--node c13:26657"
 
 export KAFKA_HOME=/usr/local/kafka
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
 
 
 #export CORE_LEDGER_STATE_DATASTRUCTURE_CONFIGS_NUMBUCKETS=32

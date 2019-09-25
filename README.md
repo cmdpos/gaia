@@ -1,5 +1,14 @@
 # Okchain 
 
+
+git remote add upstream https://github.com/monero-project/monero 
+
+git checkout remotes/upstream/master
+
+git checkout -b offmaster
+
+git branch --set-upstream-to=upstream/master offmaster
+
 ## Development resources
  protoc环境配置
 转至元数据结尾
