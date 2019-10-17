@@ -3,7 +3,7 @@
 /.idea
 
 *.exe
-
+gaia
 .deps
 .dirstamp
 .libs
