@@ -13,7 +13,7 @@ xcache
 vendor2
 statik.go
 # IDE
-.idea/
+.idea
 *.iml
 _testnet
 #vendor/*
