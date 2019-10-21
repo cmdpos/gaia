@@ -3,7 +3,7 @@
 #set -e
 
 
-target_tag=v2.0.2
+target_tag=$1
 
 official_repo=cosmos_gaia
 
