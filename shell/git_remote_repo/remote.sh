@@ -13,6 +13,7 @@ git fetch okcoin
 # go to official master
 git checkout remotes/offi/$target_branch
 
+aa91fa08505ea072acd81fbe36845adad7f6177f
 
 #git branch -D $target_branch
 

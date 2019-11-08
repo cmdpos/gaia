@@ -1,0 +1,57 @@
+
+hyperledger.abchain.org/applications/util.(*localCaller).Invoke at local_caller.go:53
+hyperledger.abchain.org/chaincode/lib/txgen.(*TxGenerator).Invoke.func1 at tx.go:199
+runtime.goexit at asm_amd64.s:1337
+ - Async stack trace
+
+
+
+
+
+
+
+---------------------------------------------
+
+hyperledger.abchain.org/chaincode/lib/txgen.(*TxGenerator).Invoke at tx.go:193
+hyperledger.abchain.org/chaincode/modules/ticket.(*GeneralCall).Add at adapter_caller.go:30
+hyperledger.abchain.org/applications/asset/currency.(*Ticket).NewTicket at ticket.go:90
+runtime.call32 at asm_amd64.s:519
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:139
+hyperledger.abchain.org/applications/asset/currency.(*Ticket).InitCaller_restcall_4 at ticket.go:53
+runtime.call64 at asm_amd64.s:520
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.(*middlewareHandler).invoke at router_serve.go:159
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:148
+hyperledger.abchain.org/applications/asset/wallet.InitTxRouterWithWallet_restcall_3.func1 at account.go:64
+runtime.call64 at asm_amd64.s:520
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.(*middlewareHandler).invoke at router_serve.go:159
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:148
+hyperledger.abchain.org/applications/util.(*FabricRPCCore).PrehandlePost_restcall_2 at tx.go:60
+runtime.call64 at asm_amd64.s:520
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.(*middlewareHandler).invoke at router_serve.go:159
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:148
+hyperledger.abchain.org/applications/util.TxRouter.Init_restcall_1.func1 at tx.go:216
+runtime.call64 at asm_amd64.s:520
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.(*middlewareHandler).invoke at router_serve.go:159
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:148
+hyperledger.abchain.org/applications/util.RPCRouter.Init_restcall_0.func1 at rpc.go:92
+runtime.call64 at asm_amd64.s:520
+reflect.Value.call at value.go:447
+reflect.Value.Call at value.go:308
+github.com/gocraft/web.(*middlewareHandler).invoke at router_serve.go:159
+github.com/gocraft/web.middlewareStack.func1 at router_serve.go:148
+github.com/gocraft/web.(*Router).ServeHTTP at router_serve.go:48
+net/http.serverHandler.ServeHTTP at server.go:2774
+net/http.(*conn).serve at server.go:1878
+runtime.goexit at asm_amd64.s:1337
+ - Async stack trace
+net/http.(*Server).Serve at server.go:2884
