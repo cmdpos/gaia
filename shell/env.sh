@@ -17,8 +17,7 @@ export ETCDCTL_API=3
 #export CC13="--node c13:26657"
 
 export KAFKA_HOME=/usr/local/kafka
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
 
 #export CORE_LEDGER_STATE_DATASTRUCTURE_CONFIGS_NUMBUCKETS=32
 #export CORE_LEDGER_STATE_DATASTRUCTURE_CONFIGS_MAXGROUPINGATEACHLEVEL=3
@@ -38,5 +37,5 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=$GOBIN:$KAFKA_HOME/bin:$PATH
 export PATH=/Users/$LOGNAME/lib/scrp/phantomjs-2.1.1-macosx/bin:$PATH
 export PATH=/User/$LOGNAME/code/bin:$PATH
-export PATH=/usr/local/opt/qt/bin:$PATH
+export PATH=/opt/apache-maven-3.6.3/bin:/usr/local/opt/qt/bin:$PATH
 export PATH=/Users/oak/go/src/github.com/hyperledger/fabric/build/bin:/usr/local/Cellar/python@2/2.7.15/bin:$PATH
