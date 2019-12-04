@@ -39,4 +39,4 @@ export PATH=$GOBIN:$KAFKA_HOME/bin:$PATH
 export PATH=/Users/$LOGNAME/lib/scrp/phantomjs-2.1.1-macosx/bin:$PATH
 export PATH=/User/$LOGNAME/code/bin:$PATH
 export PATH=/usr/local/opt/qt/bin:$PATH
-export PATH=/Users/oak/go/src/github.com/hyperledger/fabric/build/bin:/usr/local/Cellar/python@2/2.7.15/bin:$PATH
+export PATH=/opt/apache-maven-3.6.3/bin:/Users/oak/go/src/github.com/hyperledger/fabric/build/bin:/usr/local/Cellar/python@2/2.7.15/bin:$PATH
