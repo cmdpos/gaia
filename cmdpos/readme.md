@@ -29,3 +29,7 @@
 ## 6.	钱包
 * q)	安卓手机端轻钱包
 * r)	超级节点端挖矿客户端（全节点账本、路由、钱包、挖矿）
+
+
+gaiacli query account eva1fsvvrkwvlh7084mwlpjek4vjm04enljejpl7z4 --node http://18.163.89.47:20181
+fire divide pepper letter grunt impose jar hawk keep raw solar acquire analyst slogan place faint garage leave stool century myself problem unaware ecology
