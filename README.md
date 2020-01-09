@@ -1,3 +1,20 @@
+inflationRateChangePerYear是一年的通胀率变话值，正负取决于当前抵押率(bondedRatio)和目标抵押率(GoalBonded)即67%。
+
+MaxInflationRateChange是从7%~20%变化的最大步长即13%
+
+inflationRateChangePerYear = (1 – bondedRatio / GoalBonded) * MaxInflationRateChange
+将整年的通胀率变化平摊到每个块上，
+
+算出上一个块到当前块的通胀率变化值（inflationRateChange）inflationRateChange := inflationRateChangePerYear  / BlocksPerYear
+
+计算当前块的通胀率：currBlockInflationRate = preBlockInflationRate + inflationRateChange
+
+计算当前块增发量：
+currBlockInflation = totalSupply * currBlockInflationRate
+
+
+
+
 # 20191230-20200103
 
 ## 1. 核心工作
