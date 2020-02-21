@@ -15,6 +15,7 @@ currBlockInflation = totalSupply * currBlockInflationRate
 
 
 
+
 # 20191230-20200103
 
 ## 1. 核心工作
