@@ -1,81 +1,99 @@
-# 2020/02/10-2020/02/14
 
-## 1. 核心工作
-1. OKChain测试网迭代和运营 
-2. 一票多投业务功能文档 (80%)
-3. 币币杠杆设计文档 (70%)
-4. 测试币领取性能优化 (100%)
-5. OKChain v0.9测试 (100%)
-6. BTC & OKChain 基于AtomicSwap跨链 (60%)
-7. Cosmos导出当前状态实现升级调研 (40%)
-9. 解决okdex测试网线上问题 (100)
-8. 招聘
+一、技术参考资料
+
+1、RSK:比特币合并挖矿将持续发展下去
+
+简介：RSK总结概括合并挖矿的技术前景。
+
+https://blog.rsk.co/zh-hans/noticia/rsk%E6%AF%94%E7%89%B9%E5%B8%81%E5%90%88%E5%B9%B6%E6%8C%96%E7%9F%BF%E5%B0%86%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95%E4%B8%8B%E5%8E%BB/
+
+2、将MinbleWimble以合并挖矿形式集成到比特币
+
+简介：使用侧链+双向锚定扩展比特币功能的思路。
+
+https://blockflow.net/t/topic/1970
+
+3、RSK的共识机制：DECOR+协议，如何阻止SPV挖矿
+
+简介：SPV挖矿使矿工有微弱的优势，通过协议阻止。（这个问题并不重要）
+
+https://www.hellobtc.com/kp/du/05/1776.html
+
+4、BTC.com矿池开源程序
+
+简介：目前支持BTC合并挖矿的品种：NMC、RSK、ElastOS及兼容合并挖矿币种。
+
+https://github.com/btccom/btcpool
+
+5、一种基于比特币网络的造链系统
+
+简介：BCC社区提出的合并挖矿架构
+
+https://bitcoincashcn.github.io/2020/02/03/anychainoverbtc/
+https://bitcoincashcn.github.io/2019/10/01/btclayer/
+
+二、合并挖矿币种
+
+1、http://unobtanium.uno/   
+UNO：市值1亿人民币、合并挖矿算力：13 E
+
+2、https://www.namecoin.org/
+
+NMC：市值6千万人民币、合并挖矿算力：98.81E
+
+3、https://bitcointalk.org/index.php?topic=624935.0
+
+i0coin (I0C)：
+
+4、https://bitcointalk.org/index.php?topic=3015517.0
+
+ixcoin
+
+5、https://www.devcoin.org/
+
+devcoin
+
+6、https://bitcointalk.org/index.php?topic=67991.0
+
+groupcoin
+
+7、http://myriadcoin.org/
+
+XMY：支持5种算力挖矿，其中SHA-256支持合并挖矿；市值1.89千万人民币；合并挖矿算力：26.29 E
+
+8、https://terracoin.io/zh/
+
+TRC：市值6.52百万人民币、合并挖矿算力：7.65E
+
+9、https://emercoin.com/
+
+EMC：市值2.9千万人民币、合并挖矿算力23.12 E
+
+10、https://xaya.io/
+
+CHI：支持SHA-256d合并挖矿以及neoscrypt独立算法挖矿；市值6百万人民币、合并挖矿算力：8.81 E
+
+11、https://syscoin.org/
+
+SYS：市值1.45亿人民币、合并挖矿算力：22.3E
+
+12、https://bitcoinvault.global/
+
+BTCV2：疑似合并挖矿，有2E算力。
+
+13、https://www.rsk.co/
+
+比特币侧链。
+
+14、https://v.cash/
+
+V-cash
+
+15、https://xaya.io/huntercoin-legacy/
+
+HunterCoin（HUC）：xaya开发的另外一个合并挖矿币。
 
 
-## 2. 本周问题/故障
-1. okdex测试网上线问题解决 (100%)
-     - DEX-UI：上线1次，发现如下问题，已解决（100%）
-        - 问题描述：在OKEx客户端打开DEX，点击跳转至区块浏览器时链接错误
-        - 错误原因：OKEx客户端使用的bafang域名，在DEX中认为bafang是预发环境，冲突了
-        - 解决方案：DEX中增加OKEx客户端兼容，通过userAgent判断
-     - Java服务：上线2次，发现如下问题，已解决（100%）
-        - 问题描述：1. 监控中接口错误率达4.5%左右；2. okdex-auth接口403
-        - 错误原因：1. 请求超时时间设置过短（2秒）；2. 配置缺少路由白名单过滤
-        - 解决方案：1. 增加超时时间；2. 增加/okdex/v1路由白名单过滤
-     - okchainrdrest接口前缀问题修复（100%）
-        - 问题描述：通过okchainrd启动的okchain节点，rest服务缺少/okchain/v1前缀
-        - 错误原因：在rest接口前缀修改中，仅仅修改了okchain/cmd/okchaind目录下的程序，未修改okchain/cmd/okchainrd目录下的程序
-        - 解决方法：在okchain/cmd/okchainrd下增加对rest接口前缀的修改
-    
-## 3. 详细进展
-1. OKChain测试网迭代和运营 
-    — 累计927人次领取测试币，26万块高，节点均运行正常
-    - okchain-docs英文版：创建okchain-docs-en工程，按方案#1（先有一版英文版）完成：70%
-    - 测试网运行平稳，持续监控中
-    - 调整做市程序，防止k线被拉横盘
-   
-2. 一票多投业务功能文档 (80%)
-    - 分红模块对应功能裁剪及原有staking接口删减问题调研（100%）
-    - staking换票和代理投票的设计思路（100%）
-    
-3. 币币杠杆设计文档 (70%)
-   - 整理币币杠杆设计文档到wiki（100%）
-   - 整理风险准备金设计文档到wiki(75%)
-   
-4. 测试币性能优化 (100%)
-   - 2000个水龙头地址方案开发，本地测试完成（100%）
-   - Python并发测试程序开发完成（100%）
-   - Java 服务测试环境部署完成（100%）
-   - 使用redis 队列异步领取测试币编码并测试（100%）
-   - Java服务配置切换apllo（80%）。目前可能配置存在问题，待查明解决
-   
-     
-5. OKChain测试网v0.9测试  (100%)
-    - 应测试人员要求在debug模块开发：发送多币种手续费/查询多个validator分红池金额/查询当前手续费池金额，三个功能，已提交至v0.9分支（100%）
-    - 编写okchain客户端中所有staking query相关的参数、返回值和用例说明，并发布wiki（100%）
-
-6. BTCz & OKChain 基于AtomicSwap跨链 (40%)
-    - 方案设计(70%)
-       - 了解 Biance Chain HTLC (100%)
-       - 了解 OKEx 多链钱包中BTC充提币功能与实现（100%）
-       - 整理设计文档（70%）
-       - 与 PM & TL 确定分阶段实现路线图 (0%)
-    
-7. Cosmos导出当前状态实现升级调研 (60%)
-    - dev export调研并实现 （100%）
-    - 0.8 export 实现（100%）
-    - export 测试并fix（70%）
-    - 测试网数据通过export升级到dev（0%）
-
-8. 招聘离
-    - 面试通过一个P6，已offer
 
 
-## 4. 下周计划   
-1. OKChain测试网迭代和运营 
-2. 一票多投设计文档 
-3. 币币杠杆原型代码
-4. BTC & OKChain 基于AtomicSwap跨链 
-5. Cosmos导出当前状态实现升级调研 
-6. Open Dex
 
