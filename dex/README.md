@@ -1,5 +1,5 @@
 
-一、技术参考资料
+# 一、技术参考资料
 
 1、RSK:比特币合并挖矿将持续发展下去
 
@@ -28,26 +28,30 @@ https://github.com/btccom/btcpool
 5、一种基于比特币网络的造链系统
 
 简介：BCC社区提出的合并挖矿架构
-
+```
 https://bitcoincashcn.github.io/2020/02/03/anychainoverbtc/
 https://bitcoincashcn.github.io/2019/10/01/btclayer/
+```
+# 二、合并挖矿币种
 
-二、合并挖矿币种
+1. UNO：市值1亿人民币、合并挖矿算力：13 E
 
-1、http://unobtanium.uno/   
-UNO：市值1亿人民币、合并挖矿算力：13 E
+http://unobtanium.uno/   
 
-2、https://www.namecoin.org/
+2. NMC：市值6千万人民币、合并挖矿算力：98.81E
 
-NMC：市值6千万人民币、合并挖矿算力：98.81E
+https://www.namecoin.org/
 
-3、https://bitcointalk.org/index.php?topic=624935.0
 
-i0coin (I0C)：
+3. i0coin (I0C)：
 
-4、https://bitcointalk.org/index.php?topic=3015517.0
+https://bitcointalk.org/index.php?topic=624935.0
 
-ixcoin
+
+4. ixcoin
+
+https://bitcointalk.org/index.php?topic=3015517.0
+
 
 5、https://www.devcoin.org/
 
@@ -81,13 +85,14 @@ SYS：市值1.45亿人民币、合并挖矿算力：22.3E
 
 BTCV2：疑似合并挖矿，有2E算力。
 
-13、https://www.rsk.co/
+13. 比特币侧链。
 
-比特币侧链。
+https://www.rsk.co/
 
-14、https://v.cash/
+14. V-cash
 
-V-cash
+https://v.cash/
+
 
 15、https://xaya.io/huntercoin-legacy/
 
