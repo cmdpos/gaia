@@ -28,10 +28,9 @@ https://github.com/btccom/btcpool
 5、一种基于比特币网络的造链系统
 
 简介：BCC社区提出的合并挖矿架构
-```
-https://bitcoincashcn.github.io/2020/02/03/anychainoverbtc/
-https://bitcoincashcn.github.io/2019/10/01/btclayer/
-```
+* https://bitcoincashcn.github.io/2020/02/03/anychainoverbtc/
+* https://bitcoincashcn.github.io/2019/10/01/btclayer/
+
 # 二、合并挖矿币种
 
 1. UNO：市值1亿人民币、合并挖矿算力：13 E
