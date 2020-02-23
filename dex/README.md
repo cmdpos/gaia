@@ -53,37 +53,45 @@ https://bitcointalk.org/index.php?topic=624935.0
 https://bitcointalk.org/index.php?topic=3015517.0
 
 
-5、https://www.devcoin.org/
+5、devcoin
 
-devcoin
+https://www.devcoin.org/
 
-6、https://bitcointalk.org/index.php?topic=67991.0
 
-groupcoin
+6、groupcoin
 
-7、http://myriadcoin.org/
+https://bitcointalk.org/index.php?topic=67991.0
 
-XMY：支持5种算力挖矿，其中SHA-256支持合并挖矿；市值1.89千万人民币；合并挖矿算力：26.29 E
 
-8、https://terracoin.io/zh/
+7、XMY：支持5种算力挖矿，其中SHA-256支持合并挖矿；市值1.89千万人民币；合并挖矿算力：26.29 E
 
-TRC：市值6.52百万人民币、合并挖矿算力：7.65E
+http://myriadcoin.org/
 
-9、https://emercoin.com/
 
-EMC：市值2.9千万人民币、合并挖矿算力23.12 E
+8、TRC：市值6.52百万人民币、合并挖矿算力：7.65E
 
-10、https://xaya.io/
+https://terracoin.io/zh/
 
-CHI：支持SHA-256d合并挖矿以及neoscrypt独立算法挖矿；市值6百万人民币、合并挖矿算力：8.81 E
 
-11、https://syscoin.org/
+9、EMC：市值2.9千万人民币、合并挖矿算力23.12 E
 
-SYS：市值1.45亿人民币、合并挖矿算力：22.3E
+https://emercoin.com/
 
-12、https://bitcoinvault.global/
 
-BTCV2：疑似合并挖矿，有2E算力。
+10、CHI：支持SHA-256d合并挖矿以及neoscrypt独立算法挖矿；市值6百万人民币、合并挖矿算力：8.81 E
+
+https://xaya.io/
+
+
+11、SYS：市值1.45亿人民币、合并挖矿算力：22.3E
+
+https://syscoin.org/
+
+
+12、BTCV2：疑似合并挖矿，有2E算力。
+
+https://bitcoinvault.global/
+
 
 13. 比特币侧链。
 
@@ -94,9 +102,10 @@ https://www.rsk.co/
 https://v.cash/
 
 
-15、https://xaya.io/huntercoin-legacy/
+15、HunterCoin（HUC）：xaya开发的另外一个合并挖矿币。
 
-HunterCoin（HUC）：xaya开发的另外一个合并挖矿币。
+https://xaya.io/huntercoin-legacy/
+
 
 
 
