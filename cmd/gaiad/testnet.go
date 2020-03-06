@@ -39,6 +39,7 @@ var (
 	flagNodeDaemonHome    = "node-daemon-home"
 	flagNodeCLIHome       = "node-cli-home"
 	flagStartingIPAddress = "starting-ip-address"
+	flagBaseport          = "base-port" // cmdpos
 )
 
 // get cmd to initialize all files for tendermint testnet and application
@@ -91,6 +92,8 @@ Example:
 	cmd.Flags().String(
 		server.FlagMinGasPrices, fmt.Sprintf("0.000006%s", sdk.DefaultBondDenom),
 		"Minimum gas prices to accept for transactions; All fees in a tx must meet this minimum (e.g. 0.01photino,0.001stake)")
+	cmd.Flags().Int(flagBaseport, 20056, "testnet base port") // cmdpos
+
 	return cmd
 }
 
@@ -141,7 +144,7 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 		monikers = append(monikers, nodeDirName)
 		config.Moniker = nodeDirName
 
-		ip, err := getIP(i, startingIPAddress)
+		ip, err := getIP(0, startingIPAddress)
 		if err != nil {
 			_ = os.RemoveAll(outputDir)
 			return err
@@ -152,8 +155,11 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 			_ = os.RemoveAll(outputDir)
 			return err
 		}
+		baseport := viper.GetInt(flagBaseport)
+		port := baseport + i*100
+		memo := fmt.Sprintf("%s@%s:%d", nodeIDs[i], ip, port) // cmdpos
 
-		memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
+		//memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
 		genFiles = append(genFiles, config.GenesisFile())
 
 		buf := bufio.NewReader(cmd.InOrStdin())
@@ -173,11 +179,16 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 			keyPass = client.DefaultKeyPass
 		}
 
-		addr, secret, err := server.GenerateSaveCoinKey(clientDir, nodeDirName, keyPass, true)
+		addr, secret, err := server.GenerateSaveCoinKey(clientDir, nodeDirName, keyPass, true, getTestnetMnemonic(i))
 		if err != nil {
 			_ = os.RemoveAll(outputDir)
 			return err
 		}
+
+		fmt.Printf("nodeDirName: [%s]\n", nodeDirName)
+		fmt.Printf("clientDir: [%s]\n", clientDir)
+		fmt.Printf("addr: [%s]\n", addr.String())
+		fmt.Printf("secret: [%s]\n\n", secret)
 
 		info := map[string]string{"secret": secret}
 
