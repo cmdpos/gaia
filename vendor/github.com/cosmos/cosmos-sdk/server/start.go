@@ -28,6 +28,13 @@ const (
 	FlagMinGasPrices   = "minimum-gas-prices"
 	FlagHaltHeight     = "halt-height"
 	FlagHaltTime       = "halt-time"
+	FlagListenAddr     = "rest.laddr"
+
+	FlagCORES              = "cores"
+	FlagMaxOpenConnections = "max-open"
+
+	FlagRestOutsideIp   = "outside_ip"
+	FlagRestOutsidePort = "outside_port"
 )
 
 // StartCmd runs the service passed in, either stand-alone or in-process with
@@ -80,8 +87,22 @@ which accepts a path for the resulting pprof file.
 	cmd.Flags().Uint64(FlagHaltTime, 0, "Minimum block time (in Unix seconds) at which to gracefully halt the chain and shutdown the node")
 	cmd.Flags().String(flagCPUProfile, "", "Enable CPU profiling and write to the provided file")
 
+	registerRestServerFlags(cmd)
+
 	// add support for all Tendermint-specific command line options
 	tcmd.AddNodeFlags(cmd)
+	return cmd
+}
+
+
+// RegisterRestServerFlags registers the flags required for rest server
+func registerRestServerFlags(cmd *cobra.Command) *cobra.Command {
+	cmd.Flags().String(FlagListenAddr, "tcp://0.0.0.0:26659",
+		"The address for the rest-server to listen on. (0.0.0.0:0 means any interface, any port)")
+	cmd.Flags().String(FlagCORES, "", "Set the rest-server domains that can make CORS requests (* for all)")
+	cmd.Flags().Int(FlagMaxOpenConnections, 1000, "The number of maximum open connections of rest-server")
+	cmd.Flags().String(FlagRestOutsideIp, "", "Set the rest-server specific outside ip ")
+	cmd.Flags().Int(FlagRestOutsidePort, 0, "Set the rest-server specific outside port ")
 	return cmd
 }
 
