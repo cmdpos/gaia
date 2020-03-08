@@ -23,7 +23,7 @@ baseapp/data/*
 client/lcd/keys/*
 cmd/gaiacli/statik/statik.go
 mytestnet
-
+dev/testnet/cache
 # Testing
 coverage.txt
 profile.out
@@ -37,7 +37,7 @@ vagrant
 # IDE
 .idea/
 *.iml
-
+*.yaml
 # Graphviz
 dependency-graph.png
 
