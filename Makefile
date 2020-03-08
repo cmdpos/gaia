@@ -89,6 +89,8 @@ endif
 install:
 	go install $(BUILD_FLAGS) ./cmd/gaiad
 	go install $(BUILD_FLAGS) ./cmd/gaiacli
+	cp /Users/oak/go/bin/gaiad /Users/oak/go/bin/37gaiad
+	cp /Users/oak/go/bin/gaiacli /Users/oak/go/bin/37gaiacli
 
 install-debug: go.sum
 	go install -mod=readonly $(BUILD_FLAGS) ./cmd/gaiadebug
