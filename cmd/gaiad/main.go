@@ -59,7 +59,7 @@ func main() {
 	rootCmd.AddCommand(testnetCmd(ctx, cdc, app.ModuleBasics, genaccounts.AppModuleBasic{}))
 	rootCmd.AddCommand(replayCmd())
 
-	server.AddCommands(ctx, cdc, rootCmd, newApp, exportAppStateAndTMValidators)
+	server.AddCommands(ctx, cdc, rootCmd, newApp, exportAppStateAndTMValidators, registerRoutes)
 
 	// prepare and add flags
 	executor := cli.PrepareBaseCmd(rootCmd, "GA", app.DefaultNodeHome)
@@ -94,4 +94,14 @@ func exportAppStateAndTMValidators(
 	}
 	gApp := app.NewGaiaApp(logger, db, traceStore, true, uint(1))
 	return gApp.ExportAppStateAndValidators(forZeroHeight, jailWhiteList)
+}
+
+
+// registerRoutes registers the routes from the different modules for the LCD.
+// NOTE: details on the routes added for each module are in the module documentation
+// NOTE: If making updates here you also need to update the test helper in client/lcd/test_helper.go
+func registerRoutes(rs *server.RestServer) {
+	client.RegisterRoutes(rs.CliCtx, rs.Mux)
+	authrest.RegisterTxRoutes(rs.CliCtx, rs.Mux)
+	app.ModuleBasics.RegisterRESTRoutes(rs.CliCtx, rs.Mux)
 }

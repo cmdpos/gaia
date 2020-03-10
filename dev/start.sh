@@ -22,6 +22,6 @@ gaiacli config output json
 gaiacli config indent true
 
 sleep 1
-nohup gaiacli rest-server &
+#nohup gaiacli rest-server &
 gaiad start --home cache/node0/gaiad
 
