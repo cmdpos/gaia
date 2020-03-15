@@ -34,10 +34,10 @@ const appName = "GaiaApp"
 
 var (
 	// default home directories for gaiacli
-	DefaultCLIHome = os.ExpandEnv("$HOME/.gaiacli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.evaiocli")
 
 	// default home directories for gaiad
-	DefaultNodeHome = os.ExpandEnv("$HOME/.gaiad")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.evaiod")
 
 	// The module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration

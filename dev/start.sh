@@ -23,5 +23,5 @@ gaiacli config indent true
 
 sleep 1
 #nohup gaiacli rest-server &
-gaiad start --home cache/node0/gaiad
+gaiad start --home cache/node0/evaiod
 

@@ -97,7 +97,7 @@ which accepts a path for the resulting pprof file.
 
 // RegisterRestServerFlags registers the flags required for rest server
 func registerRestServerFlags(cmd *cobra.Command) *cobra.Command {
-	cmd.Flags().String(FlagListenAddr, "tcp://127.0.0.1:26659",
+	cmd.Flags().String(FlagListenAddr, "tcp://0.0.0.0:1317",
 		"The address for the rest-server to listen on. (0.0.0.0:0 means any interface, any port)")
 	cmd.Flags().String(FlagCORES, "", "Set the rest-server domains that can make CORS requests (* for all)")
 	cmd.Flags().Int(FlagMaxOpenConnections, 1000, "The number of maximum open connections of rest-server")

@@ -31,6 +31,10 @@ while getopts "isn:b:p:" opt; do
   esac
 done
 
+echorun(){
+    echo $@
+    $@
+}
 
 function init {
     cd ${COSMOS_TOP}
@@ -39,12 +43,12 @@ function init {
 
     cd ${COSMOS_NET_TOP}
     ${COSMOS_TOP}/dev/killbyname.sh ${BIN_NAME}
-    rm -rf ${COSMOS_NET_CACHE}
+    rm -rf cache
 
     echo "=================================================="
     echo "===== Generate testnet configurations files...===="
     echo "${BIN_NAME} testnet --v $1 -o cache --chain-id testchain --starting-ip-address ${IP} --base-port ${BASE_PORT}"
-    ${COSMOS_BIN}/${BIN_NAME} testnet --v $1 -o cache \
+    echorun ${COSMOS_BIN}/${BIN_NAME} testnet --v $1 -o cache \
     --chain-id testchain \
     --starting-ip-address ${IP} \
     --base-port ${BASE_PORT}  <<EOF
@@ -56,23 +60,26 @@ function start {
 
     index=0
 
-    echo "============================================"
-    echo "=========== Startup seed node...============"
-    echo "${BIN_NAME} --home ${COSMOS_NET_CACHE}/node${index}/gaiad  start --p2p.laddr tcp://${IP}:${seedp2pport} --p2p.seed_mode=true --p2p.addr_book_strict=false  --rpc.laddr tcp://${IP}:${seedrpcport}"
-    nohup ${COSMOS_BIN}/${BIN_NAME} start \
-    --home ${COSMOS_NET_CACHE}/node${index}/${BIN_NAME} \
+    echo "================================================================================================================"
+    echo "============================================= Startup seed node...=============================================="
+#    echo "${BIN_NAME} --home cache/node${index}/evaiod  start --p2p.laddr tcp://${IP}:${seedp2pport} --p2p.seed_mode=true --p2p.addr_book_strict=false  --rpc.laddr tcp://${IP}:${seedrpcport}"
+
+    cmd="${BIN_NAME} start \
+    --home cache/node${index}/${BIN_NAME} \
     --p2p.laddr tcp://${IP}:${seedp2pport} \
     --p2p.seed_mode=true --p2p.addr_book_strict=false \
     --log_level "main:info,state:info,*:error" \
     --rest.laddr tcp://${IP}:${seedrestport} \
-    --rpc.laddr tcp://${IP}:${seedrpcport} > ${COSMOS_NET_CACHE}/${BIN_NAME}.${index}.log 2>&1 &
+    --rpc.laddr tcp://${IP}:${seedrpcport}"
 
-    seed=$(${COSMOS_BIN}/${BIN_NAME} tendermint show-node-id --home ${COSMOS_NET_CACHE}/node${index}/${BIN_NAME})
+    echo $cmd
+
+    nohup $cmd > cache/${BIN_NAME}.${index}.log 2>&1 &
+
+    seed=$(${COSMOS_BIN}/${BIN_NAME} tendermint show-node-id --home cache/node${index}/${BIN_NAME})
 
 
 
-    echo "============================================"
-    echo "======== Startup validator nodes...========="
     for ((index=1; index<${1}; index++)) do
 
         let p2pport=${BASE_PORT_PREFIX}+${index}*100+${P2P_PORT_SUFFIX}
@@ -80,18 +87,22 @@ function start {
 
         ((restport = BASE_PORT_PREFIX + index * 100 + REST_PORT_SUFFIX))
 
-        echo "${BIN_NAME} --home ${COSMOS_NET_CACHE}/node${index}/gaiad  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seed}@${IP}:${seedp2pport} --p2p.addr_book_strict=false  --rpc.laddr tcp://${IP}:${rpcport}"
+#        echo "${BIN_NAME} --home cache/node${index}/evaiod  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seed}@${IP}:${seedp2pport} --p2p.addr_book_strict=false  --rpc.laddr tcp://${IP}:${rpcport}"
+        echo "========================================== Startup nodes $index...==========================================="
 
-        nohup ${COSMOS_BIN}/${BIN_NAME} start \
-        --home ${COSMOS_NET_CACHE}/node${index}/${BIN_NAME} \
+        cmd="${BIN_NAME} start \
+        --home cache/node${index}/${BIN_NAME} \
         --p2p.laddr tcp://${IP}:${p2pport} \
-        --p2p.seeds ${seed}@${IP}:${seedp2pport} \
         --log_level "main:info,state:info,*:error" \
         --p2p.addr_book_strict=false \
         --rest.laddr tcp://${IP}:${restport} \
-        --rpc.laddr tcp://${IP}:${rpcport} > ${COSMOS_NET_CACHE}/${BIN_NAME}.${index}.log 2>&1 &
+        --rpc.laddr tcp://${IP}:${rpcport} \
+        --p2p.seeds ${seed}@${IP}:${seedp2pport} "
+
+        echo $cmd
+        nohup $cmd > cache/${BIN_NAME}.${index}.log 2>&1 &
     done
-    echo "start node done"
+    echo "===================================start node done===================================="
 }
 
 if [ -z ${IP} ]; then

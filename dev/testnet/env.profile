@@ -1,4 +1,4 @@
-BIN_NAME=gaiad
+BIN_NAME=evaiod
 COSMOS_TOP=${GOPATH}/src/github.com/cosmos/gaia
 COSMOS_BIN=${GOPATH}/bin
 COSMOS_NET_TOP=`pwd`
