@@ -1,11 +1,10 @@
 #!/usr/bin/make -f
 
 PACKAGES_SIMTEST=$(shell go list ./... | grep '/simulation')
-VERSION := $(shell echo $(shell git describe --tags) | sed 's/^v//')
+#VERSION := $(shell echo $(shell git describe --tags) | sed 's/^v//')
 COMMIT := $(shell git log -1 --format='%H')
 LEDGER_ENABLED ?= false
 SDK_PACK := $(shell go list -m github.com/cosmos/cosmos-sdk | sed  's/ /\@/g')
-
 export GO111MODULE = off
 
 # process build tags
@@ -47,12 +46,25 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=gaia \
-		  -X github.com/cosmos/cosmos-sdk/version.ServerName=gaiad \
-		  -X github.com/cosmos/cosmos-sdk/version.ClientName=gaiacli \
-		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
-		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
-		  -X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
+COMMIT := $(shell git rev-parse HEAD)
+CAT := $(if $(filter $(OS),Windows_NT),type,cat)
+
+# this should be the same as the version in go.mod
+Name=evaio
+Version=2.0.0
+Tendermint=0.32.7
+CosmosSDK=0.37.4
+ServerName=evaiod
+ClientName=evaiocli
+
+ldflags = -X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.Version=$(Version) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.Name=$(Name) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.ServerName=$(ServerName) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.ClientName=$(ClientName) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.CosmosSDK=$(CosmosSDK) \
+	-X github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.Tendermint=$(Tendermint) \
+	-X "github.com/cosmos/gaia/vendor/github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags)"
 
 ifeq ($(WITH_CLEVELDB),yes)
   ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=cleveldb
@@ -60,7 +72,7 @@ endif
 ldflags += $(LDFLAGS)
 ldflags := $(strip $(ldflags))
 
-BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)'
+BUILD_FLAGS := -v -ldflags '$(ldflags)'
 
 # The below include contains the tools target.
 include contrib/devtools/Makefile
@@ -91,8 +103,8 @@ install:
 	go install $(BUILD_FLAGS) ./cmd/gaiacli
 	cp $(GOBIN)/gaiad $(GOBIN)/evaiod
 	cp $(GOBIN)/gaiacli $(GOBIN)/evaiocli
-	cp $(GOBIN)/gaiad $(GOBIN)/37gaiad
-	cp $(GOBIN)/gaiacli $(GOBIN)/37gaiacli
+#	cp $(GOBIN)/gaiad $(GOBIN)/37gaiad
+#	cp $(GOBIN)/gaiacli $(GOBIN)/37gaiacli
 
 install-debug: go.sum
 	go install -mod=readonly $(BUILD_FLAGS) ./cmd/gaiadebug
