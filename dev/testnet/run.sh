@@ -4,11 +4,9 @@
 ../killbyname.sh "gaiad"
 ../killbyname.sh "okchaind"
 ../killbyname.sh "evaiod"
+rm -rf ~/.evaiod
 
 ./testnet.sh -i -s -n 4
-
-#nohup gaiacli rest-server --laddr tcp://localhost:10059 --node tcp://localhost:10157 &
-
 
 for ((;;)) do
     tail -n 5 ./cache/evaiod.0.log

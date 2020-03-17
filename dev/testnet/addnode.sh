@@ -70,6 +70,10 @@ if [ ! -z ${INPUT_SEEDNODE} ]; then
     seed_addr=${INPUT_SEEDNODE}
 fi
 
+echorun(){
+    echo "["$@"]"
+    $@
+}
 
 function init {
     if [ ${INPUT_INDEX} -gt 99 ]; then
@@ -96,7 +100,7 @@ function init {
         exit
     fi
 
-    ${COSMOS_BIN}/${BIN_NAME} init ${NODE_ID} -o --chain-id testchain --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod
+    nohup ${BIN_NAME} init ${NODE_ID} -o --chain-id testchain --home cache/${NODE_ID}/evaiod
 }
 
 
@@ -117,15 +121,17 @@ function start {
     restport=$4
     seednode=$3
 
-    echo "${BIN_NAME} --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seednode} --rpc.laddr tcp://${IP}:${rpcport}"
-
-    ${COSMOS_BIN}/${BIN_NAME} start\
-    --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod \
+    cmd="${BIN_NAME} start\
+    --home cache/${NODE_ID}/evaiod \
     --p2p.laddr tcp://${IP}:${p2pport} \
     --p2p.seeds ${seednode} \
     --p2p.addr_book_strict=false\
     --rest.laddr tcp://${IP}:${restport}\
-    --rpc.laddr tcp://${IP}:${rpcport} > ${COSMOS_NET_CACHE}/${BIN_NAME}.${NODE_ID}.log 2>&1 &
+    --rpc.laddr tcp://${IP}:${rpcport}"
+
+    echo $cmd
+
+    echorun $cmd > cache/${BIN_NAME}.${NODE_ID}.log 2>&1 &
 
     echo "start new node done"
 }
