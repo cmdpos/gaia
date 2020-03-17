@@ -62,8 +62,8 @@ if [ -z ${IP} ]; then
     IP="127.0.0.1"
 fi
 
-if [ -d ${COSMOS_NET_CACHE}/node0/gaiad ]; then
-    seed_addr=$(${COSMOS_BIN}/${BIN_NAME} tendermint show-node-id --home ${COSMOS_NET_CACHE}/node0/gaiad)@${IP}:${seedp2pport}
+if [ -d ${COSMOS_NET_CACHE}/node0/evaiod ]; then
+    seed_addr=$(${COSMOS_BIN}/${BIN_NAME} tendermint show-node-id --home ${COSMOS_NET_CACHE}/node0/evaiod)@${IP}:${seedp2pport}
 fi
 
 if [ ! -z ${INPUT_SEEDNODE} ]; then
@@ -96,7 +96,7 @@ function init {
         exit
     fi
 
-    ${COSMOS_BIN}/${BIN_NAME} init ${NODE_ID} -o --chain-id testchain --home ${COSMOS_NET_CACHE}/${NODE_ID}/gaiad
+    ${COSMOS_BIN}/${BIN_NAME} init ${NODE_ID} -o --chain-id testchain --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod
 }
 
 
@@ -107,8 +107,8 @@ function start {
 
 #    exit
     echo "copy the genesis file..."
-    rm ${COSMOS_NET_CACHE}/${NODE_ID}/gaiad/config/genesis.json
-    cp ${COSMOS_NET_CACHE}/node0/gaiad/config/genesis.json ${COSMOS_NET_CACHE}/${NODE_ID}/gaiad/config/
+    rm ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod/config/genesis.json
+    cp ${COSMOS_NET_CACHE}/node0/evaiod/config/genesis.json ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod/config/
     echo "copy the genesis file done"
 
     echo "start new node..."
@@ -117,10 +117,10 @@ function start {
     restport=$4
     seednode=$3
 
-    echo "${BIN_NAME} --home ${COSMOS_NET_CACHE}/${NODE_ID}/gaiad  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seednode} --rpc.laddr tcp://${IP}:${rpcport}"
+    echo "${BIN_NAME} --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seednode} --rpc.laddr tcp://${IP}:${rpcport}"
 
     ${COSMOS_BIN}/${BIN_NAME} start\
-    --home ${COSMOS_NET_CACHE}/${NODE_ID}/gaiad \
+    --home ${COSMOS_NET_CACHE}/${NODE_ID}/evaiod \
     --p2p.laddr tcp://${IP}:${p2pport} \
     --p2p.seeds ${seednode} \
     --p2p.addr_book_strict=false\
