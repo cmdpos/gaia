@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 
-/killbyname.sh gaiad
-/killbyname.sh "gaiacli rest-server"
-
-rm -rf ~/.gaiad
+./killbyname.sh "evaiocli rest-server"
+./killbyname.sh "evaiod"
+./killbyname.sh "okchaind"
+./killbyname.sh "evaiod"
+rm -rf ~/.evaiod
 
 rm nohup.out
 
@@ -12,16 +13,16 @@ rm nohup.out
 
 rm -rf cache
 
-gaiad testnet --v 1 --output-dir cache --chain-id testchain --starting-ip-address 127.0.0.1<<EOF
+evaiod testnet --v 1 --output-dir cache --chain-id testchain --starting-ip-address 127.0.0.1<<EOF
 12345678
 EOF
 
-gaiacli config chain-id testchain
-gaiacli config trust-node true
-gaiacli config output json
-gaiacli config indent true
+evaiocli config chain-id testchain
+evaiocli config trust-node true
+evaiocli config output json
+evaiocli config indent true
 
 sleep 1
-#nohup gaiacli rest-server &
-gaiad start --home cache/node0/evaiod
+#nohup evaiocli rest-server &
+evaiod start --home cache/node0/evaiod
 
