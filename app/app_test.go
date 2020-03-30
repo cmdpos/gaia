@@ -4,6 +4,7 @@ import (
 	"os"
 	"testing"
 
+	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tm-db"
@@ -15,6 +16,32 @@ import (
 )
 
 func TestGaiadExport(t *testing.T) {
+
+	dcoin, _ := sdk.ParseDecCoin("1000.01okt")
+	icoin, _ := sdk.ParseCoin("1000.01okt")
+
+	dcoinstr := dcoin.Amount.String()
+	icoinstr := icoin.Amount.String()
+
+	a1, ok := sdk.NewIntFromString("1000")
+	a2, err2 := sdk.NewDecFromStr("1000")
+
+	a1str := a1.String()
+	a2str := a2.String()
+
+
+
+	_ = dcoin
+	_ = icoin
+	_ = dcoinstr
+	_ = icoinstr
+	_ = a1str
+	_ = a2str
+	_ = a1
+	_ = a2
+	_ = ok
+	_ = err2
+
 	db := db.NewMemDB()
 	gapp := NewGaiaApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, 0)
 	setGenesis(gapp)
