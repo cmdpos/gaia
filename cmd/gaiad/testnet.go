@@ -3,7 +3,6 @@ package main
 // DONTCOVER
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -162,22 +161,7 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 		//memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
 		genFiles = append(genFiles, config.GenesisFile())
 
-		buf := bufio.NewReader(cmd.InOrStdin())
-		prompt := fmt.Sprintf(
-			"Password for account '%s' (default %s):", nodeDirName, client.DefaultKeyPass,
-		)
-
-		keyPass, err := client.GetPassword(prompt, buf)
-		if err != nil && keyPass != "" {
-			// An error was returned that either failed to read the password from
-			// STDIN or the given password is not empty but failed to meet minimum
-			// length requirements.
-			return err
-		}
-
-		if keyPass == "" {
-			keyPass = client.DefaultKeyPass
-		}
+		keyPass := client.DefaultKeyPass
 
 		addr, secret, err := server.GenerateSaveCoinKey(clientDir, nodeDirName, keyPass, true, getTestnetMnemonic(i))
 		if err != nil {

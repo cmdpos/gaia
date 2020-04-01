@@ -1,8 +1,9 @@
 package types
 
 import (
-	"encoding/json"
+	//"encoding/json"
 
+	"encoding/json"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
@@ -13,7 +14,7 @@ var (
 
 type MsgTokenBurn struct {
 	Amount sdk.Coins      `json:"amount"`
-	Owner  sdk.AccAddress `json:"owner"`
+	Owner  sdk.AccAddress `json:"address"`
 }
 
 func NewMsgTokenBurn(amount sdk.Coins, owner sdk.AccAddress) MsgTokenBurn {
@@ -23,7 +24,7 @@ func NewMsgTokenBurn(amount sdk.Coins, owner sdk.AccAddress) MsgTokenBurn {
 	}
 }
 
-func (msg MsgTokenBurn) Route() string { return "token" }
+func (msg MsgTokenBurn) Route() string { return RouterKey }
 
 func (msg MsgTokenBurn) Type() string { return "burn" }
 
@@ -42,8 +43,12 @@ func (msg MsgTokenBurn) ValidateBasic() sdk.Error {
 	return nil
 }
 
-// GetSignBytes Implements Msg.
 func (msg MsgTokenBurn) GetSignBytes() []byte {
+	bz := ModuleCdc.MustMarshalJSON(msg)
+	return sdk.MustSortJSON(bz)
+}
+
+func (msg MsgTokenBurn) GetSignBytesJsonMarshal() []byte {
 	b, err := json.Marshal(msg)
 	if err != nil {
 		panic(err)

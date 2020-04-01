@@ -7,9 +7,7 @@
 *.swn
 .vscode
 .idea
-
 # Build
-vendor
 build
 tools/bin/*
 examples/build/*
@@ -27,6 +25,7 @@ dev/testnet/cache
 # Testing
 coverage.txt
 profile.out
+cache
 
 # Vagrant
 .vagrant/
