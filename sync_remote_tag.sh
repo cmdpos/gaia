@@ -9,6 +9,7 @@ official_repo=cosmos_gaia
 
 has_tag=`git tag | grep ${target_tag}`
 if [[ $has_tag != "" ]];then
+    git checkout $target_tag
     echo "error: exist gaia tag ${target_tag}"
     exit
 fi
