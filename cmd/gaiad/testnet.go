@@ -3,7 +3,6 @@ package main
 // DONTCOVER
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -39,6 +38,7 @@ var (
 	flagNodeDaemonHome    = "node-daemon-home"
 	flagNodeCLIHome       = "node-cli-home"
 	flagStartingIPAddress = "starting-ip-address"
+	flagBaseport          = "base-port" // cmdpos
 )
 
 // get cmd to initialize all files for tendermint testnet and application
@@ -48,14 +48,14 @@ func testnetCmd(ctx *server.Context, cdc *codec.Codec,
 
 	cmd := &cobra.Command{
 		Use:   "testnet",
-		Short: "Initialize files for a Gaiad testnet",
+		Short: "Initialize files for a Evaio testnet",
 		Long: `testnet will create "v" number of directories and populate each with
 necessary files (private validator, genesis, config, etc.).
 
 Note, strict routability for addresses is turned off in the config file.
 
 Example:
-	gaiad testnet --v 4 --output-dir ./output --starting-ip-address 192.168.10.2
+	evaiod testnet --v 4 --output-dir ./output --starting-ip-address 192.168.10.2
 	`,
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			config := ctx.Config
@@ -80,17 +80,19 @@ Example:
 		"Directory to store initialization data for the testnet")
 	cmd.Flags().String(flagNodeDirPrefix, "node",
 		"Prefix the directory name for each node with (node results in node0, node1, ...)")
-	cmd.Flags().String(flagNodeDaemonHome, "gaiad",
+	cmd.Flags().String(flagNodeDaemonHome, "evaiod",
 		"Home directory of the node's daemon configuration")
-	cmd.Flags().String(flagNodeCLIHome, "gaiacli",
+	cmd.Flags().String(flagNodeCLIHome, "evaiocli",
 		"Home directory of the node's cli configuration")
 	cmd.Flags().String(flagStartingIPAddress, "192.168.0.1",
 		"Starting IP address (192.168.0.1 results in persistent peers list ID0@192.168.0.1:46656, ID1@192.168.0.2:46656, ...)")
 	cmd.Flags().String(
 		client.FlagChainID, "", "genesis file chain-id, if left blank will be randomly created")
 	cmd.Flags().String(
-		server.FlagMinGasPrices, fmt.Sprintf("0.000006%s", sdk.DefaultBondDenom),
+		server.FlagMinGasPrices, fmt.Sprintf("50000.000000" + "%s", sdk.DefaultBondDenom),
 		"Minimum gas prices to accept for transactions; All fees in a tx must meet this minimum (e.g. 0.01photino,0.001stake)")
+	cmd.Flags().Int(flagBaseport, 20056, "testnet base port") // cmdpos
+
 	return cmd
 }
 
@@ -126,7 +128,7 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 		gentxsDir := filepath.Join(outputDir, "gentxs")
 
 		config.SetRoot(nodeDir)
-		config.RPC.ListenAddress = "tcp://0.0.0.0:26657"
+		config.RPC.ListenAddress = "tcp://0.0.0.0:20181"
 
 		if err := os.MkdirAll(filepath.Join(nodeDir, "config"), nodeDirPerm); err != nil {
 			_ = os.RemoveAll(outputDir)
@@ -141,7 +143,7 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 		monikers = append(monikers, nodeDirName)
 		config.Moniker = nodeDirName
 
-		ip, err := getIP(i, startingIPAddress)
+		ip, err := getIP(0, startingIPAddress)
 		if err != nil {
 			_ = os.RemoveAll(outputDir)
 			return err
@@ -152,32 +154,25 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 			_ = os.RemoveAll(outputDir)
 			return err
 		}
+		baseport := viper.GetInt(flagBaseport)
+		port := baseport + i*100
+		memo := fmt.Sprintf("%s@%s:%d", nodeIDs[i], ip, port) // cmdpos
 
-		memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
+		//memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
 		genFiles = append(genFiles, config.GenesisFile())
 
-		buf := bufio.NewReader(cmd.InOrStdin())
-		prompt := fmt.Sprintf(
-			"Password for account '%s' (default %s):", nodeDirName, client.DefaultKeyPass,
-		)
+		keyPass := client.DefaultKeyPass
 
-		keyPass, err := client.GetPassword(prompt, buf)
-		if err != nil && keyPass != "" {
-			// An error was returned that either failed to read the password from
-			// STDIN or the given password is not empty but failed to meet minimum
-			// length requirements.
-			return err
-		}
-
-		if keyPass == "" {
-			keyPass = client.DefaultKeyPass
-		}
-
-		addr, secret, err := server.GenerateSaveCoinKey(clientDir, nodeDirName, keyPass, true)
+		addr, secret, err := server.GenerateSaveCoinKey(clientDir, nodeDirName, keyPass, true, getTestnetMnemonic(i))
 		if err != nil {
 			_ = os.RemoveAll(outputDir)
 			return err
 		}
+
+		fmt.Printf("nodeDirName: [%s]\n", nodeDirName)
+		fmt.Printf("clientDir: [%s]\n", clientDir)
+		fmt.Printf("addr: [%s]\n", addr.String())
+		fmt.Printf("secret: [%s]\n\n", secret)
 
 		info := map[string]string{"secret": secret}
 
@@ -237,7 +232,7 @@ func InitTestnet(cmd *cobra.Command, config *tmconfig.Config, cdc *codec.Codec,
 
 		// TODO: Rename config file to server.toml as it's not particular to Gaia
 		// (REF: https://github.com/cosmos/cosmos-sdk/issues/4125).
-		gaiaConfigFilePath := filepath.Join(nodeDir, "config/gaiad.toml")
+		gaiaConfigFilePath := filepath.Join(nodeDir, "config/app.toml")
 		srvconfig.WriteConfigFile(gaiaConfigFilePath, gaiaConfig)
 	}
 

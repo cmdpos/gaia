@@ -1,0 +1,550 @@
+{
+  "genesis_time": "2020-03-06T03:53:33.500002Z",
+  "chain_id": "testchain",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age": "100000"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }
+  },
+  "validators": [
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "ZlB6C322pKBvJ1yvc7ZrU7Csvj8tv3UgPwbaNPcuXwM="
+      },
+      "power": "100",
+      "name": "node2"
+    },
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "GzgTD/RsJJT6cPqByxv288or5oybDYN71wX9uO5TidQ="
+      },
+      "power": "100",
+      "name": "node1"
+    },
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "T1J0pQcrWUTUGwqb6AT83bLZ76lqF1Bi88EYUnuLVQo="
+      },
+      "power": "100",
+      "name": "node3"
+    },
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "4yUCDRDxmWGsaUAiS1wSLnOv7LPZ6Te9DTc1HL9CncU="
+      },
+      "power": "100",
+      "name": "node0"
+    }
+  ],
+  "app_hash": "",
+  "app_state": {
+    "accounts": [
+      {
+        "address": "eva1ztwjutkmfk30q8jr8444fyenkvwzrt2nczmgmn",
+        "coins": [
+          {
+            "denom": "neva",
+            "amount": "400000376334"
+          },
+          {
+            "denom": "node2token",
+            "amount": "1000000000000"
+          }
+        ],
+        "sequence_number": "1",
+        "account_number": "2",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "eva1geyy4wtak2q9effnfhze9u4htd8yxxma0jmgl6",
+        "coins": [
+          {
+            "denom": "neva",
+            "amount": "400000377918"
+          },
+          {
+            "denom": "node1token",
+            "amount": "1000000000000"
+          }
+        ],
+        "sequence_number": "1",
+        "account_number": "1",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "eva1jt9vwuyfqmtphd2g36gyxmrwaga4tgekukysyp",
+        "coins": [
+          {
+            "denom": "neva",
+            "amount": "400000375542"
+          },
+          {
+            "denom": "node3token",
+            "amount": "1000000000000"
+          }
+        ],
+        "sequence_number": "1",
+        "account_number": "3",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "eva1hg40dv5e237qy28vtyum52ygke32ez35syykpz",
+        "coins": [
+          {
+            "denom": "neva",
+            "amount": "400000376334"
+          },
+          {
+            "denom": "node0token",
+            "amount": "1000000000000"
+          }
+        ],
+        "sequence_number": "1",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "auth": {
+      "collected_fees": null,
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "bank": {
+      "send_enabled": true
+    },
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "1600001536868",
+        "bonded_tokens": "400000000000"
+      },
+      "params": {
+        "unbonding_time": "1209600000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "neva"
+      },
+      "last_total_power": "400",
+      "last_validator_powers": [
+        {
+          "Address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "Power": "100"
+        },
+        {
+          "Address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "Power": "100"
+        },
+        {
+          "Address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "Power": "100"
+        },
+        {
+          "Address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "Power": "100"
+        }
+      ],
+      "validators": [
+        {
+          "operator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "consensus_pubkey": "evavalconspub1zcjduepqveg85zmak6j2qme8tjhh8dnt2wc2e03l9klh2gplqmdrfaewtupsrrtgcq",
+          "jailed": false,
+          "status": 2,
+          "tokens": "100000000000",
+          "delegator_shares": "100000000000.000000000000000000",
+          "description": {
+            "moniker": "node2",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.500000000000000000",
+            "max_rate": "0.500000000000000000",
+            "max_change_rate": "0.000000000000000000",
+            "update_time": "2020-03-06T03:53:33.500002Z"
+          },
+          "min_self_delegation": "1"
+        },
+        {
+          "operator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "consensus_pubkey": "evavalconspub1zcjduepqrvupxrl5dsjff7nsl2qukxlk709zhe5vnvxcx77hqh7m3mjn382qrg46y8",
+          "jailed": false,
+          "status": 2,
+          "tokens": "100000000000",
+          "delegator_shares": "100000000000.000000000000000000",
+          "description": {
+            "moniker": "node1",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.500000000000000000",
+            "max_rate": "0.500000000000000000",
+            "max_change_rate": "0.000000000000000000",
+            "update_time": "2020-03-06T03:53:33.500002Z"
+          },
+          "min_self_delegation": "1"
+        },
+        {
+          "operator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "consensus_pubkey": "evavalconspub1zcjduepqfaf8ffg89dv5f4qmp2d7sp8umkednmafdgt4qchncyv9y7ut259qt9vggt",
+          "jailed": false,
+          "status": 2,
+          "tokens": "100000000000",
+          "delegator_shares": "100000000000.000000000000000000",
+          "description": {
+            "moniker": "node3",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.500000000000000000",
+            "max_rate": "0.500000000000000000",
+            "max_change_rate": "0.000000000000000000",
+            "update_time": "2020-03-06T03:53:33.500002Z"
+          },
+          "min_self_delegation": "1"
+        },
+        {
+          "operator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "consensus_pubkey": "evavalconspub1zcjduepquvjsyrgs7xvkrtrfgq3ykhqj9ee6lm9nm85n00gdxu63e06znhzspfqvny",
+          "jailed": false,
+          "status": 2,
+          "tokens": "100000000000",
+          "delegator_shares": "100000000000.000000000000000000",
+          "description": {
+            "moniker": "node0",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.500000000000000000",
+            "max_rate": "0.500000000000000000",
+            "max_change_rate": "0.000000000000000000",
+            "update_time": "2020-03-06T03:53:33.500002Z"
+          },
+          "min_self_delegation": "1"
+        }
+      ],
+      "delegations": [
+        {
+          "delegator_address": "eva1ztwjutkmfk30q8jr8444fyenkvwzrt2nczmgmn",
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "shares": "100000000000.000000000000000000"
+        },
+        {
+          "delegator_address": "eva1geyy4wtak2q9effnfhze9u4htd8yxxma0jmgl6",
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "shares": "100000000000.000000000000000000"
+        },
+        {
+          "delegator_address": "eva1jt9vwuyfqmtphd2g36gyxmrwaga4tgekukysyp",
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "shares": "100000000000.000000000000000000"
+        },
+        {
+          "delegator_address": "eva1hg40dv5e237qy28vtyum52ygke32ez35syykpz",
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "shares": "100000000000.000000000000000000"
+        }
+      ],
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": true
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.050000000000000000",
+        "annual_provisions": "100000076051.200000000000000000"
+      },
+      "params": {
+        "mint_denom": "neva",
+        "inflation_rate_change": "0.000000000000000000",
+        "inflation_max": "0.050000000000000000",
+        "inflation_min": "0.050000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "distr": {
+      "fee_pool": {
+        "community_pool": [
+          {
+            "denom": "neva",
+            "amount": "30740.000000000000000000"
+          }
+        ]
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "evavalcons17a6lzqpexh4cp5s0n9050qnr0rgyus9uwvcgj8",
+      "outstanding_rewards": [
+        {
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "outstanding_rewards": null
+        },
+        {
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "outstanding_rewards": null
+        },
+        {
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "outstanding_rewards": null
+        },
+        {
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "outstanding_rewards": null
+        }
+      ],
+      "validator_accumulated_commissions": [
+        {
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "accumulated": null
+        },
+        {
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "accumulated": null
+        },
+        {
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "accumulated": null
+        },
+        {
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "accumulated": null
+        }
+      ],
+      "validator_historical_rewards": [
+        {
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        },
+        {
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        },
+        {
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        },
+        {
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        }
+      ],
+      "validator_current_rewards": [
+        {
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "rewards": {
+            "rewards": null,
+            "period": "2"
+          }
+        },
+        {
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "rewards": {
+            "rewards": null,
+            "period": "2"
+          }
+        },
+        {
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "rewards": {
+            "rewards": null,
+            "period": "2"
+          }
+        },
+        {
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "rewards": {
+            "rewards": null,
+            "period": "2"
+          }
+        }
+      ],
+      "delegator_starting_infos": [
+        {
+          "delegator_address": "eva1ztwjutkmfk30q8jr8444fyenkvwzrt2nczmgmn",
+          "validator_address": "evavaloper1ztwjutkmfk30q8jr8444fyenkvwzrt2nwle7lk",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "100000000000.000000000000000000",
+            "height": "0"
+          }
+        },
+        {
+          "delegator_address": "eva1geyy4wtak2q9effnfhze9u4htd8yxxma0jmgl6",
+          "validator_address": "evavaloper1geyy4wtak2q9effnfhze9u4htd8yxxmae0e7ml",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "100000000000.000000000000000000",
+            "height": "0"
+          }
+        },
+        {
+          "delegator_address": "eva1jt9vwuyfqmtphd2g36gyxmrwaga4tgekukysyp",
+          "validator_address": "evavaloper1jt9vwuyfqmtphd2g36gyxmrwaga4tgek2txxqy",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "100000000000.000000000000000000",
+            "height": "0"
+          }
+        },
+        {
+          "delegator_address": "eva1hg40dv5e237qy28vtyum52ygke32ez35syykpz",
+          "validator_address": "evavaloper1hg40dv5e237qy28vtyum52ygke32ez35xexq98",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "100000000000.000000000000000000",
+            "height": "0"
+          }
+        }
+      ],
+      "validator_slash_events": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": null,
+      "votes": null,
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "neva",
+            "amount": "10000000000"
+          }
+        ],
+        "max_deposit_period": "172800000000000"
+      },
+      "voting_params": {
+        "voting_period": "172800000000000"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
+    },
+    "crisis": {
+      "constant_fee": {
+        "denom": "neva",
+        "amount": "1000"
+      }
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {
+        "evavalcons1ym7kv8l5whu5769ww0z6a7fmdezuy6mq0h7kvd": {
+          "start_height": "0",
+          "index_offset": "96",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "evavalcons19pdwjzqf6jkem5lrrm2pq8r85z78v0xpmt3lht": {
+          "start_height": "0",
+          "index_offset": "96",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "evavalcons1nxnn26t6h2hsccwj5n0l0cd6835e0jkqn38gr6": {
+          "start_height": "0",
+          "index_offset": "96",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "evavalcons17a6lzqpexh4cp5s0n9050qnr0rgyus9uwvcgj8": {
+          "start_height": "0",
+          "index_offset": "96",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        }
+      },
+      "missed_blocks": {
+        "evavalcons1ym7kv8l5whu5769ww0z6a7fmdezuy6mq0h7kvd": [],
+        "evavalcons19pdwjzqf6jkem5lrrm2pq8r85z78v0xpmt3lht": [],
+        "evavalcons1nxnn26t6h2hsccwj5n0l0cd6835e0jkqn38gr6": [],
+        "evavalcons17a6lzqpexh4cp5s0n9050qnr0rgyus9uwvcgj8": []
+      }
+    },
+    "gentxs": null
+  }
+}

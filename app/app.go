@@ -1,6 +1,7 @@
 package app
 
 import (
+	"github.com/cosmos/cosmos-sdk/x/token"
 	"io"
 	"os"
 
@@ -34,10 +35,10 @@ const appName = "GaiaApp"
 
 var (
 	// default home directories for gaiacli
-	DefaultCLIHome = os.ExpandEnv("$HOME/.gaiacli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.evaiocli")
 
 	// default home directories for gaiad
-	DefaultNodeHome = os.ExpandEnv("$HOME/.gaiad")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.evaiod")
 
 	// The module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -55,6 +56,7 @@ var (
 		crisis.AppModuleBasic{},
 		slashing.AppModuleBasic{},
 		supply.AppModuleBasic{},
+		token.AppModuleBasic{},
 	)
 
 	// module account permissions
@@ -65,6 +67,7 @@ var (
 		staking.BondedPoolName:    {supply.Burner, supply.Staking},
 		staking.NotBondedPoolName: {supply.Burner, supply.Staking},
 		gov.ModuleName:            {supply.Burner},
+		token.ModuleName:          {supply.Minter, supply.Burner},
 	}
 )
 
@@ -101,6 +104,7 @@ type GaiaApp struct {
 	distrKeeper    distr.Keeper
 	govKeeper      gov.Keeper
 	crisisKeeper   crisis.Keeper
+	tokenKeeper    token.Keeper
 	paramsKeeper   params.Keeper
 
 	// the module manager
@@ -120,7 +124,7 @@ func NewGaiaApp(logger log.Logger, db dbm.DB, traceStore io.Writer, loadLatest b
 	keys := sdk.NewKVStoreKeys(
 		bam.MainStoreKey, auth.StoreKey, staking.StoreKey,
 		supply.StoreKey, mint.StoreKey, distr.StoreKey, slashing.StoreKey,
-		gov.StoreKey, params.StoreKey,
+		gov.StoreKey, params.StoreKey, token.StoreKey,
 	)
 	tkeys := sdk.NewTransientStoreKeys(staking.TStoreKey, params.TStoreKey)
 
@@ -138,6 +142,7 @@ func NewGaiaApp(logger log.Logger, db dbm.DB, traceStore io.Writer, loadLatest b
 	bankSubspace := app.paramsKeeper.Subspace(bank.DefaultParamspace)
 	stakingSubspace := app.paramsKeeper.Subspace(staking.DefaultParamspace)
 	mintSubspace := app.paramsKeeper.Subspace(mint.DefaultParamspace)
+	tokenSubspace := app.paramsKeeper.Subspace(token.DefaultParamspace)
 	distrSubspace := app.paramsKeeper.Subspace(distr.DefaultParamspace)
 	slashingSubspace := app.paramsKeeper.Subspace(slashing.DefaultParamspace)
 	govSubspace := app.paramsKeeper.Subspace(gov.DefaultParamspace)
@@ -158,6 +163,10 @@ func NewGaiaApp(logger log.Logger, db dbm.DB, traceStore io.Writer, loadLatest b
 		app.cdc, keys[slashing.StoreKey], &stakingKeeper, slashingSubspace, slashing.DefaultCodespace,
 	)
 	app.crisisKeeper = crisis.NewKeeper(crisisSubspace, invCheckPeriod, app.supplyKeeper, auth.FeeCollectorName)
+
+	app.tokenKeeper = token.NewKeeper(
+		app.cdc, keys[token.StoreKey], tkeys[token.TStoreKey],
+		app.bankKeeper, app.supplyKeeper, tokenSubspace, token.DefaultCodespace)
 
 	// register the proposal types
 	govRouter := gov.NewRouter()
@@ -189,6 +198,7 @@ func NewGaiaApp(logger log.Logger, db dbm.DB, traceStore io.Writer, loadLatest b
 		mint.NewAppModule(app.mintKeeper),
 		slashing.NewAppModule(app.slashingKeeper, app.stakingKeeper),
 		staking.NewAppModule(app.stakingKeeper, app.distrKeeper, app.accountKeeper, app.supplyKeeper),
+		token.NewAppModule(app.tokenKeeper, app.accountKeeper, app.supplyKeeper),
 	)
 
 	// During begin block slashing happens after distr.BeginBlocker so that

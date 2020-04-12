@@ -7,9 +7,7 @@
 *.swn
 .vscode
 .idea
-
 # Build
-vendor
 build
 tools/bin/*
 examples/build/*
@@ -23,10 +21,11 @@ baseapp/data/*
 client/lcd/keys/*
 cmd/gaiacli/statik/statik.go
 mytestnet
-
+dev/testnet/cache
 # Testing
 coverage.txt
 profile.out
+cache
 
 # Vagrant
 .vagrant/
@@ -37,7 +36,7 @@ vagrant
 # IDE
 .idea/
 *.iml
-
+*.yaml
 # Graphviz
 dependency-graph.png
 
@@ -46,3 +45,5 @@ dependency-graph.png
 *.out
 *.synctex.gz
 contract_tests/*
+dev/cache/*
+*.json
