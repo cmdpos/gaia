@@ -51,9 +51,9 @@ CAT := $(if $(filter $(OS),Windows_NT),type,cat)
 
 # this should be the same as the version in go.mod
 Name=evaio
-Version=2.0.0
-Tendermint=0.32.7
-CosmosSDK=0.37.4
+Version=2.0.8
+Tendermint=0.32.10
+CosmosSDK=0.37.9
 ServerName=evaiod
 ClientName=evaiocli
 
