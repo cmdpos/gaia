@@ -34,8 +34,6 @@ github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghf
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cmdpos/cosmos-sdk v0.37.9-eva h1:PfWOIbfnEd52dXQheuFZu/rU32ZK+cYWz1M+me87RDI=
 github.com/cmdpos/cosmos-sdk v0.37.9-eva/go.mod h1:PG0SiXXlRej2X62VJLGbbiQuFa+i8TX/98vcfX71QLI=
-github.com/cmdpos/cosmos-sdk v0.37.10-0.20200412032139-9f0f67784f8e h1:IuEbJYMmuRQGTyissiFS3kXSThKJrvTstcqiIKFnzP0=
-github.com/cmdpos/cosmos-sdk v0.37.10-0.20200412032139-9f0f67784f8e/go.mod h1:PG0SiXXlRej2X62VJLGbbiQuFa+i8TX/98vcfX71QLI=
 github.com/cmdpos/tendermint v0.32.10-eva h1:NfbkRt7M1/lhSfJ7PHWda11dWfxYqRe8Bn2gG915Z/k=
 github.com/cmdpos/tendermint v0.32.10-eva/go.mod h1:5/B1XZjNYtVBso8o1l/Eg4A0Mhu42lDcmftoQl95j/E=
 github.com/coreos/bbolt v1.3.2/go.mod h1:iRUV2dpdMOn7Bo10OQBFzIJO9kkE559Wcmn+qkEiiKk=
