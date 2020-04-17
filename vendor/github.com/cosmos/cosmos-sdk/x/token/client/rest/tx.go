@@ -9,18 +9,7 @@ import (
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router) {
-	//r.HandleFunc(
-	//	"/staking/delegators/{delegatorAddr}/delegations",
-	//	postDelegationsHandlerFn(cliCtx),
-	//).Methods("POST")
-	//r.HandleFunc(
-	//	"/staking/delegators/{delegatorAddr}/unbonding_delegations",
-	//	postUnbondingDelegationsHandlerFn(cliCtx),
-	//).Methods("POST")
-	//r.HandleFunc(
-	//	"/staking/delegators/{delegatorAddr}/redelegations",
-	//	postRedelegationsHandlerFn(cliCtx),
-	//).Methods("POST")
+
 }
 
 type (

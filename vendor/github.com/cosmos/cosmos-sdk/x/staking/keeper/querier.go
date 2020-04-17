@@ -43,7 +43,7 @@ func NewQuerier(k Keeper) sdk.Querier {
 		case types.QueryParameters:
 			return queryParameters(ctx, k)
 		default:
-			return nil, sdk.ErrUnknownRequest("unknown staking query endpoint")
+			return nil, sdk.ErrUnknownRequest("unknown staking query endpoint: "+path[0])
 		}
 	}
 }
