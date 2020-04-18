@@ -4,4 +4,4 @@
 index=$1
 
 
-gaiad export --for-zero-height  --home cache/node${index}/gaiad | jq > node$index.json
+evaiod export --for-zero-height  --home cache/node${index}/evaiod | jq > node$index.json
