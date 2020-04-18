@@ -13,7 +13,7 @@ const DefaultParamspace = ModuleName
 
 // Default parameter values
 const (
-	DefaultMaxMemoCharacters      uint64 = 256
+	DefaultMaxMemoCharacters      uint64 = 1024
 	DefaultTxSigLimit             uint64 = 7
 	DefaultTxSizeCostPerByte      uint64 = 10
 	DefaultSigVerifyCostED25519   uint64 = 590
