@@ -4,12 +4,21 @@
 
 index=$1
 
-gaiacli keys add node${index} -y --home cache/node${index}/gaiacli
+gaiacli keys add node${index} -y --home cache/node${index}/gaiacli<<EOF
+12345678
+12345678
+EOF
+
 toAddr=$(gaiacli keys show node${index} -a --home cache/node${index}/gaiacli)
 valPubkey=$(gaiad tendermint show-validator --home cache/node${index}/gaiacli)
 
 
-gaiacli tx send $toAddr 10000000000neva --from=node0 -b block --yes --chain-id testchain --node localhost:10057
+echorun(){
+    echo "["$@"]"
+    $@
+}
+
+echorun gaiacli tx send node0 $toAddr 10000000000neva -b block --yes --chain-id testchain --node tcp://localhost:10057
 
 sleep 10
 
@@ -19,5 +28,5 @@ gaiacli tx staking create-validator --amount 2000000000neva \
     --commission-max-rate 0.5 \
     --commission-max-change-rate 0.001 \
     -b block \
-    --min-self-delegation 1 --from node${index} --moniker node${index} -y --node localhost:10057 \
+    --min-self-delegation 1 --from node${index} --moniker node${index} -y --node tcp://localhost:10057 \
     --home cache/node${index}/gaiacli

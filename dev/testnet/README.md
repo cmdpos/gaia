@@ -1,3 +1,20 @@
+## 创建新节点并成为validator
+
+* 启动4个节点
+```
+./run.sh
+```
+
+* 启动第5个节点
+```
+./addnode.sh -n 4
+```
+
+* 让第5个节点成为validator
+```
+./newvalidator.sh 4
+```
+
 
 ## 多节点网络环境
 ```sh
