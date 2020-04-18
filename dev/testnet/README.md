@@ -1,11 +1,11 @@
 ## 创建新节点并成为validator
 
-* 启动4个节点
+* 启动4个节点, 4个都是validator
 ```
 ./run.sh
 ```
 
-* 启动第5个节点
+* 启动第5个节点(仅仅是全节点, 不是validator)
 ```
 ./addnode.sh -n 4
 ```
