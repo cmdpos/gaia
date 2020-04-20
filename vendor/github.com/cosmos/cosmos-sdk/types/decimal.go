@@ -17,7 +17,8 @@ type Dec struct {
 
 // number of decimal places
 const (
-	Precision = 9
+	Precision = 18
+	EvaioTokenPrecision = 9
 
 	// bytes required to represent the above precision
 	// Ceiling[Log2[999 999 999 999 999 999]]
