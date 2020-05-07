@@ -1,3 +1,37 @@
+# slashing
+
+`MaxMissed = signed_blocks_window - （min_signed_per_window * signed_blocks_window）`
+
+n 是区块高度
+
+```
+
+foreach(n)
+{
+    if validator.isMissed(n) && !validator.isMissed(n - signed_blocks_window){
+        validator.missed++
+    }
+
+    if !validator.isMissed(n) && validator.isMissed(n - signed_blocks_window){
+        validator.missed--
+    }
+
+    if validator.missed >= MaxMissed {
+        validator.jail()
+        validator.missed = 0
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
 # Contributing
 
 - [Contributing](#contributing)
