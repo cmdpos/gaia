@@ -4,7 +4,6 @@
 ./killbyname.sh "evaiocli rest-server"
 ./killbyname.sh "evaiod"
 ./killbyname.sh "okchaind"
-./killbyname.sh "evaiod"
 #rm -rf ~/.evaiod
 
 rm nohup.out
@@ -17,12 +16,12 @@ rm nohup.out
 #12345678
 #EOF
 
-evaiocli config chain-id testchain
+evaiocli config chain-id evaio
 evaiocli config trust-node true
 evaiocli config output json
 evaiocli config indent true
 
 sleep 1
 #nohup evaiocli rest-server &
-evaiod start --home cache/node0/evaiod
+nohup evaiod start --home cache --p2p.seeds 7b25b5163db6e68c506305a864fe9a27d6c8e2ed@47.99.211.214:30180 &
 
